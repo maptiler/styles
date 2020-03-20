@@ -1,0 +1,8 @@
+{
+  "name": "@maptiler/styles",
+  "version": "1.0.0",
+  "private": true,
+  "peerDependencies": {
+    "bootstrap": "^4.4.1"
+  }
+}
