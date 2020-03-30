@@ -137,8 +137,8 @@ mark {
   }
   // topbar
 
-  @each $gradient, $value in $gradients {
-    .topbar.#{$gradient} {
+  @each $topbars, $value in $topbars {
+    .topbar.#{$topbars} {
       position: relative;
       height: 75px;
       background: $value;
