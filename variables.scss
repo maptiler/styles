@@ -1179,3 +1179,17 @@ $positions: static, relative, absolute, fixed, sticky !default;
 
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
+
+// maptiler components
+
+$gradients: () !default;
+$gradients: map-merge(
+  (
+  'grad-cloud': linear-gradient(90deg, #140F92 1.04%, #2340B7 49.48%, #38B6FB 100%),
+  'grad-desktop': linear-gradient(90deg, #453279 1.04%, #5D399B 49.48%, #997EC4 100%),
+  'grad-mobile': linear-gradient(90deg, #004C73 1.04%, #00D5DF 100%),
+  'grad-cluster': linear-gradient(90deg, #AF3213 1.04%, #E68236 49.48%, #FFC74A 100%),
+  'grad-server': linear-gradient(90deg, #8D0020 1.04%, #E12E39 49.48%, #FF7B68 100%),
+  ),
+  $gradients
+);

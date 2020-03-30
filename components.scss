@@ -135,3 +135,18 @@ mark {
       margin-left: 20px;
     }
   }
+  // topbar
+
+  @each $gradient, $value in $gradients {
+    .topbar.#{$gradient} {
+      position: relative;
+      height: 75px;
+      background: $value;
+      width: 100%;
+      z-index: 2;
+      img {
+        height: 100%;
+        padding: 10px 10px;
+      }
+    }
+  }
