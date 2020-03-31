@@ -7,6 +7,7 @@
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
     border: solid 2px $value;
+    line-height: 15px;
     &:active, &:hover{
       background-color: transparent !important;
       color: darken($value, 5%)!important;
@@ -150,3 +151,121 @@ mark {
       }
     }
   }
+  //skew
+  .skewed {
+      -webkit-transform: skewY(-$skew);
+      transform: skewY(-$skew);
+  }
+  .unskewed {
+      -webkit-transform: skewY($skew);
+      transform: skewY($skew);
+  }
+  //footer
+  .footer{
+    color: $footer-color;
+    background-color: $footer-color-bg;
+    font-weight: $footer-fontweight;
+    height: $footer-height + $footer-bordertop-size;
+    position: relative;
+    font-size: $footer-fontsize;
+    border-top: $footer-bordertop-size solid $footer-border-color;
+
+    a{
+      display: block;
+      color: $footer-link-color;
+      font-size: $footer-fontsize;
+      margin: $footer-link-margin;
+      &:hover{
+        color: $footer-link-hover-color;
+        text-decoration: $footer-link-hover-decoration;
+      }
+    }
+
+    .container{
+      padding: $footer-padding;
+    }
+  }
+// popup
+.popup {
+  z-index: 111;
+  position: fixed;
+  width: $popup-width;
+  min-height: 100px;
+  top: $popup-top;
+  left: 50%;
+  margin-left: ($popup-width / 2) * -1;
+  padding: $popup-padding;
+  background: $popup-bg-color;
+  transition: all 0.3s ease;
+  border-radius: $popup-radius;
+
+  &.closed {
+    top: -1000px;
+  }
+  .popup-title {
+    display: block;
+    font-weight: bold;
+    padding: 0 0 10px;
+    font-size: 120%;
+  }
+
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'icons';
+    cursor: pointer;
+    color: $body-color;
+
+    &:hover {
+      text-decoration: none;
+      color: darken($body-color, 20%);
+    }
+  }
+
+  .popup-content {
+    display: block;
+  }
+
+  .popup-actions {
+    display: block;
+    margin-top: 10px;
+
+    div {
+      margin-right: 10px;
+    }
+  }
+
+  ul.options {
+    max-height: 400px;
+    overflow: auto;
+
+    li {
+      cursor: pointer;
+      display: block;
+      padding: 2px;
+
+      &:nth-child(even) {
+        background: #f9f9f9;
+      }
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+.popup-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $popupbg-bg-color;
+  z-index: 101;
+  transition: 0.3s all ease;
+
+  &.closed {
+    display: none;
+  }
+}

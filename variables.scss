@@ -1181,7 +1181,7 @@ $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 
 // maptiler components
-$skew: 5%;
+$skew: 5deg;
 
 $gradient-cloud : linear-gradient(90deg, #140F92 1.04%, #2340B7 49.48%, #38B6FB 100%);
 $gradient-desktop : linear-gradient(90deg, #453279 1.04%, #5D399B 49.48%, #997EC4 100%);
@@ -1200,3 +1200,24 @@ $topbars: map-merge(
   ),
   $topbars
 );
+
+$footer-color: #868d97;
+$footer-color-bg: transparent;
+$footer-link-color: #868d97;
+$footer-link-hover-color: #868d97;
+$footer-link-hover-decoration: none;
+$footer-height: 80px;
+$footer-fontsize: 100%;
+$footer-padding: 24px 20px 16px 20px;
+$footer-fontweight: normal;
+$footer-border-color: transparent;
+$footer-bordertop-size: 0;
+$footer-link-margin: 10px 0;
+
+
+$popupbg-bg-color: rgba(55, 55, 55, 0.8);
+$popup-bg-color: #fff;
+$popup-top: 10%;
+$popup-width: 400px;
+$popup-padding: 25px;
+$popup-radius: 6px;
