@@ -61,8 +61,10 @@ $colors: map-merge(
     "cyan":       $cyan,
     "white":      $white,
     "gray":       $gray-600,
-    "gray-light": $gray-100,
-    "gray-dark":  $gray-900,
+    "gray-lighter": $gray-100,
+    "gray-light": $gray-400,
+    "gray-dark":  $gray-800,
+    "gray-darker":  $gray-900,
 
   ),
   $colors
@@ -74,18 +76,21 @@ $success:       #90cb90 !default;
 $info:          #a1acb7 !default;
 $warning:       #ff905e !default;
 $danger:        #dc3545 !default;
-$light:         $gray-100 !default;
-$dark:          $gray-900 !default;
-$cloud: #0E61C6 !default;
-$cloud-s: #2B8BFB !default;
-$desktop: #724FA7 !default;
-$desktop-s: #A82AB6 !default;
-$mobile: #00D5DF !default;
-$engine: #E58035 !default;
-$engine-s: #FF6F4C !default;
-$cluster: #E58035 !default;
-$cluster-s: #FFC957 !default;
-$server: #E6353D !default;
+$lighter:       $gray-100 !default;
+$light:         $gray-400 !default;
+$gray:          $gray-600 !default;
+$dark:          $gray-800 !default;
+$darker:        $gray-900 !default;
+$cloud:         #0E61C6 !default;
+$cloud-s:       #2B8BFB !default;
+$desktop:       #724FA7 !default;
+$desktop-s:     #A82AB6 !default;
+$mobile:        #00D5DF !default;
+$engine:        #E58035 !default;
+$engine-s:      #FF6F4C !default;
+$cluster:       #E58035 !default;
+$cluster-s:     #FFC957 !default;
+$server:        #E6353D !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -97,8 +102,11 @@ $theme-colors: map-merge(
     "info":       $info,
     "warning":    $warning,
     "danger":     $danger,
+    "lighter":    $lighter,
     "light":      $light,
+    "gray":       $gray,
     "dark":       $dark,
+    "darker":     $darker,
     "cloud":      $cloud,
     "cloud-s":    $cloud-s,
     "desktop":    $desktop,
