@@ -23,3 +23,11 @@
     padding: $footer-padding;
   }
 }
+.navbar-small {
+  z-index: $zindex-fixed;
+  padding: 0 !important;
+  height: 65px;
+  background: rgba(255,255,255,.9);
+  box-shadow: 0 10px 35px rgba(51,51,89,.1);
+
+}
