@@ -70,57 +70,74 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       #3174FF !default;
-$secondary:     #333359 !default;
-$success:       #90cb90 !default;
-$info:          #a1acb7 !default;
-$warning:       #ff905e !default;
-$danger:        #dc3545 !default;
-$lighter:       $gray-100 !default;
-$light:         $gray-400 !default;
-$gray:          $gray-600 !default;
-$dark:          $gray-800 !default;
-$darker:        $gray-900 !default;
-$cloud:         #0E61C6 !default;
-$cloud-s:       #2B8BFB !default;
-$desktop:       #724FA7 !default;
-$desktop-s:     #A82AB6 !default;
-$mobile:        #00D5DF !default;
-$engine:        #E58035 !default;
-$engine-s:      #FF6F4C !default;
-$cluster:       #E58035 !default;
-$cluster-s:     #FFC957 !default;
-$server:        #E6353D !default;
+$primary:          #3174FF !default;
+$secondary:        #333359 !default;
+$success:          #90cb90 !default;
+$info:             #a1acb7 !default;
+$warning:          #ff905e !default;
+$danger:           #dc3545 !default;
+$white:            $white !default;
+$lighter:          $gray-100 !default;
+$light:            $gray-400 !default;
+$gray:             $gray-600 !default;
+$dark:             $gray-800 !default;
+$darker:           $gray-900 !default;
+$cloud:            #0E61C6 !default;
+$cloud-s:          #2B8BFB !default;
+$cloud-light:      #dbe7fd !default;
+$desktop:          #724FA7 !default;
+$desktop-s:        #A82AB6 !default;
+$desktop-light:    #f1edf8 !default;
+$mobile:           #00D5DF !default;
+$mobile-s:         #03A1C4 !default;
+$mobile-light:     #daf5f9 !default;
+$engine:           #E58035 !default;
+$engine-s:         #FF6F4C !default;
+$engine-light:     #fcf3e9 !default;
+$cluster:          #E58035 !default;
+$cluster-s:        #FFC957 !default;
+$cluster-light:    #fcefe0 !default;
+$server:           #E6353D !default;
+$server-s:         #DD1144 !default;
+$server-light:     #f5d7d7 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "lighter":    $lighter,
-    "light":      $light,
-    "gray":       $gray,
-    "dark":       $dark,
-    "darker":     $darker,
-    "cloud":      $cloud,
-    "cloud-s":    $cloud-s,
-    "desktop":    $desktop,
-    "desktop-s":  $desktop-s,
-    "mobile":     $mobile,
-    "engine":     $engine,
-    "engine-s":   $engine-s,
-    "cluster":    $cluster,
-    "cluster-s":  $cluster-s,
-    "server":     $server,
+  "primary":       $primary,
+  "secondary":     $secondary,
+  "success":       $success,
+  "info":          $info,
+  "warning":       $warning,
+  "danger":        $danger,
+  "white":         $white,
+  "lighter":       $lighter,
+  "light":         $light,
+  "gray":          $gray,
+  "dark":          $dark,
+  "darker":        $darker,
+  "cloud":         $cloud,
+  "cloud-s":       $cloud-s,
+  "cloud-light":   $cloud-light,
+  "desktop":       $desktop,
+  "desktop-s":     $desktop-s,
+  "desktop-light": $desktop-light,
+  "mobile":        $mobile,
+  "mobile-s":      $mobile-s,
+  "mobile-light":  $mobile-light,
+  "engine":        $engine,
+  "engine-s":      $engine-s,
+  "engine-light":  $engine-light,
+  "cluster":       $cluster,
+  "cluster-s":     $cluster-s,
+  "cluster-light": $cluster-light,
+  "server":        $server,
+  "server-s":      $server-s,
+  "server-light":  $server-light,
   ),
   $theme-colors
 );
-
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
 
@@ -1188,26 +1205,7 @@ $positions: static, relative, absolute, fixed, sticky !default;
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 
-// maptiler components
-$skew: 5deg;
-
-$gradient-cloud : linear-gradient(90deg, #140F92 1.04%, #2340B7 49.48%, #38B6FB 100%);
-$gradient-desktop : linear-gradient(90deg, #453279 1.04%, #5D399B 49.48%, #997EC4 100%);
-$gradient-mobile : linear-gradient(90deg, #004C73 1.04%, #00D5DF 100%);
-$gradient-cluster : linear-gradient(90deg, #AF3213 1.04%, #E68236 49.48%, #FFC74A 100%);
-$gradient-server : linear-gradient(90deg, #8D0020 1.04%, #E12E39 49.48%, #FF7B68 100%);
-
-$topbars: () !default;
-$topbars: map-merge(
-  (
-  'topbar-cloud': $gradient-cloud,
-  'topbar-desktop': $gradient-desktop,
-  'topbar-mobile': $gradient-mobile,
-  'topbar-cluster': $gradient-cluster,
-  'topbar-server': $gradient-server,
-  ),
-  $topbars
-);
+/*  --maptiler components--  */
 
 $footer-color: #868d97;
 $footer-color-bg: transparent;
@@ -1229,3 +1227,34 @@ $popup-top: 10%;
 $popup-width: 400px;
 $popup-padding: 25px;
 $popup-radius: 6px;
+
+$skew: 5deg;
+
+$gradient-cloud : linear-gradient(90deg, #140F92 1.04%, #2340B7 49.48%, #38B6FB 100%);
+$gradient-desktop : linear-gradient(90deg, #453279 1.04%, #5D399B 49.48%, #997EC4 100%);
+$gradient-mobile : linear-gradient(90deg, #004C73 1.04%, #00D5DF 100%);
+$gradient-cluster : linear-gradient(90deg, #AF3213 1.04%, #E68236 49.48%, #FFC74A 100%);
+$gradient-server : linear-gradient(90deg, #8D0020 1.04%, #E12E39 49.48%, #FF7B68 100%);
+
+$topbars: () !default;
+$topbars: map-merge(
+  (
+  'topbar-cloud': $gradient-cloud,
+  'topbar-desktop': $gradient-desktop,
+  'topbar-mobile': $gradient-mobile,
+  'topbar-cluster': $gradient-cluster,
+  'topbar-server': $gradient-server,
+  ),
+  $topbars
+);
+
+$font-sizes: () !default;
+$font-sizes: map-merge(
+  (
+  'smaller': 75%,
+  'small': 88%,
+  'big': 112%,
+  'bigger': 125%,
+  ),
+  $font-sizes
+);

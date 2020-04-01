@@ -1,0 +1,51 @@
+//bootstrap design changes to our framework
+
+.table thead th {
+  border-bottom: 1px;
+  font-weight: 600;
+}
+
+mark {
+  color: $secondary;
+  background-color: $gray-100;
+}
+
+.custom-control.custom-switch {
+  .custom-control-input:checked:not(:disabled) ~ .custom-control-label::before {
+    background-color: $custom-switch-indicator-checked-bg !important;
+  }
+}
+//  btn-stroke
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+    border: solid 2px $value;
+    line-height: 15px;
+
+    &:active,
+    &:hover {
+      background-color: transparent !important;
+      color: darken($value, 5%)!important;
+      border: solid 2px darken($value, 5%)!important;
+    }
+  }
+}
+//skew
+
+.skewed {
+  -webkit-transform: skewY(-$skew);
+  transform: skewY(-$skew);
+}
+
+.unskewed {
+  -webkit-transform: skewY($skew);
+  transform: skewY($skew);
+}
+// text sizes
+
+@each $font-sizes, $value in $font-sizes {
+  .#{$font-sizes} {
+    font-size: $value;
+  }
+}

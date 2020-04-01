@@ -1,0 +1,25 @@
+.footer {
+  color: $footer-color;
+  background-color: $footer-color-bg;
+  font-weight: $footer-fontweight;
+  height: $footer-height + $footer-bordertop-size;
+  position: relative;
+  font-size: $footer-fontsize;
+  border-top: $footer-bordertop-size solid $footer-border-color;
+
+  a {
+    display: block;
+    color: $footer-link-color;
+    font-size: $footer-fontsize;
+    margin: $footer-link-margin;
+
+    &:hover {
+      color: $footer-link-hover-color;
+      text-decoration: $footer-link-hover-decoration;
+    }
+  }
+
+  .container {
+    padding: $footer-padding;
+  }
+}
