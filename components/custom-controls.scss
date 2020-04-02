@@ -1,0 +1,24 @@
+.custom-control {
+  min-height: unset;
+}
+.custom-control-label {
+  &::before {
+    top: 0 !important;
+  }
+  &::after {
+    top: 2px !important;
+  }
+}
+.custom-control.custom-switch {
+  .custom-control-input:checked:not(:disabled) ~ .custom-control-label::before {
+    background-color: $custom-switch-indicator-checked-bg !important;
+  }
+}
+.custom-control-label.equal {
+  &::before{
+    background-color: #3174FF !important;
+  }
+  &::after{
+    background-color: #fff !important;;
+  }
+}

@@ -26,12 +26,6 @@
   margin: -8px 5px -5px 10px;
 }
 
-#map-type-raster,
-#map-type-vector {
-  width: 75px;
-  display: inline-block;
-}
-
 .map-controls a.map-controls-text {
   font-size: 16px;
 }
@@ -83,10 +77,16 @@
     text-decoration: none;
   }
 }
-
 .map-wrap {
+
   position: relative !important;
-  height: 603px;
+  height: 595px;
+  &:not(.fullscreen) {
+    .map{
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+  }
 
   &.fullscreen {
     position: fixed !important;
@@ -113,7 +113,7 @@
   text-align: center;
   width: auto;
   height: auto;
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-down(md) {
     font-size: 12px;
     padding: 6px 0 5px;
     top: 127px;
@@ -141,7 +141,7 @@
   height: auto;
   top: 130px;
   left: 20px;
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-down(md) {
     padding: 7px !important;
     bottom: 10px;
     left: 10px;
@@ -185,7 +185,7 @@
   width: auto;
   height: auto;
   -webkit-mask-image: linear-gradient(0deg,transparent,#000 10px,#000 calc(100% - 10px),transparent);
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-down(md){
     bottom: 65px;
     left: 15px;
     top: 155px;
@@ -212,7 +212,7 @@
   background-size: 85px 85px;
   background-repeat: no-repeat;
   transition: all 0.2s ease;
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-down(md){
     width: 55px !important;
     height: 55px !important;
   }
@@ -244,7 +244,7 @@
     text-align: center;
     display: block;
   }
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-down(md){
     padding: 8px 0;
     bottom: 80px;
   }
@@ -252,7 +252,7 @@
 
 span.map-switch-customize-text {
   display: inline !important;
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-down(md){
     display: none !important;
   }
 }
