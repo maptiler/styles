@@ -1,14 +1,16 @@
 //bootstrap design changes to our framework
-
+mark {
+  color: $secondary;
+  background-color: $gray-100;
+}
+b {
+  color: $darker;
+}
 .table thead th {
   border-bottom: 1px;
   font-weight: 600;
 }
 
-mark {
-  color: $secondary;
-  background-color: $gray-100;
-}
 
 .custom-control.custom-switch {
   .custom-control-input:checked:not(:disabled) ~ .custom-control-label::before {
@@ -47,5 +49,10 @@ mark {
 @each $font-sizes, $value in $font-sizes {
   .#{$font-sizes} {
     font-size: $value;
+  }
+}
+@each $color, $value in $theme-colors {
+  .shadow-#{$color} {
+    box-shadow: 0 10px 30px #{$value}40;
   }
 }

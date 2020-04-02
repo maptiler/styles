@@ -13,7 +13,7 @@ $gray-400: #E4E7F2 !default;  //maptiler
 $gray-500: #d8e0e7 !default;  //maptiler
 $gray-600: #CFD3E2 !default ; //maptiler
 $gray-700: #C1CFE4 !default;  //maptiler
-$gray-800:  #6B7C93 !default; //maptiler
+$gray-800: #6B7C93 !default; //maptiler
 $gray-900: #3E4048 !default; //maptiler
 $black:    #000 !default;
 
@@ -65,7 +65,6 @@ $colors: map-merge(
     "gray-light": $gray-400,
     "gray-dark":  $gray-800,
     "gray-darker":  $gray-900,
-
   ),
   $colors
 );
@@ -198,7 +197,7 @@ $spacers: map-merge(
     9: ($spacer * 9),
     10: ($spacer * 10),
     15: ($spacer * 1.5),
-
+  home-cards: ($spacer * -40),
 
   ),
   $spacers
@@ -209,6 +208,11 @@ $sizes: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $sizes: map-merge(
   (
+    300px: 300px,
+    350px: 350px,
+    400px: 400px,
+    450px: 450px,
+    500px: 500px,
     10: 10%,
     20: 20%,
     25: 25%,
@@ -219,6 +223,7 @@ $sizes: map-merge(
     70: 70%,
     75: 75%,
     80: 80%,
+    85: 85%,
     90: 90%,
     100: 100%,
     auto: auto
@@ -242,7 +247,7 @@ $body-color:                $gray-800 !default;
 $link-color:                              theme-color("primary") !default;
 $link-decoration:                         none !default;
 $link-hover-color:                        lighten($link-color, 8%) !default;
-$link-hover-decoration:                   underline !default;
+$link-hover-decoration:                   none !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
 
@@ -366,11 +371,11 @@ $h4-font-size:                $font-size-base * 1.125 !default;
 $h5-font-size:                $font-size-base * 1 !default;
 $h6-font-size:                $font-size-base * 0.75 !default;
 
-$headings-margin-bottom:      1rem !default;
+$headings-margin-bottom:      10px !default;
 $headings-font-family:        'Ubuntu', 'Open Sans', sans-serif !default;
 $headings-font-weight:        400 !default;
 $headings-line-height:        1.1 !default;
-$headings-color:              $secondary !default;
+$headings-color:              $secondary !important;
 
 $display1-size:               6rem !default;
 $display2-size:               5.5rem !default;
@@ -481,7 +486,7 @@ $btn-padding-y:               8px !default; /* 8/16 */
 $btn-padding-x:               16px !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               15px !default; /* 14/16 */
-$btn-line-height:             15px !default;
+$btn-line-height:             $line-height-sm !default;
 $btn-white-space:             nowrap !default; // Set to `nowrap` to prevent text wrapping
 
 $btn-padding-y-sm:            4px !default;
@@ -760,8 +765,8 @@ $zindex-tooltip:                    1070 !default;
 
 // Navs
 
-$nav-link-padding-y:                0.5rem !default; /* 10/16 */
-$nav-link-padding-x:                1rem !default; /* 20/16 */
+$nav-link-padding-y:                0.5rem !default;
+$nav-link-padding-x:                1rem !default;
 $nav-link-disabled-color:           $gray-600 !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
@@ -782,8 +787,8 @@ $nav-divider-margin-y:              $spacer / 2 !default;
 
 // Navbar
 
-$navbar-padding-y:                  15px !default;
-$navbar-padding-x:                  15px !default;
+$navbar-padding-y:                  50px !default;
+$navbar-padding-x:                  0 !default;
 
 $navbar-nav-link-padding-x:          1.25em !default;
 
@@ -805,9 +810,9 @@ $navbar-dark-disabled-color:        rgba($white, .25) !default;
 $navbar-dark-toggler-icon-bg:       none !default;
 $navbar-dark-toggler-border-color:  0 !default;
 
-$navbar-light-color:                rgba($black, .5) !default;
-$navbar-light-hover-color:          rgba($black, .7) !default;
-$navbar-light-active-color:         rgba($black, .9) !default;
+$navbar-light-color:                $white !default;
+$navbar-light-hover-color:          #eee !default;
+$navbar-light-active-color:         #eee !default;
 $navbar-light-disabled-color:       rgba($black, .3) !default;
 $navbar-light-toggler-icon-bg:      none !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
