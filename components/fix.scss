@@ -10,7 +10,14 @@ b {
   border-bottom: 1px;
   font-weight: 600;
 }
-
+.table.small{
+  td{
+    padding: 0.8rem;
+  }
+}
+.custom-select{
+  width: unset;
+}
 //  btn-stroke
 
 @each $color, $value in $theme-colors {
