@@ -34,26 +34,3 @@ b {
     }
   }
 }
-//skew
-
-.skewed {
-  -webkit-transform: skewY(-$skew);
-  transform: skewY(-$skew);
-}
-
-.unskewed {
-  -webkit-transform: skewY($skew);
-  transform: skewY($skew);
-}
-// text sizes
-
-@each $font-sizes, $value in $font-sizes {
-  .#{$font-sizes} {
-    font-size: $value;
-  }
-}
-@each $color, $value in $theme-colors {
-  .shadow-#{$color} {
-    box-shadow: 0 10px 30px #{$value}40;
-  }
-}
