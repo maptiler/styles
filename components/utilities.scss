@@ -1,5 +1,3 @@
-//skew
-
 .skewed {
   -webkit-transform: skewY(-$skew);
   transform: skewY(-$skew);
@@ -15,8 +13,10 @@
 .uderline{
   text-decoration: underline;
 }
-
-// text sizes
+.stick-left{left: 0;}
+.stick-right{right: 0;}
+.stick-top{top: 0;}
+.stick-bottom{bottom: 0;}
 
 @each $font-sizes, $value in $font-sizes {
   .#{$font-sizes} {
@@ -26,5 +26,10 @@
 @each $color, $value in $theme-colors {
   .shadow-#{$color} {
     box-shadow: 0 10px 30px #{$value}40;
+  }
+}
+@for $i from 1 through 10 {
+  .z-#{$i} {
+    z-index: $i;
   }
 }
