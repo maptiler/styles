@@ -21,6 +21,9 @@ iframe {
 .custom-select, .form-control{
   width: unset;
 }
+:focus {
+    outline: none;
+}
 //  btn-stroke
 
 @each $color, $value in $theme-colors {
