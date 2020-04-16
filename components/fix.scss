@@ -24,6 +24,13 @@ iframe {
 :focus {
     outline: none;
 }
+.nav-item{
+  user-select: none;
+  cursor: pointer;
+}
+.btn-lg{
+  font-weight: $btn-font-weight;
+}
 //  btn-stroke
 
 @each $color, $value in $theme-colors {
@@ -34,6 +41,7 @@ iframe {
 
     &:active,
     &:hover {
+      box-shadow: none!important;
       background-color: transparent !important;
       color: darken($value, 5%)!important;
       border: solid 2px darken($value, 5%)!important;
