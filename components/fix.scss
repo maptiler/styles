@@ -19,7 +19,9 @@ iframe {
   }
 }
 .custom-select, .form-control{
-  width: unset;
+  @include media-breakpoint-down(sm){
+    width: 100%;
+  }
 }
 :focus {
     outline: none;
@@ -30,6 +32,9 @@ iframe {
 }
 .btn-lg{
   font-weight: $btn-font-weight;
+}
+.navbar-toggler{
+  border: none;
 }
 //  btn-stroke
 
