@@ -99,7 +99,7 @@
 
     .leaflet-top.leaflet-right,
     .mapboxgl-ctrl-top-right {
-      top: 83px;
+      top: 80px;
       right: 10px;
     }
   }
@@ -139,7 +139,6 @@
 #map-language.fullscreen {
   width: auto;
   height: auto;
-  top: 130px;
   left: 20px;
   @include media-breakpoint-down(md) {
     padding: 7px !important;
@@ -280,4 +279,177 @@ span.map-switch-customize-text {
 
 #map-switch-darkmatter {
   background-image: url("/img/cloud/slider/dark-matter.png");
+}
+
+/* mapcontrols */
+.btn-3d{
+    position: absolute;
+    top: 200px !important;
+    right: 10px !important;
+    z-index: 1000;
+    a{
+      color: $white;
+      background: $primary;
+      padding: 4px;
+      border-radius: $border-radius;
+      font-weight: 700;
+    }
+}
+/* mapbox fix */
+
+.mapboxgl-ctrl {
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+.mapboxgl-ctrl-zoom-out{
+  border-top: 1px solid $light !important;
+  border-bottom: 1px solid $light !important;
+  &::before {
+    content: '-';
+    font-family: 'icons';
+    color: #333359;
+    position: relative;
+    top: -1px;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+}
+
+.mapboxgl-ctrl-zoom-in {
+  &::before {
+    content: '+';
+    font-family: 'icons';
+    color: #333359;
+    position: relative;
+    top: -1px;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
+
+.mapboxgl-ctrl-fullscreen {
+  &::before {
+    content: "e";
+    color: $secondary;
+    position: relative;
+    top: -1px;
+    font-size: 26px;
+    line-height: 1.2;
+  }
+}
+
+.mapboxgl-ctrl-shrink {
+  &::before {
+    content: "X";
+    color: $secondary;
+    position: relative;
+    top: -1px;
+    font-size: 26px;
+    line-height: 1.2;
+  }
+}
+
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-in {
+    background-image: none;
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-out {
+    background-image: none;
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-compass > .mapboxgl-ctrl-compass-arrow {
+
+    margin: 0;
+    background-image: url("/img/icon/compass.svg");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 70%;
+}
+.mapboxgl-ctrl-group > button:focus {
+    box-shadow: none;
+}
+// ol controls need to add 'mt-button' class in js
+.mt-button {
+  top: 80px;
+  right: 10px;
+  padding: 0 !important;
+}
+
+.mt-button-in {
+  height: 30px!important;
+  width: 30px!important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  background: white !important;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+  color: #333359 !important;
+  color: transparent !important;
+  &:hover {
+    background-color: darken(white, 5%)!important;
+}
+  &::before {
+    content: '+ ';
+    font-weight: 500;
+    font-family: 'icons';
+    color: #333359;
+    position: relative;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+.mt-button-out {
+  height: 30px!important;
+  width: 30px!important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  background: white !important;
+  color: #333359 !important;
+  border-top: 1px solid $light !important;
+  border-bottom: 1px solid $light !important;
+  color: transparent !important;
+  &:hover {
+    background-color: darken(white, 5%)!important;
+}
+ &::before {
+   content: '-';
+   font-weight: 500;
+   font-family: 'icons';
+   color: #333359;
+   position: relative;
+   font-size: 24px;
+   line-height: 1.25;
+ }
+}
+
+.mt-button-reset {
+  height: 30px!important;
+  width: 30px!important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  background: white !important;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  top: 60px;
+  position: relative;
+  color: transparent !important;
+  &:hover {
+    background-color: darken(white, 5%)!important;
+}
+
+  .ol-compass {
+    background: url("/img/icon/compass.svg");
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 70%;
+  }
+}
+.mapboxgl-ctrl-group > button + button {
+    border-top: none;
 }

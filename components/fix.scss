@@ -1,4 +1,7 @@
 //bootstrap design changes to our framework
+html{
+  scroll-behavior: smooth;
+}
 mark {
   color: $secondary;
   background-color: $gray-100;
@@ -25,6 +28,10 @@ iframe {
 }
 :focus {
     outline: none;
+}
+button:focus {
+  outline: none !important;
+
 }
 .nav-item{
   user-select: none;
