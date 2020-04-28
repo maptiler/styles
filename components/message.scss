@@ -1,0 +1,82 @@
+/* Messages */
+.flashes{
+  position: absolute;
+  width: $message-width;
+  left: 50%;
+  top: ($navbar-top-height);
+  margin-left: -220px;
+  z-index: 1000;
+  transition: all 0.5s ease-out;
+
+  &.right{
+    position: fixed;
+    left: auto;
+    right: 0;
+    margin-left: 0;
+
+    animation: 0.8s ease-out 0s 1 slideFromRight;
+  }
+
+  &.closed{
+    right: -440px;
+  }
+}
+
+.message-box{
+  position: absolute;
+}
+
+.message{
+  color: $message-color;
+  background-color: $message-bg;
+  padding: 25px;
+  font-weight: normal;
+  min-height: 70px;
+  position: relative;
+  padding-left: 95px;
+  margin: 10px 0;
+  font-size: 14px;
+  color: $text-color !important;
+  box-shadow: $message-shadow;
+
+  &::before{
+    content: 'i';
+    background-color: $color-info;
+    color: $message-bg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70px;
+    line-height: 70px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: $font-secondary;
+  }
+
+  &.success::before{
+    content: '1';
+    background-color: $color-success;
+    font-family: $font-icon;
+  }
+  &.warning::before{
+    content: '?';
+    background-color: $color-warning;
+  }
+  &.error::before{
+    content: '!';
+    background-color: $color-error;
+  }
+
+}
+
+.flashes.right .message {
+  right: 0;
+
+  &.closed {
+    transition: right 0.8s ease-out;
+    right: -440px;
+  }
+}
