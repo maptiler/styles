@@ -20,7 +20,9 @@
 
 @each $font-sizes, $value in $font-sizes {
   .#{$font-sizes} {
-    font-size: $value;
+    @media (min-width: 500px){
+      font-size: $value;
+    }
   }
 }
 @each $color, $value in $theme-colors {
@@ -28,7 +30,7 @@
     box-shadow: 0 10px 30px #{$value}40;
   }
 }
-@for $i from 1 through 10 {
+@for $i from -1 through 10 {
   .z-#{$i} {
     z-index: $i;
   }
