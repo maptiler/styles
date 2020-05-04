@@ -31,5 +31,10 @@
 
 }
 .collapse-small{
+  @include media-breakpoint-down(md){
   background: rgba(255,255,255,.9);
+  top: 3px;
+  position: relative;
+  padding-bottom: 10px;
+  }
 }
