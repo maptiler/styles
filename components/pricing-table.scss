@@ -7,13 +7,11 @@
     box-shadow: 0 6px 35px 0 rgba(0,0,0,0.1);
   }
   border-radius: 6px;
-  @media(max-width: 1124px){
-@include media-breakpoint-down(lg){
-margin-left: 8.3333%;
-width: 83.3333%;
-}
-
-}
+    @media(max-width: 1124px) {
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
   &.thin {
 
     @media(min-width: 1125px) {
