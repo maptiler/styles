@@ -31,7 +31,9 @@ iframe {
 }
 button:focus {
   outline: none !important;
-
+}
+.btn-link:active{
+box-shadow: none !important;
 }
 .nav-item{
   user-select: none;
@@ -42,6 +44,13 @@ button:focus {
 }
 .navbar-toggler{
   border: none;
+}
+p, h1, h2, h3, h4, h5, h6, {
+  margin-top: $headings-margin-bottom;
+  margin-bottom: $headings-margin-bottom;
+}
+ul, ol{
+  padding-left: 1.5rem;
 }
 //  btn-stroke
 
