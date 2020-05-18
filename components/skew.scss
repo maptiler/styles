@@ -1,0 +1,99 @@
+// mixin
+@mixin skew($pseudo) {
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: relative;
+    z-index: 1;
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+
+    #{$selector} {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 70%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+    }
+
+    @if $pseudo == 'before' {
+      #{$selector} {
+        top: 0;
+        transform: skewY($skew * -1);
+        transform-origin: 0 0;
+      }
+    }
+
+    @if $pseudo == 'after' {
+      #{$selector} {
+        bottom: 0;
+          transform: skewY($skew * -1);
+          transform-origin: 100%;
+      }
+    }
+
+    @if $pseudo == 'both' {
+      &:before {
+        top: 0;
+        transform: skewY($skew * -1);
+        transform-origin: 0 0;
+      }
+
+      &:after {
+        bottom: 0;
+          transform: skewY($skew * -1);
+          transform-origin: 100%;
+      }
+    }
+  }
+}
+
+//basic skew
+.skew-top {
+  @include skew(before);
+}
+.skew-bottom {
+  @include skew(after);
+}
+.skew-both {
+  @include skew(both);
+}
+//transparent middle fix on custom height
+.skew-top.skew-custom {
+  background-color: transparent !important;
+  &::before {
+    background-color: currentColor !important;
+    top: 50%;
+    height: 70%;
+  }
+}
+.skew-bottom.skew-custom {
+  background-color: transparent !important;
+  &::after {
+    background-color: currentColor !important;
+    bottom:50%;
+    height: 70%;
+  }
+}
+
+//skew height
+@for $i from 0 through 5 {
+  @each $color, $value in $theme-colors {
+    .skew-top.skew-top-#{$i*2}.text-#{$color}.skew-custom {
+      &::before {
+        top: ($i*20%);
+      }
+    }
+  }
+}
+@for $i from 0 through 5 {
+  @each $color, $value in $theme-colors {
+    .skew-bottom.skew-bottom-#{$i*2}.text-#{$color}.skew-custom {
+      &::after {
+        bottom: ($i*20%);
+      }
+    }
+  }
+}
+// custom skew: skew-custom(sets custom, default height 50%) skew-bottom(bottom skew) skew-bottom-2(bottom skew height 20% ) skew-top(top skew) skew-top-4(top skew height 40%) text-lighter(bg color, also changes text color!)

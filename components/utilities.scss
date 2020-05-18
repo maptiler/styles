@@ -1,12 +1,3 @@
-.skewed {
-  -webkit-transform: skewY(-$skew);
-  transform: skewY(-$skew);
-}
-
-.unskewed {
-  -webkit-transform: skewY($skew);
-  transform: skewY($skew);
-}
 .no-select{
   user-select: none;
 }
