@@ -97,3 +97,11 @@
   }
 }
 // custom skew: skew-custom(sets custom, default height 50%) skew-bottom(bottom skew) skew-bottom-2(bottom skew height 20% ) skew-top(top skew) skew-top-4(top skew height 40%) text-lighter(bg color, also changes text color!)
+.skewed{
+  -webkit-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+}
+.unskewed{
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+}
