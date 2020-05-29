@@ -16,7 +16,7 @@
 }
 .custom-control-label.equal {
   &::before{
-    background-color: #3174FF !important;
+    background-color: $primary !important;
   }
   &::after{
     background-color: #fff !important;;
