@@ -110,6 +110,7 @@
   span, label{
     user-select: none;
     cursor: pointer;
+    line-height: 1.4;
   }
   @include media-breakpoint-down(md) {
     font-size: 12px;
@@ -308,9 +309,8 @@ span.map-switch-customize-text {
     font-family: 'icons';
     color: #333359;
     position: relative;
-    top: -1px;
-    font-size: 24px;
-    line-height: 1.3;
+    font-size: 20px;
+    line-height: 1.4;
   }
   &:hover:before{
     color: $link-hover-color;
@@ -323,9 +323,8 @@ span.map-switch-customize-text {
     font-family: 'icons';
     color: #333359;
     position: relative;
-    top: -1px;
-    font-size: 24px;
-    line-height: 1.3;
+    font-size: 20px;
+    line-height: 1.5;
   }
   &:hover:before{
     color: $link-hover-color;
@@ -337,9 +336,8 @@ span.map-switch-customize-text {
     content: "e";
     color: $secondary;
     position: relative;
-    top: -1px;
-    font-size: 26px;
-    line-height: 1.2;
+    font-size: 20px;
+    line-height: 1.5;
   }
   &:hover:before{
     color: $link-hover-color;
@@ -351,9 +349,8 @@ span.map-switch-customize-text {
     content: "X";
     color: $secondary;
     position: relative;
-    top: -1px;
-    font-size: 26px;
-    line-height: 1.2;
+    font-size: 20px;
+    line-height: 1.5;
   }
   &:hover:before{
     color: $link-hover-color;
@@ -441,12 +438,11 @@ span.map-switch-customize-text {
 }
   &::before {
     content: '+ ';
-    font-weight: 500;
     font-family: 'icons';
     color: #333359;
     position: relative;
-    font-size: 24px;
-    line-height: 1.25;
+    font-size: 20px;
+    line-height: 1.5;
   }
   &:hover:before{
     color: $link-hover-color;
@@ -468,12 +464,11 @@ span.map-switch-customize-text {
 }
  &::before {
    content: '-';
-   font-weight: 500;
    font-family: 'icons';
    color: #333359;
    position: relative;
-   font-size: 24px;
-   line-height: 1.25;
+   font-size: 20px;
+   line-height: 1.4;
  }
  &:hover:before{
      color: $link-hover-color;
