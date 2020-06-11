@@ -266,8 +266,7 @@
     }
   }
   .hidden{
-    visibility: hidden !important;
-    opacity: 0;
+    display: none !important;
   }
   .tiles-desktop {
     img {
