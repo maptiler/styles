@@ -109,6 +109,11 @@
       background-repeat: no-repeat;
       background-size: 41px 42px;
     }
+    &.bg-server-light::before {
+      background: url('/img/icon/server.svg');
+      background-repeat: no-repeat;
+      background-size: 41px 42px;
+    }
   }
 }
 .tag-hiring {
