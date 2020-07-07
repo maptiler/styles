@@ -1,24 +1,19 @@
 .plans {
+  line-height: 0;
+  border-radius: 6px;
   .invisible {
     visibility: hidden;
   }
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     background: #fff;
     box-shadow: 0 6px 35px 0 rgba(0,0,0,0.1);
   }
-  border-radius: 6px;
-    @media(max-width: 1124px) {
-      @include media-breakpoint-down(lg) {
-        width: 100%;
-      }
-    }
-  &.thin {
 
+  &.thin {
     @media(min-width: 1125px) {
       .plans-card:first-child {
         width: 25% !important;
       }
-
       .plans-card {
         width: 15% !important;
       }
@@ -26,11 +21,12 @@
   }
 
   .plans-card {
-    width: 25%;
+    width: 20%;
     display: inline-block;
-    @media(max-width: 1124px) {
+    @media (max-width: 1200px) {
       margin: 5px 0;
       border-radius: 6px;
+      padding: 0 20px;
       box-shadow: 0 6px 35px 0 rgba(0,0,0,0.1);
       width: 100%;
       background: #fff;
@@ -39,7 +35,7 @@
       }
     }
   }
-  @media(max-width: 1124px) {
+  @media (max-width: 1200px) {
     div.plans-card:first-child {
       display: none;
     }
@@ -49,14 +45,9 @@
       padding-left: 15px !important;
     }
   }
-  @media(min-width: 1125px) {
-    td:first-child {
-      display: none;
-    }
-  }
 
-  .mobile-br {
-    @media(min-width: 1124px) {
+  @include media-breakpoint-up(xl) {
+    td:first-child {
       display: none;
     }
   }
@@ -65,25 +56,26 @@
     width: 100%;
     td {
       border-bottom: 1px solid $light;
-      line-height: 1;
-      height: 66px;
-      padding: 16px 24px;
-      @media(max-width: 1124px) {
-        &:not(.h3){
-          height: 58px;
-          padding: 5px;
-          font-size: 14px;
-        }
+      line-height: 1.2;
+      font-size: 14px;
+      height: 64px;
       }
     }
-
-    td:not(.icon) {
-      color: $body-color;
-    }
   }
-
-  .icon {
-    font-weight: bold;
-    font-size: 24px;
+.head-recommended {
+  @media (min-width: 1200px) {
+    &:before {
+      content: 'Recommended';
+      position: absolute;
+      line-height: 1.5;
+      z-index: 2;
+      background: $primary;
+      color: white;
+      top: -25px;
+      display: block;
+      padding: 10px 56px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
   }
 }
