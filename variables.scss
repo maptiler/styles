@@ -6,7 +6,7 @@
 // Color system
 
 $white:    #fff !default;
-$gray-100: #F6F7FD !default; //maptiler
+$gray-100: #F5F8FF !default; //maptiler
 $gray-200: #e9ecef !default;
 $gray-300: #e7e8f0 !default;  // maptiler
 $gray-400: #E4E7F2 !default;  //maptiler
@@ -1213,6 +1213,29 @@ $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 
 /*  --maptiler components--  */
 $btn-text-transform: uppercase;
+$skew: 5deg;
+
+$font-sizes: () !default;
+$font-sizes: map-merge(
+  (
+  'smaller': 75%,
+  'small': 88%,
+  'big': 112%,
+  'bigger': 125%,
+  ),
+  $font-sizes
+);
+
+$transform-scale: () !default;
+$transform-scale: map-merge(
+  (
+  'o5': .5,
+  'o75': .75,
+  '125': 1.25,
+  '150': 1.25,
+  ),
+  $transform-scale
+);
 
 $footer-color: #868d97;
 $footer-color-bg: transparent;
@@ -1235,8 +1258,6 @@ $popup-width: 400px;
 $popup-padding: 25px;
 $popup-radius: 6px;
 
-$skew: 5deg;
-
 $gradient-cloud : linear-gradient(90deg, #140F92 1.04%, #2340B7 49.48%, #38B6FB 100%);
 $gradient-desktop : linear-gradient(90deg, #453279 1.04%, #5D399B 49.48%, #997EC4 100%);
 $gradient-mobile : linear-gradient(90deg, #004C73 1.04%, #00D5DF 100%);
@@ -1253,15 +1274,4 @@ $topbars: map-merge(
   'topbar-server': $gradient-server,
   ),
   $topbars
-);
-
-$font-sizes: () !default;
-$font-sizes: map-merge(
-  (
-  'smaller': 75%,
-  'small': 88%,
-  'big': 112%,
-  'bigger': 125%,
-  ),
-  $font-sizes
 );
