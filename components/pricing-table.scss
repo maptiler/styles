@@ -10,7 +10,7 @@
   }
 
   &.thin {
-    @media(min-width: 1125px) {
+    @media(min-width: 1200px) {
       .plans-card:first-child {
         width: 25% !important;
       }
