@@ -1,0 +1,70 @@
+.video-player {
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: url("/img/icon/play.svg");
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    text-align: center;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    top: calc(50% - 42px);
+  }
+
+  &:after {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: $secondary;
+    background: white;
+    transition: 0.35s;
+  }
+
+  &:hover {
+    img {
+      filter: blur(2px);
+      transition: 0.35s;
+    }
+
+    &:after {
+      height: 35px;
+      padding: 5px 8px;
+      transition: 0.25s;
+    }
+  }
+}
+
+.play-video {
+  &:before {
+    content: url("/img/icon/close.svg");
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+
+.video-autoplay {
+  padding-bottom: 56.25%;
+  pointer-events: none;
+}
