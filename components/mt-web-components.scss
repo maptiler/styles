@@ -78,7 +78,7 @@
       content: '';
       width: 45px;
       height: 45px;
-      background: url('/img/icon/cloud-mobile-nav.svg');
+      background: url('#{$nav-icon-path}cloud-nav-icon.svg');
       position: absolute;
       background-repeat: no-repeat;
       background-size: 40px 40px;
@@ -86,30 +86,30 @@
     }
 
     &.desktop::before {
-      background: url('/img/icon/desktop-mobile-nav.svg');
+      background: url('#{$nav-icon-path}desktop-nav-icon.svg');
       background-repeat: no-repeat;
       background-size: 40px 40px;
     }
 
     &.engine::before {
-      background: url('/img/icon/engine-mobile-nav.svg');
+      background: url('#{$nav-icon-path}engine-nav-icon.svg');
       background-repeat: no-repeat;
       background-size: 40px 40px;
     }
 
     &.mobile::before {
-      background: url('/img/icon/mobile-mobile-nav.svg');
+      background: url('#{$nav-icon-path}mobile-nav-icon.svg');
       background-repeat: no-repeat;
       background-size: 40px 40px;
     }
 
     &.cluster::before {
-      background: url('/img/icon/cluster-mobile-nav.svg');
+      background: url('#{$nav-icon-path}cluster-nav-icon.svg');
       background-repeat: no-repeat;
       background-size: 41px 42px;
     }
     &.server::before {
-      background: url('/img/icon/server-mobile-nav.svg');
+      background: url('#{$nav-icon-path}server-nav-icon.svg');
       background-repeat: no-repeat;
       background-size: 41px 42px;
     }
