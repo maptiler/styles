@@ -68,3 +68,16 @@
   padding-bottom: 56.25%;
   pointer-events: none;
 }
+.video-container{
+  max-width: 1200px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+  z-index: 4;
+  video{
+    width: 100%;
+  }
+}
