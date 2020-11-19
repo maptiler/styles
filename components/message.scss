@@ -40,31 +40,28 @@
   box-shadow: $message-shadow;
 
   &::before{
-    content: 'i';
+    content: url("#{$messages-icon}check-white.svg");
     background-color: $blue;
-    color: $message-bg;
+    color: white;
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
-    height: 100%;
+    padding: 26px 0;
     width: 70px;
-    line-height: 70px;
-    vertical-align: middle;
     text-align: center;
-    font-size: 32px;
-    font-weight: 600;
   }
 
   &.success::before{
-    content: 'Y';
+    content: url("#{$messages-icon}check-white.svg");
     background-color: $green;
   }
   &.warning::before{
-    content: '?';
+    content: url("#{$messages-icon}info_outline-white.svg");
     background-color: $orange;
   }
   &.error::before{
-    content: '!';
+    content: url("#{$messages-icon}clear-white.svg");
     background-color: $red;
   }
 
