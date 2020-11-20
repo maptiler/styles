@@ -6,6 +6,9 @@ mark {
   color: $secondary;
   background-color: $gray-100;
 }
+textarea{
+  resize: auto;
+}
 b {
   color: $darker;
 }

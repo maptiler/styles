@@ -44,8 +44,8 @@
     background-color: $blue;
     color: white;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    height: 100%;
     left: 0;
     padding: 26px 0;
     width: 70px;
@@ -53,18 +53,17 @@
   }
 
   &.success::before{
-    content: url("#{$messages-icon}check-white.svg");
-    background-color: $green;
+    content: '';
+    background: url("#{$messages-icon}/check-white.svg") no-repeat center, #90cb90;
   }
   &.warning::before{
-    content: url("#{$messages-icon}info_outline-white.svg");
-    background-color: $orange;
+    content: '';
+    background: url("#{$messages-icon}/info_outline-white.svg") no-repeat center, $orange;
   }
   &.error::before{
-    content: url("#{$messages-icon}clear-white.svg");
-    background-color: $red;
+    content: '';
+    background: url("#{$messages-icon}/clear-white.svg") no-repeat center, $red;
   }
-
 }
 
 .flashes.right .message {
