@@ -52,13 +52,20 @@
     }
   }
 
-  .plans-table {
-    width: 100%;
-    td {
-      border-bottom: 1px solid $light;
-      line-height: 1.2;
-      font-size: 14px;
-      height: 64px;
+    .plans-table {
+      width: 100%;
+      tbody{
+        tr:last-child{
+          td:last-child{
+            border-bottom: none;
+          }
+        }
+      }
+      td {
+        border-bottom: 1px solid $light;
+        line-height: 1.2;
+        font-size: 14px;
+        height: 64px;
       }
     }
   }
@@ -67,7 +74,7 @@
     &:before {
       content: 'Recommended';
       position: absolute;
-      line-height: 1.5;
+      line-height: 1.8;
       z-index: 2;
       background: $primary;
       color: white;
@@ -77,9 +84,14 @@
       border-top-left-radius: 6px;
       border-top-right-radius: 6px;
     }
-  &.desktop:before{
-    background: $desktop;
-    padding: 10px 29px;
-  }
+
+    &.desktop:before {
+      background: $desktop;
+      padding: 10px 29px;
+    }
+
+    &.data:before {
+      background: $data;
+    }
   }
 }
