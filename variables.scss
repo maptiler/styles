@@ -1285,6 +1285,10 @@ $gradient-cluster: linear-gradient(90deg, #AF3213 1.04%, #E68236 49.48%, #FFC74A
 $gradient-server:  linear-gradient(90deg, #8D0020 1.04%, #E12E39 49.48%, #FF7B68 100%);
 $gradient-gray: linear-gradient(180deg, rgba(49, 112, 254, 0.05) 7.92%, rgba(49, 112, 254, 0) 100%);
 
+$mt-aside-width: 300px;
+$mt-aside-width-sm: 90px;
+$topbar-height: 75px;
+
 $topbars: () !default;
 $topbars: map-merge(
   (
