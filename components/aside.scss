@@ -2,7 +2,6 @@
   display: flex;
   height: 100%;
   min-height: 100vh;
-  padding-top: topbar-height;
 }
 
 .mt-section {
@@ -20,8 +19,10 @@
 .mt-content {
   max-width: 1000px;
   padding: 30px;
+  padding-top: $topbar-height;
   @include media-breakpoint-down(md) {
     padding: 0 10px;
+    padding-top: $topbar-height;
   }
 
   p:first-child {
@@ -33,14 +34,12 @@
   height: 100%;
   min-height: 100vh;
   width: $mt-aside-width;
-  padding: $topbar-height 0;
   position: fixed;
   overflow: auto;
-  padding-bottom: $topbar-height;
+  padding-top: $topbar-height;
 
   @include media-breakpoint-down(md) {
     width: $mt-aside-width-sm;
-    padding: 0;
     text-align: center;
   }
 
