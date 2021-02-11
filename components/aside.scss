@@ -33,7 +33,7 @@
   height: 100%;
   min-height: 100vh;
   width: $mt-aside-width;
-  padding: 30px 0;
+  padding: $topbar-height 0;
   position: fixed;
   overflow: auto;
   padding-bottom: $topbar-height;
@@ -55,18 +55,21 @@
     svg{margin-right: 20px;}
 
     @include media-breakpoint-down(md) {
-      height: 90px;
+
+      padding: 5px 10px;
       font-size: 10px;
-      padding: 20px 10px;
       margin: 0 0 6px 0;
       text-align: center;
       flex-direction: column;
-    svg{margin: 0}
+      &:not(.sub){
+        height: 90px;
+        padding: 20px 10px;
+      }
+      svg{margin: 0}
     }
 
     &:hover {
       color: darken($primary,8%)!important;
-
       svg {
         color: darken($primary,8%)!important;
       }
