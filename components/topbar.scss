@@ -4,7 +4,7 @@
     height: $topbar-height;
     background: $value;
     width: 100%;
-    z-index: 2;
+    z-index: $zindex-fixed;
 
     img, svg {
       height: 100%;

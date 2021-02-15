@@ -229,23 +229,23 @@
   border-top: 1px solid $light !important;
   border-bottom: 1px solid $light !important;
   &::before {
-    content: url(#{$map-control-out}.svg);
+    content: url('#{$map-control-out}.svg');
     position: relative;
     top: 3px;
   }
   &:hover:before{
-    content: url(#{$map-control-out}-hover.svg);
+    content: url('#{$map-control-out}-hover.svg');
   }
 }
 
 .mapboxgl-ctrl-zoom-in {
   &::before {
-    content: url(#{$map-control-in}.svg);
+    content: url('#{$map-control-in}.svg');
     position: relative;
     top: 3px;
   }
   &:hover:before{
-    content: url(#{$map-control-in}-hover.svg);
+    content: url('#{$map-control-in}-hover.svg');
   }
 }
 
