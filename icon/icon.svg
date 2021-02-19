@@ -1,3 +1,8 @@
+<!--
+Quick access svgs from icomoonn updated manually, changes colors depending to css color:;
+use:
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><use href="/styles/styles/icon.svg#_youriconID_"></use></svg>
+-->
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <symbol id="repeat" viewBox="0 0 24 24">

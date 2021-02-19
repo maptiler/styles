@@ -1300,11 +1300,12 @@ $topbars: map-merge(
   ),
   $topbars
 );
+// icons used in scss components or navigations and additional icons all in icons/extra/
 
-$map-control-in: '/img/icon/add';
-$map-control-out: '/img/icon/remove';
-$map-control-compass: '/img/icon/compass';
-$icon-loupe: '/img/icon/search';
-$nav-icon-path: '/img/icon/';
-$product-switch-path: '/img/icon/';
-$messages-icon: '/img/icon/'; //width="35" height="35" viewBox="1 10 22 2" fill='white'
+$map-control-in: '/icon/extra/';
+$map-control-out: '/icon/extra/';
+$map-control-compass: '/icon/extra/';
+$nav-icon: '/icon/extra/';
+$loupe-icon: '/icon/extra/';
+$messages-icon: '/icon/extra/';
+$player-icon: '/icon/extra/';

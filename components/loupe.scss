@@ -2,9 +2,8 @@
   display: block;
   position: relative;
   &:before {
-      content: url(#{$icon-loupe}-white.svg);
+      content: url(#{$loupe-icon}search-white.svg);
       background: rgba(90, 89, 89, 0.55);
-      background: white;
       position: absolute;
       padding: 10px 15px;
       left: 50%;
@@ -13,7 +12,7 @@
       transform: translate(-50%, -50%);
   }
   &.white:before{
-    content: url(#{$icon-loupe}.svg);
+    content: url(#{$loupe-icon}search.svg);
     background: white;
   }
 }
