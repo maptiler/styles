@@ -1,0 +1,150 @@
+<div class="container px-0 {% if page.style contains 'default' or page.style contains 'home' %}{% else %}border-bottom border-light{% endif %}">
+  <nav id="Navbar" class="navbar navbar-expand-md px-gutter pt-md-4 pb-md-1 w-100
+                          {% if page.header == 'darklight' or page.header == 'light' %} navbar-light
+                          {% else %} navbar-dark{% endif %}">
+
+      {% if page.style contains 'desktop' or page.style contains 'cloud'
+            or page.style contains 'mobile' or page.style contains 'cluster'
+            or page.style contains 'engine' or page.style contains 'server'
+            or page.style contains 'data' or page.style contains 'terrain' %}
+      <a class="navbar-brand product-brand adaptive-brand" href="{{ '/' | relative_url }}">
+      <svg width="347" height="57">
+        <use href="/logo/maptiler-logo-adaptive-{{ page.style | replace: " svg","" }}.svg#{{ page.style | replace: " svg","" }}"></use>
+      </svg>
+      </a>
+      {% elsif page.header == 'darklight' %}
+      <a class="navbar-brand product-brand adaptive-brand" href="{{ '/' | relative_url }}">
+      <svg width="318" height="55">
+        <use href="/logo/maptiler-logo-adaptive.svg#maptilerLogo"></use>
+      </svg>
+      </a>
+      {% elsif page.header == 'light' %}
+      <a class="navbar-brand product-brand" href="{{ '/' | relative_url }}">
+      <svg width="318" height="55">
+        <use href="/logo/maptiler-logo-adaptive.svg#maptilerLogo"></use>
+      </svg>
+      </a>
+      {% else %}
+      <a class="navbar-brand product-brand" href="{{ '/' | relative_url }}">
+      <svg width="318" height="55">
+        <use href="/logo/maptiler-logo-adaptive.svg#maptilerLogo"></use>
+      </svg>
+      </a>
+      {% endif %}
+
+      <button onclick="changeThemeColor()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+          <use href="/icon/icon.svg#menu"></use>
+        </svg>
+      </button>
+
+      <div class="collapse navbar-collapse navbar-mobile justify-content-end font-weight-bold" id="Mobilenav">
+        <div class="navbar-nav flex-sm-row text-dark">
+          <div class="d-none d-md-flex">
+            <a tabindex="0" id="subnav-products-btn"
+            class="nav-item nav-link mx-1rem d-none d-md-block
+                  {% if page.url contains '/desktop/' or page.url contains 'pricing' or
+                        page.url contains 'download' or page.url contains '/cloud/' or
+                        page.url contains '/demo/' or page.url contains '/geoeditor/' or
+                        page.url contains '/mobile/' or page.url contains '/engine/' or
+                        page.url contains '/server/' or page.url contains '/cluster/'
+                   %}active{% endif %}">Products</a>
+            <div tabindex="1" class="subnav-products  text-left">
+                <div>
+                  <a class="cloud" href="/cloud/">
+                    <h4 class="text-cloud">Cloud</h4>
+                    Map hosting service
+                  </a>
+                  <a class="desktop" href="/desktop/">
+                    <h4 class="text-desktop">Desktop</h4>
+                    Create zoomable maps
+                  </a>
+                  <a class="engine" href="/engine/">
+                    <h4 class="text-engine">Engine</h4>
+                    Fast automated map processing
+                  </a>
+                </div>
+                <div>
+                  <a class="data" href="/data/">
+                    <h4 class="text-data">Data</h4>
+                    Global geodata for self-hosting
+                  </a>
+                  <a class="server" href="/server/">
+                    <h4 class="text-server">Server</h4>
+                    Map server for self-hosting
+                  </a>
+                  <a class="mobile" href="/mobile/">
+                    <h4 class="text-mobile">Mobile</h4>
+                    Phone &amp; tablet mapping app
+                  </a>
+                </div>
+            </div>
+            <a class="nav-item nav-link mx-md-1rem {% if page.url contains 'support' %}active{% endif %}" href="/support/">Support</a>
+            <a class="nav-item nav-link mx-md-1rem {% if page.url contains 'news' %}active{% endif %}" href="/news/">News</a>
+          </div>
+
+          <div class="d-flex flex-wrap d-md-none px-gutter">
+            <div class="col-12 d-flex justify-content-between px-0 mb-1 border-bottom border-light">
+                <a class="navbar-brand product-brand text-darker" href="{{ '/' | relative_url }}">
+                  <svg width="318" height="55">
+                    <use href="/logo/maptiler-logo-adaptive.svg#maptilerLogo"></use>
+                  </svg>
+                </a>
+              <button onclick="changeThemeColor()" class="navbar-toggler text-darker" type="button" data-toggle="collapse" data-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                  <use href="/icon/icon.svg#clear"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="col-6 text-left pb-3">
+              <a class="nav-item nav-link py-gutter" href="/cloud/">
+                <img loading="lazy" width="35" height="35" src="/icon/extra/cloud-icon.svg" alt="Icon"><span class="pl-2 text-cloud font-weight-normal">Cloud</span>
+              </a>
+              <a class="nav-item nav-link py-gutter" href="https://www.maptiler.com/data/">
+                <img loading="lazy" width="35" height="35" src="/icon/extra/data-icon.svg" alt="Icon"><span class="pl-2 text-data font-weight-normal">Data</span>
+              </a>
+              <a class="nav-item nav-link py-gutter" href="/server/">
+                <img loading="lazy" width="35" height="35" src="/icon/extra/server-icon.svg" alt="Icon"><span class="pl-2 text-server font-weight-normal">Server</span>
+              </a>
+              <a class="nav-item nav-link py-gutter" href="/desktop/">
+                <img loading="lazy" width="35" height="35" src="/icon/extra/desktop-icon.svg" alt="Icon"><span class="pl-2 text-desktop font-weight-normal">Desktop</span>
+              </a>
+              <a class="nav-item nav-link py-gutter" href="/engine/">
+                <img loading="lazy" width="35" height="35" src="/icon/extra/engine-icon.svg" alt="Icon"><span class="pl-2 text-engine font-weight-normal">Engine</span>
+              </a>
+              <a class="nav-item nav-link py-gutter" href="/mobile/">
+                <img loading="lazy" width="35" height="35" src="/icon/extra/mobile-icon.svg" alt="Icon"><span class="pl-2 text-mobile font-weight-normal">Mobile</span>
+              </a>
+            </div>
+
+            <div class="col-6 text-right">
+              <a class="d-block nav-item nav-link py-gutter text-dark font-weight-normal" href="/news/">
+                 News
+               </a>
+              <a class="d-block nav-item nav-link py-gutter text-dark font-weight-normal" href="/support/">
+                Support
+              </a>
+              <a class="d-block nav-item nav-link py-gutter text-dark font-weight-normal" href="/team/">
+                Team
+              </a>
+              <a class="d-block nav-item nav-link py-gutter text-dark font-weight-normal" href="/press/">
+                Press
+              </a>
+              <a class="d-block nav-item nav-link py-gutter text-dark font-weight-normal" href="/jobs/">
+                Jobs
+              </a>
+            </div>
+            <div class="col-12 text-center border-top border-light">
+              <a class="btn btn-primary w-90 my-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {% if page.style contains 'data' %}
+      <a class="btn btn-primary d-none d-md-block ml-3" href="https://data.maptiler.com/my-extracts/">My Data</a>
+      {% else %}
+      <a class="btn btn-primary d-none d-md-block ml-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
+      {% endif %}
+  </nav>
+</div>

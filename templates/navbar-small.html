@@ -1,0 +1,110 @@
+  <nav id="Navbar" class="navbar navbar-expand-md px-gutter pt-md-4 pb-md-1 w-100 {% if page.header == 'small' %} navbar-dark{% endif %}{% if page.header == 'darklight' %} navbar-light{% elsif page.header != nil %} navbar-{{ page.header }}{% else %} navbar-dark{% endif %}">
+    <div class="container pr-gutter">
+        <a class="navbar-brand product-brand text-darker ml-gutter" href="{{ '/' | relative_url }}">
+          <svg height="46"><use href="/styles/styles/logo/maptiler-logo-adaptive-small.svg#maptilerLogo"></use></svg>
+        </a>
+
+      <button onclick="changeThemeColor()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+          <use href="/styles/styles/icon/icon.svg#menu"></use>
+        </svg>
+      </button>
+
+      <div class="collapse navbar-collapse navbar-mobile justify-content-end font-weight-bold" id="Mobilenav">
+        <div class="navbar-nav flex-sm-row text-dark">
+          <div class="d-none d-md-flex">
+            <a tabindex="0"  id="subnav-products-btn" class="nav-item nav-link mx-1rem d-none d-md-block">Products</a>
+            <div tabindex="1" class="subnav-products  text-left" >
+                <div>
+                  <a class="cloud" href="/cloud/">
+                    <h4 class="text-cloud">Cloud</h4>
+                    Map hosting service
+                  </a>
+                  <a class="desktop" href="/desktop/">
+                    <h4 class="text-desktop">Desktop</h4>
+                    Create zoomable maps
+                  </a>
+                  <a class="engine" href="/engine/">
+                    <h4 class="text-engine">Engine</h4>
+                    Fast automated map processing
+                  </a>
+                </div>
+                <div>
+                  <a class="data" href="/data/">
+                    <h4 class="text-data">Data</h4>
+                    Global geodata for self-hosting
+                  </a>
+                  <a class="server" href="/server/">
+                    <h4 class="text-server">Server</h4>
+                    Map server for self-hosting
+                  </a>
+                  <a class="mobile" href="/mobile/">
+                    <h4 class="text-mobile">Mobile</h4>
+                    Phone &amp; tablet mapping app
+                  </a>
+                </div>
+            </div>
+            <a class="nav-item nav-link mx-md-1rem" href="/support/">Support</a>
+            <a class="nav-item nav-link mx-md-1rem" href="/news/">News</a>
+          </div>
+
+          <div class="d-flex flex-wrap d-md-none px-gutter">
+            <div class="col-12 d-flex justify-content-between px-0 mb-1 border-bottom border-light">
+              <a class="navbar-brand product-brand text-darker" href="{{ '/' | relative_url }}">
+                <svg height="46"><use href="/styles/styles/logo/maptiler-logo-adaptive-small.svg#maptilerLogo"></use></svg>
+              </a>
+              <button onclick="changeThemeColor()" class="navbar-toggler text-darker" type="button" data-toggle="collapse" data-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                  <use href="/styles/styles/icon/icon.svg#clear"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="col-6 text-left pb-3">
+              <a class="nav-item nav-link py-gutter" href="/cloud/">
+                <img loading="lazy" width="35" height="35" src="/styles/styles/icon/extra/cloud-icon.svg" alt="Icon"><span class="pl-2 text-cloud font-weight-normal">Cloud</span>
+              </a>
+              <a class="nav-item nav-link py-gutter" href="https://www.maptiler.com/data/">
+                <img loading="lazy" width="35" height="35" src="/styles/styles/icon/extra/data-icon.svg" alt="Icon"><span class="pl-2 text-data font-weight-normal">Data</span>
+              </a>
+              <a class="nav-item nav-link py-gutter" href="/server/">
+                <img loading="lazy" width="35" height="35" src="/styles/styles/icon/extra/server-icon.svg" alt="Icon"><span class="pl-2 text-server font-weight-normal">Server</span>
+              </a>
+              <a class="nav-item nav-link py-gutter" href="/desktop/">
+                <img loading="lazy" width="35" height="35" src="/styles/styles/icon/extra/desktop-icon.svg" alt="Icon"><span class="pl-2 text-desktop font-weight-normal">Desktop</span>
+              </a>
+              <a class="nav-item nav-link py-gutter" href="/engine/">
+                <img loading="lazy" width="35" height="35" src="/styles/styles/icon/extra/engine-icon.svg" alt="Icon"><span class="pl-2 text-engine font-weight-normal">Engine</span>
+              </a>
+              <a class="nav-item nav-link py-gutter" href="/mobile/">
+                <img loading="lazy" width="35" height="35" src="/styles/styles/icon/extra/mobile-icon.svg" alt="Icon"><span class="pl-2 text-mobile font-weight-normal">Mobile</span>
+              </a>
+            </div>
+
+            <div class="col-6 text-right">
+              <a class="d-block nav-item nav-link py-gutter text-dark font-weight-normal" href="/news/">
+                 News
+               </a>
+              <a class="d-block nav-item nav-link py-gutter text-dark font-weight-normal" href="/support/">
+                Support
+              </a>
+              <a class="d-block nav-item nav-link py-gutter text-dark font-weight-normal" href="/team/">
+                Team
+              </a>
+              <a class="d-block nav-item nav-link py-gutter text-dark font-weight-normal" href="/press/">
+                Press
+              </a>
+              <a class="d-block nav-item nav-link py-gutter text-dark font-weight-normal" href="/jobs/">
+                Jobs
+              </a>
+            </div>
+            <div class="col-12 text-center border-top border-light">
+              <a class="btn btn-primary w-90 my-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <a class="btn btn-primary d-none d-md-block ml-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
+    </div>
+  </nav>

@@ -1,0 +1,16 @@
+<div class="product-banner">
+  <picture>
+    {% if page.style contains 'svg' %}
+    <img loading="eager" class="product-banner-img"
+         src="/img/rectangles/banners/{{ page.style | replace: " ", "-" | replace: "svg", "" }}banner.svg"
+         alt="Banner image">
+    {% else %}
+    <source type="image/webp"
+            srcset="/img/rectangles/banners/{{ page.style | replace: " ", "-" }}-banner.webp">
+    <img loading="eager"
+         class="product-banner-img"
+         src="/img/rectangles/banners/{{ page.style | replace: " ", "-" }}-banner.png"
+         alt="Banner image">
+    {% endif %}
+  </picture>
+</div>

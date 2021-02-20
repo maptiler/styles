@@ -1,0 +1,47 @@
+{% if include.autoplay == "true" %}
+<div class="video-autoplay mw-100 overflow-hidden position-relative h-0 rounded shadow">
+  <iframe class="position-absolute stick-top stick-left w-100 h-100"
+  src="https://www.youtube.com/embed/{{ include.video }}?autoplay=1&loop=1&controls=0&mute=1&playlist={{ include.video }}"
+   allowfullscreen autoplay></iframe>
+</div>
+{% elsif include.local == "true" %}
+<div class="overflow-hidden rounded shadow">
+  <a role="button" class="video-player" data-title="{{ include.title }}"
+  onclick="switchClass('{{ include.title | replace: ' ', '' }}','hidden');
+  document.getElementById('{{ include.title | replace: ' ', '' }}Frame').play()">
+
+    <img loading="lazy" class="w-100 h-auto" src="{{ include.video }}.png" alt="Video thumbnail">
+  </a>
+</div>
+<div id="{{ include.title | replace: ' ', '' }}" class="play-video hidden">
+    <a class="position-absolute h-100 w-100 z-1" onclick="switchClass('{{ include.title | replace: ' ', '' }}','hidden');
+    document.getElementById('{{ include.title | replace: ' ', '' }}Frame').pause()" role="button"></a>
+     <div class="video-container">
+       <video id="{{ include.title | replace: ' ', '' }}Frame"
+       class="rounded shadow" controls src="{{ include.video }}.mp4" poster='{{ include.video }}.png'>
+       </video>
+     </div>
+  </div>
+{% else %}
+<div class="overflow-hidden rounded shadow">
+  <a role="button" class="video-player" data-title="{{ include.title }}" onclick="switchClass('{{ include.video }}','hidden')">
+    <img loading="lazy" class="w-100 h-auto"
+    src="https://i.ytimg.com/vi/{{ include.video }}/{% if include.thumbnail == 'hq' %}hqdefault{% elsif include.thumbnail == 'mq' %}mqdefault{% else %}maxresdefault{% endif %}.jpg"
+    alt="Video thumbnail">
+  </a>
+</div>
+<div id="{{ include.video }}" class="play-video hidden">
+  <div tabindex="0" class="position-relative z-6 h-100" onclick="switchClass('{{ include.video }}','hidden');
+                var iframe = document.getElementById('{{ include.video }}Frame'); var iframeSrc = iframe.src; iframe.src = iframeSrc;">
+    <div class="container h-100">
+      <div class="row justify-content-center h-100 align-items-center">
+        <div class="col-sm-10">
+          <iframe id="{{ include.video }}Frame" height="600" width="200" class="rounded shadow w-100"
+          src="https://www.youtube.com/embed/{{ include.video }}?rel=0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
