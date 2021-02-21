@@ -143,7 +143,7 @@ $theme-colors: map-merge(
   "server-s":      $server-s,
   "server-light":  $server-light,
   "data":          $data,
-  "data-light":          $data-light,
+  "data-light":    $data-light,
   ),
   $theme-colors
 );
@@ -327,7 +327,7 @@ $border-color:                $gray-300 !default;
 
 $border-radius:               .375rem !default;
 $border-radius-lg:            .375rem !default;
-$border-radius-sm:            .375rem !default;
+$border-radius-sm:            3px !default;
 
 $rounded-pill:                50rem !default;
 
@@ -784,14 +784,14 @@ $zindex-tooltip:                    1070 !default;
 // Navs
 
 $nav-link-padding-y:                0.5rem !default;
-$nav-link-padding-x:                0 !default;
+$nav-link-padding-x:                1rem !default;
 $nav-link-disabled-color:           $gray-600 !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
 $nav-tabs-border-width:             $border-width !default;
 $nav-tabs-border-radius:            $border-radius !default;
 $nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:        $gray-700 !default;
+$nav-tabs-link-active-color:        $primary !default;
 $nav-tabs-link-active-bg:           $body-bg !default;
 $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 
@@ -845,31 +845,31 @@ $navbar-dark-brand-hover-color:           $navbar-dark-active-color !default;
 //
 // Dropdown menu container and contents.
 
-$dropdown-min-width:                10rem !default;
-$dropdown-padding-y:                .5rem !default;
+$dropdown-min-width:                130px !default;
+$dropdown-padding-y:                .25rem !default;
 $dropdown-spacer:                   .125rem !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    $body-color !default;
 $dropdown-bg:                       $white !default;
-$dropdown-border-color:             rgba($black, .15) !default;
+$dropdown-border-color:             transparent !default;
 $dropdown-border-radius:            $border-radius !default;
-$dropdown-border-width:             $border-width !default;
+$dropdown-border-width:             0 !default;
 $dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) !default;
 $dropdown-divider-bg:               $gray-200 !default;
 $dropdown-divider-margin-y:         $nav-divider-margin-y !default;
-$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) !default;
+$dropdown-box-shadow:               0px 2px 8px 0px rgba(51, 51, 89, 0.15) !default;
 
-$dropdown-link-color:               $gray-900 !default;
-$dropdown-link-hover-color:         darken($gray-900, 5%) !default;
-$dropdown-link-hover-bg:            $gray-100 !default;
+$dropdown-link-color:               $dark !default;
+$dropdown-link-hover-color:         $primary !default;
+$dropdown-link-hover-bg:            $lighter !default;
 
-$dropdown-link-active-color:        $component-active-color !default;
-$dropdown-link-active-bg:           $component-active-bg !default;
+$dropdown-link-active-color:        $primary !default;
+$dropdown-link-active-bg:           $lighter !default;
 
 $dropdown-link-disabled-color:      $gray-600 !default;
 
-$dropdown-item-padding-y:           .25rem !default;
-$dropdown-item-padding-x:           1.5rem !default;
+$dropdown-item-padding-y:           8px !default;
+$dropdown-item-padding-x:           15px !default;
 
 $dropdown-header-color:             $gray-600 !default;
 
@@ -1012,7 +1012,7 @@ $badge-font-size:                   75% !default;
 $badge-font-weight:                 $font-weight-bold !default;
 $badge-padding-y:                   .25em !default;
 $badge-padding-x:                   .4em !default;
-$badge-border-radius:               $border-radius !default;
+$badge-border-radius:               $border-radius-sm !default;
 
 $badge-transition:                  $btn-transition !default;
 $badge-focus-width:                 $input-btn-focus-width !default;
@@ -1292,11 +1292,12 @@ $topbar-height: 75px;
 $topbars: () !default;
 $topbars: map-merge(
   (
-  'topbar-cloud': $gradient-cloud,
-  'topbar-desktop': $gradient-desktop,
-  'topbar-mobile': $gradient-mobile,
-  'topbar-cluster': $gradient-cluster,
-  'topbar-server': $gradient-server,
+  'topbar-cloud': $cloud,
+  'topbar-desktop': $desktop,
+  'topbar-mobile': $mobile,
+  'topbar-cluster': $cluster,
+  'topbar-server': $server,
+  'topbar-data': $data,
   ),
   $topbars
 );
@@ -1309,4 +1310,4 @@ $nav-icon: '/icon/extra/';
 $loupe-icon: '/icon/extra/';
 $messages-icon: '/icon/extra/';
 $player-icon: '/icon/extra/';
-$social-icon: '/styles/styles/icon/extra/';
+$social-icon: '/icon/extra/';
