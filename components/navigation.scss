@@ -86,45 +86,35 @@
       content: '';
       width: 45px;
       height: 45px;
-      background: url('#{$nav-icon}cloud-icon.svg');
+      background-image: none;
       position: absolute;
       background-repeat: no-repeat;
       background-size: 40px 40px;
       left: 15px;
     }
 
-    &.desktop::before {
-      background: url('#{$nav-icon}desktop-icon.svg');
-      background-repeat: no-repeat;
-      background-size: 40px 40px;
+    &.cloud::before {
+      background-image: url('#{$nav-icon}cloud-icon.svg');
     }
-
+    &.desktop::before {
+      background-image: url('#{$nav-icon}desktop-icon.svg');
+    }
     &.engine::before {
-      background: url('#{$nav-icon}engine-icon.svg');
-      background-repeat: no-repeat;
-      background-size: 40px 40px;
+      background-image: url('#{$nav-icon}engine-icon.svg');
     }
 
     &.mobile::before {
-      background: url('#{$nav-icon}mobile-icon.svg');
-      background-repeat: no-repeat;
-      background-size: 40px 40px;
+      background-image: url('#{$nav-icon}mobile-icon.svg');
     }
 
     &.cluster::before {
-      background: url('#{$nav-icon}cluster-icon.svg');
-      background-repeat: no-repeat;
-      background-size: 41px 42px;
+      background-image: url('#{$nav-icon}cluster-icon.svg');
     }
     &.server::before {
-      background: url('#{$nav-icon}server-icon.svg');
-      background-repeat: no-repeat;
-      background-size: 41px 42px;
+      background-image: url('#{$nav-icon}server-icon.svg');
     }
     &.data::before {
-      background: url('#{$nav-icon}data-icon.svg');
-      background-repeat: no-repeat;
-      background-size: 41px 42px;
+      background-image: url('#{$nav-icon}data-icon.svg');
     }
   }
   &:before {
@@ -139,6 +129,76 @@
     left: 0;
     right: 0;
     margin: auto;
+  }
+}
+.subnav-products-mobile{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  a.nav-item {
+    padding: 20px 0;
+    font-weight: normal;
+  }
+  .products{
+    text-align: left;
+    padding-bottom: 30px;
+
+    a{
+      padding-left: 50px;
+      &:before {
+        content: '';
+        width: 35px;
+        height: 35px;
+        background-image: none;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 35px 35px;
+        left: 10px;
+        margin-top: -5px;
+      }
+      &.cloud{
+        color: $cloud;
+        &:before {
+          background-image: url('#{$nav-icon}cloud-icon.svg');
+        }
+      }
+      &.desktop{
+        color: $desktop;
+        &:before {
+          background-image: url('#{$nav-icon}desktop-icon.svg');
+        }
+      }
+      &.engine{
+        color: $engine;
+        &:before {
+          background-image: url('#{$nav-icon}engine-icon.svg');
+        }
+      }
+      &.mobile{
+        color: $mobile;
+        &:before {
+          background-image: url('#{$nav-icon}mobile-icon.svg');
+        }
+      }
+      &.cluster{
+        color: cluster;
+        &:before {
+          background-image: url('#{$nav-icon}cluster-icon.svg');
+        }
+      }
+      &.server{
+        color: $server;
+        &:before {
+          background-image: url('#{$nav-icon}server-icon.svg');
+        }
+      }
+      &.data{
+        color: $data;
+        &:before {
+          background-image: url('#{$nav-icon}data-icon.svg');
+        }
+      }
+    }
   }
 }
 // active states
