@@ -5,6 +5,17 @@ use:
 -->
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
+<symbol id="cancel" viewBox="0 0 24 24">
+<path d="M0 0h24v24H0z" fill="none"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+</symbol>
+<symbol id="view_list" viewBox="0 0 24 24">
+<path d="M0 0h24v24H0z" fill="none"/>
+<path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"/>
+</symbol>
+<symbol id="view_module" viewBox="0 0 24 24">
+<path d="M0 0h24v24H0z" fill="none"/>
+<path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z"/>
+</symbol>
 <symbol id="repeat" viewBox="0 0 24 24">
 <path fill="currentColor" d="M17.016 17.016v-4.031h1.969v6h-12v3l-3.984-3.984 3.984-3.984v3h10.031zM6.984 6.984v4.031h-1.969v-6h12v-3l3.984 3.984-3.984 3.984v-3h-10.031z"></path>
 </symbol>
@@ -651,5 +662,10 @@ use:
 <symbol id="bolt" viewBox="0 0 24 24">
 <path fill="currentColor" d="M11.016 21h-1.031l1.031-6.984h-3.516q-0.75 0-0.375-0.656 0.141-0.234 0.047-0.141 2.391-4.172 5.813-10.219h1.031l-1.031 6.984h3.516q0.656 0 0.422 0.656z"></path>
 </symbol>
+<symbol id="check_circle" viewBox="0 0 24 24">
+<path d="M0 0h24v24H0z" fill="none"/>
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+</symbol>
+
 </defs>
 </svg>

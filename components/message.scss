@@ -27,8 +27,8 @@
 }
 
 .message{
-  color: $message-color;
-  background-color: $message-bg;
+  color: $body-color;
+  background-color: white;
   padding: 25px;
   font-weight: normal;
   min-height: 70px;
@@ -36,33 +36,24 @@
   padding-left: 95px;
   margin: 10px 0;
   font-size: 14px;
-  color: $message-color !important;
-  box-shadow: $message-shadow;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
 
   &::before{
-    content: url("#{$messages-icon}check-white.svg");
-    background-color: $blue;
-    color: white;
+    content: url("#{$messages-icon}info-blue.svg");
     position: absolute;
-    top: 0;
-    height: 100%;
-    left: 0;
-    padding: 26px 0;
-    width: 70px;
-    text-align: center;
+    left: 30px;
+    transform: scale(1.5);
   }
 
   &.success::before{
-    content: '';
-    background: url("#{$messages-icon}/check-white.svg") no-repeat center, #90cb90;
+    content: url("#{$messages-icon}check_circle-success.svg");
   }
   &.warning::before{
-    content: '';
-    background: url("#{$messages-icon}/info_outline-white.svg") no-repeat center, $orange;
+    content: url("#{$messages-icon}warning-orange.svg");
   }
   &.error::before{
-    content: '';
-    background: url("#{$messages-icon}/clear-white.svg") no-repeat center, $red;
+    content: url("#{$messages-icon}cancel-red.svg");
   }
 }
 
