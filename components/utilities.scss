@@ -1,13 +1,10 @@
-.no-select{
-  user-select: none;
-}
-.uderline{
-  text-decoration: underline;
-}
+.no-select{user-select: none;}
+.uderline{text-decoration: underline;}
 .stick-left{left: 0;}
 .stick-right{right: 0;}
 .stick-top{top: 0;}
 .stick-bottom{bottom: 0;}
+.svg-text{vertical-align: bottom;}
 
 @each $font-sizes, $value in $font-sizes {
   .#{$font-sizes} {

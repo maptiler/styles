@@ -26,6 +26,7 @@
   width: $mt-aside-width;
   position: fixed;
   overflow: auto;
+  z-index: $zindex-fixed;
   padding-top: $topbar-height;
 
   @include media-breakpoint-down(md) {
