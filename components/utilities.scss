@@ -38,3 +38,13 @@ p, h1, h2, h3, h4, h5, h6, {
     }
   }
 }
+.collapse-arrow {
+  transform: rotateX(0deg);
+  transition: 0.25s;
+}
+a[aria-expanded="true"] {
+  .collapse-arrow {
+    transform: rotateX(180deg);
+    color: $primary;
+  }
+}
