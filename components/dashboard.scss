@@ -5,7 +5,7 @@
 }
 
 .mt-container {
-  width: calc(100% - $mt-aside-width);
+  width: calc(100% - #{$mt-aside-width});
   margin-left: $mt-aside-width;
   margin-top: $topbar-height;
 
