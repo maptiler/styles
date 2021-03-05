@@ -35,11 +35,12 @@
   }
 
   a {
+    font-family: "Ubuntu";
     font-size: 15px;
     padding: 14px 0px 14px 20px;
     margin: 3px 15px;
     font-weight: bold;
-    color: $darker;
+    color: $secondary;
     display: flex;
     align-items: center;
     border-radius: $border-radius;
