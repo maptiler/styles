@@ -60,6 +60,9 @@ ul, ol{
 .modal-title{
   margin-top: 0;
 }
+.form-control{
+  height: auto;
+}
 //  btn-stroke
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
