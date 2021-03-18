@@ -9,7 +9,7 @@
 
 @each $font-sizes, $value in $font-sizes {
   .#{$font-sizes} {
-    @media (min-width: 500px){
+    @include media-breakpoint-up(sm) {
       font-size: $value;
     }
   }
