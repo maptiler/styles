@@ -74,10 +74,9 @@ $danger:           #dc3545 !default;
 
 $white:            $white !default;
 $lighter:          $gray-100 !default;
-$light:            $gray-400 !default;
-$gray:             $gray-600 !default;
-$dark:             $gray-800 !default;
-$darker:           $gray-900 !default;
+$light:            $gray-300 !default;
+$dark:             $gray-600 !default;
+$darker:           $gray-700 !default;
 
 $cloud:            #0E61C6 !default;
 $cloud-s:          #2B8BFB !default;
@@ -113,7 +112,7 @@ $theme-colors: map-merge(
 
   "white":         $white,
   "lighter":       $gray-100,
-  "light":         $gray-400,
+  "light":         $gray-300,
   "dark":          $gray-600,
   "darker":        $gray-700,
 
