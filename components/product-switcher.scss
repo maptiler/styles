@@ -1,32 +1,43 @@
+.product-switch-wrap{
+  position: relative;
+  height: 45px;
+}
 .product-switch{
   background: rgba(255,255,255,0);
   border-radius: 50%;
   padding: 0;
   margin: 10px;
   right: 10px;
-  transition: .25s;
+  transition: .1s;
+
   &:focus{
-    background: rgba(255,255,255,.25);
+    background: rgba(255,255,255,.35);
     padding: 10px;
     margin: 0;
   }
+  &:active{
+    background-color: rgba(255,255,255,.4);
+  }
   &:focus~.product-switch-container {
-    display: block !important;
+    height: 230px;
   }
 }
 
 .product-switch-container{
-  display: none;
+  height: 0;
+  width: 230px;
   position: absolute;
   overflow: hidden;
   background: $white;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
-  padding-bottom: 15px;
-  top: 65px;
+  top: 0;
+  margin-top: 55px;
+  transition: $transition-collapse;
+  z-index: $zindex-modal;
 
-  h4{background: $lighter;padding: 15px; margin: 0;border-top: $border-radius;user-select:none;}
-  a{
+  .switch-title{background: $lighter;padding: 15px; margin: 0;border-top: $border-radius;user-select:none;}
+  .switch-link{
     user-select: none;
     padding: 15px 30px;
     padding-left: 75px;
@@ -45,21 +56,21 @@
     }
   }
 
-  #web-switch{
+  .web-switch{
     &:before{
       background: url('#{$nav-icon}website-icon.svg');
       background-repeat: no-repeat;
       background-size: 40px 40px;
     }
   }
-  #cloud-switch{
+  .cloud-switch{
     &:before{
       background: url('#{$nav-icon}cloud-icon.svg');
       background-repeat: no-repeat;
       background-size: 40px 40px;
     }
   }
-  #data-switch{
+  .data-switch{
     &:before{
       background: url('#{$nav-icon}data-icon.svg');
       background-repeat: no-repeat;
