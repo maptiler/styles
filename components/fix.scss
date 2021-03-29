@@ -95,4 +95,10 @@ ul, ol{
     color: #3174FF;
     border-color: #3174FF;
     border-bottom: 2px solid;
-}
+  }
+
+  .collapsing.width {
+    -webkit-transition-property: width, visibility;
+    transition-property: width, visibility;
+    width: 0;
+  }
