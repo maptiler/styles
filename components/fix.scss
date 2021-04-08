@@ -2,6 +2,10 @@
 html{
   scroll-behavior: smooth;
 }
+main{
+  position: relative;
+  overflow: hidden;
+}
 mark {
   color: $secondary;
   background-color: $gray-100;

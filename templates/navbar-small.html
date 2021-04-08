@@ -1,6 +1,6 @@
   <nav id="Navbar" class="navbar navbar-expand-md px-gutter w-100 navbar-dark">
     <div class="container pr-gutter">
-        <a class="navbar-brand product-brand text-darker ml-gutter" href="{{ '/' | relative_url }}">
+        <a class="navbar-brand product-brand" href="{{ '/' | relative_url }}">
           <svg height="46"><use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-small.svg#maptilerLogo"></use></svg>
         </a>
 
@@ -10,41 +10,41 @@
         </svg>
       </button>
 
-      <div class="collapse navbar-collapse navbar-mobile justify-content-end font-weight-bold" id="Mobilenav">
+      <div class="collapse navbar-collapse navbar-mobile justify-content-end font-weight-bolder" id="Mobilenav">
         <div class="navbar-nav flex-sm-row text-dark">
           <div class="d-none d-md-flex">
             <a tabindex="0"  id="subnav-products-btn" class="nav-item nav-link mx-1rem d-none d-md-block">Products</a>
-            <div tabindex="1" class="subnav-products  text-left" >
+            <div tabindex="1" class="subnav-products text-left" >
                 <div>
                   <a class="cloud" href="{{ include.link_url }}/cloud/">
-                    <h4 class="text-cloud">Cloud</h4>
+                    <h6 class="product-title text-cloud">Cloud</h6>
                     Map hosting service
                   </a>
                   <a class="desktop" href="{{ include.link_url }}/desktop/">
-                    <h4 class="text-desktop">Desktop</h4>
+                    <h6 class="product-title text-desktop">Desktop</h6>
                     Create zoomable maps
                   </a>
                   <a class="engine" href="{{ include.link_url }}/engine/">
-                    <h4 class="text-engine">Engine</h4>
+                    <h6 class="product-title text-engine">Engine</h6>
                     Fast automated map processing
                   </a>
                 </div>
                 <div>
                   <a class="data" href="{{ include.link_url }}/data/">
-                    <h4 class="text-data">Data</h4>
+                    <h6 class="product-title text-data">Data</h6>
                     Global geodata for self-hosting
                   </a>
                   <a class="server" href="{{ include.link_url }}/server/">
-                    <h4 class="text-server">Server</h4>
+                    <h6 class="product-title text-server">Server</h6>
                     Map server for self-hosting
                   </a>
                   <a class="mobile" href="{{ include.link_url }}/mobile/">
-                    <h4 class="text-mobile">Mobile</h4>
+                    <h6 class="product-title text-mobile">Mobile</h6>
                     Phone &amp; tablet mapping app
                   </a>
                 </div>
             </div>
-            <a class="nav-item nav-link mx-md-1rem" href="{{ include.link_url }}/support/">Support</a>
+            <a class="nav-item nav-link mx-md-1rem" href="https://support.maptiler.com/">Support</a>
             <a class="nav-item nav-link mx-md-1rem" href="{{ include.link_url }}/news/">News</a>
           </div>
 
@@ -84,7 +84,7 @@
               <a class="d-block nav-item nav-link text-dark" href="{{ include.link_url }}/news/">
                  News
                </a>
-              <a class="d-block nav-item nav-link text-dark" href="{{ include.link_url }}/support/">
+              <a class="d-block nav-item nav-link text-dark" href="https://support.maptiler.com/">
                 Support
               </a>
               <a class="d-block nav-item nav-link text-dark" href="{{ include.link_url }}/team/">

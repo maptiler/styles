@@ -1,5 +1,5 @@
 <div class="container px-0">
-  <nav id="Navbar" class="navbar navbar-expand-md px-gutter pt-md-4 pb-md-1 w-100
+  <nav id="Navbar" class="navbar navbar-expand-md pt-md-4 pb-md-1 w-100 px-gutter
                           {% if page.header == 'darklight' or page.header == 'light' %} navbar-light
                           {% else %} navbar-dark{% endif %}">
 
@@ -38,7 +38,7 @@
         </svg>
       </button>
 
-      <div class="collapse navbar-collapse navbar-mobile justify-content-end font-weight-bold" id="Mobilenav">
+      <div class="collapse navbar-collapse navbar-mobile justify-content-end font-weight-bolder" id="Mobilenav">
         <div class="navbar-nav flex-sm-row text-dark">
           <div class="d-none d-md-flex">
             <a tabindex="0" id="subnav-products-btn"
@@ -79,7 +79,9 @@
                   </a>
                 </div>
             </div>
-            <a class="nav-item nav-link mx-md-1rem {% if page.url contains 'support' %}active{% endif %}" href="{{ include.link_url }}/support/">Support</a>
+
+            <a class="nav-item nav-link mx-md-1rem {% if page.url contains 'docs.maptiler' %}active{% endif %}" href="https://docs.maptiler.com/">Docs</a>
+            <a class="nav-item nav-link mx-md-1rem {% if page.url contains 'support' %}active{% endif %}" href="https://support.maptiler.com/">Support</a>
             <a class="nav-item nav-link mx-md-1rem {% if page.url contains 'news' %}active{% endif %}" href="{{ include.link_url }}/news/">News</a>
           </div>
 
@@ -121,7 +123,7 @@
               <a class="d-block nav-item nav-link text-dark" href="{{ include.link_url }}/news/">
                  News
                </a>
-              <a class="d-block nav-item nav-link text-dark" href="{{ include.link_url }}/support/">
+              <a class="d-block nav-item nav-link text-dark" href="https://support.maptiler.com/">
                 Support
               </a>
               <a class="d-block nav-item nav-link text-dark" href="{{ include.link_url }}/team/">

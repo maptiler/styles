@@ -6,6 +6,7 @@
 .stick-bottom{bottom: 0;}
 .svg-text{vertical-align: bottom;}
 .events-none{pointer-events: none;}
+.border-thick{border-width: 2px !important;}
 
 @each $font-sizes, $value in $font-sizes {
   .#{$font-sizes} {
