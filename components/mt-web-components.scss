@@ -299,3 +299,11 @@
     opacity: 0;
   }
 }
+
+// misc
+.customer-logo-link{
+  color: #AEB6C7;
+  &:hover{
+    color: darken(#AEB6C7, 12%);
+  }
+}
