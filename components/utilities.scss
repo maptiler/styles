@@ -50,3 +50,10 @@ a[aria-expanded="true"] {
     color: $primary;
   }
 }
+.select-transparent,.select-transparent:focus{
+  background: transparent;
+  border: 0;
+  text-align-last: center;
+  padding: 0;
+  text-overflow: ellipsis;
+}
