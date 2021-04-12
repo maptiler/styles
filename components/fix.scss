@@ -106,3 +106,8 @@ ul, ol{
     transition-property: width, visibility;
     width: 0;
   }
+  
+  //safari btn fix
+    [type=button], [type=reset], [type=submit], button {
+  -webkit-appearance: none !important;
+  }
