@@ -5,10 +5,16 @@
       {% if page.style contains 'desktop' or page.style contains 'cloud'
             or page.style contains 'mobile' or page.style contains 'cluster'
             or page.style contains 'engine' or page.style contains 'server'
-            or page.style contains 'data' or page.style contains 'terrain' %}
+            or page.style contains 'data' %}
       <a class="navbar-brand product-brand adaptive-brand" href="{{ '/' | relative_url }}">
       <svg width="347" height="57">
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-{{ page.style | replace: " svg","" }}.svg#{{ page.style | replace: " svg","" }}"></use>
+      </svg>
+      </a>
+      {% elsif page.style contains 'basemaps' %}
+      <a class="navbar-brand pl-gutter product-brand {% if page.style contains 'satellite' %}adaptive-brand{% endif %}" href="{{ '/' | relative_url }}">
+      <svg width="347" height="57">
+        <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-data.svg#data"></use>
       </svg>
       </a>
       {% elsif page.header == 'darklight' %}

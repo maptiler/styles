@@ -254,8 +254,7 @@
   .nav-secondary-link {
     @extend .nav-item;
     @extend .nav-link;
-    @extend .mr-1;
-    @extend .mx-sm-gutter;
+    margin: 0 10px;
     font-weight: $font-weight-bold;
     font-size: 14px;
     text-transform: uppercase;
