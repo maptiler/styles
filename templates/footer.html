@@ -44,7 +44,7 @@
         <a href="{{ include.link_url }}/jobs/">Jobs</a>
         <a href="{{ include.link_url }}/press/">Press</a>
         <a href="{{ include.link_url }}/company/">Company</a>
-        <a href="{{ include.link_url }}/#contact">Contact sales</a>
+        <a class="contact-btn" {% if include.link_url != null %}href="{{ include.link_url }}/#contact"{% endif %} >Contact sales</a>
       </div>
       <div class="mt-copyright text-center border-top border-light mt-8">
         <p class="py-4">

@@ -1,4 +1,7 @@
 // navbar
+#navbar:not(.navbar-small){
+ @extend .container;
+}
 .navbar-small {
   z-index: $zindex-fixed;
   padding: 0 !important;
@@ -241,6 +244,43 @@
     a{
       color: $dark;
       display: inline;
+    }
+  }
+}
+// secondary nav
+.nav.nav-secondary {
+  justify-content: flex-end;
+
+  .nav-secondary-link {
+    @extend .nav-item;
+    @extend .nav-link;
+    @extend .mr-1;
+    @extend .mx-sm-gutter;
+    font-weight: $font-weight-bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $secondary;
+
+    &:hover {
+      color: $secondary !important;
+    }
+
+    &.active {
+      border-bottom: 2px solid $secondary;
+    }
+  }
+
+  &.nav-secondary-light {
+    .nav-secondary-link {
+      color: $white;
+
+      &:hover {
+        color: $white !important;
+      }
+
+      &.active {
+        border-bottom: 2px solid $white;
+      }
     }
   }
 }

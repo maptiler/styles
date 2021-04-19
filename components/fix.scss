@@ -95,18 +95,13 @@ ul, ol{
     color: $dark;
     border-bottom: 1px solid $light;
 }
-.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-    color: #3174FF;
-    border-color: #3174FF;
-    border-bottom: 2px solid;
-  }
 
   .collapsing.width {
     -webkit-transition-property: width, visibility;
     transition-property: width, visibility;
     width: 0;
   }
-  
+
   //safari btn fix
     [type=button], [type=reset], [type=submit], button {
   -webkit-appearance: none !important;
