@@ -26,7 +26,7 @@
 <div class="overflow-hidden rounded shadow">
   <a role="button" class="video-player" data-title="{{ include.title }}" onclick="switchClass('{{ include.video }}','hidden')">
     <img loading="lazy" class="w-100 h-auto"
-    src="https://i.ytimg.com/vi/{{ include.video }}/{% if include.thumbnail == 'hq' %}hqdefault{% elsif include.thumbnail == 'mq' %}mqdefault{% else %}maxresdefault{% endif %}.jpg"
+    src="https://img.youtube.com/vi/{{ include.video }}/{% if include.thumbnail == 'hq' %}hqdefault{% elsif include.thumbnail == 'mq' %}mqdefault{% elsif include.thumbnail == 'sd' %}sddefault{% else %}maxresdefault{% endif %}.jpg"
     alt="Video thumbnail">
   </a>
 </div>
