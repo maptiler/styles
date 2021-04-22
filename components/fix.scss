@@ -106,3 +106,12 @@ ul, ol{
     [type=button], [type=reset], [type=submit], button {
   -webkit-appearance: none !important;
   }
+  
+  .form-switch {
+    .form-check-input {
+      background-color: gray-400;
+      &:checked {
+        background-color: $primary;
+      }
+    }
+  }

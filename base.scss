@@ -1,45 +1,9 @@
-@import "functions";
-@import "variables";
-@import "mixins";
-@import "root";
-@import "reboot";
-@import "type";
-@import "images";
-@import "code";
-@import "grid";
-@import "tables";
-@import "forms";
-@import "buttons";
-@import "transitions";
-@import "dropdown";
-@import "button-group";
-@import "input-group";
-@import "custom-forms";
-@import "nav";
-@import "navbar";
-@import "card";
-@import "breadcrumb";
-@import "pagination";
-@import "badge";
-@import "jumbotron";
-@import "alert";
-@import "progress";
-@import "media";
-@import "list-group";
-@import "close";
-@import "toasts";
-@import "modal";
-@import "tooltip";
-@import "popover";
-@import "carousel";
-@import "spinners";
-@import "utilities";
-@import "print";
+// Must add bootstrap imports before MapTiler ones:
 
-//maptiler styles
+// MapTiler Imports
 @import "components/icon.scss";
 @import "components/map.scss";
-@import "components/mt-web-components.scss"; //these are used on maptiler-web and miniweb only
+@import "components/mt-web-components.scss";
 @import "components/rectangles.scss";
 @import "components/navigation.scss";
 @import "components/popup.scss";
