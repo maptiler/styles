@@ -37,12 +37,6 @@
       </a>
       {% endif %}
 
-      <button onclick="changeThemeColor()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-          <use href="{{ include.styles_path }}icon/icon.svg#menu"></use>
-        </svg>
-      </button>
-
       <div class="collapse navbar-collapse navbar-mobile justify-content-end font-weight-bolder" id="Mobilenav">
         <div class="navbar-nav flex-sm-row text-dark">
           <div class="d-none d-md-flex">
@@ -85,7 +79,7 @@
                 </div>
             </div>
 
-            <a class="nav-item nav-link mx-md-1rem {% if page.url contains 'docs' %}active{% endif %}" href="https://www.maptiler.com/docs/">Docs</a>
+            <a class="nav-item nav-link mx-md-1rem {% if page.url contains 'docs' %}active{% endif %}" href="{{ include.link_url }}/docs/">Docs</a>
             <a class="nav-item nav-link mx-md-1rem {% if page.url contains 'news' %}active{% endif %}" href="{{ include.link_url }}/news/">News</a>
           </div>
 
@@ -147,9 +141,17 @@
 
         </div>
       </div>
-      {% if page.style contains 'data' %}
-      <a class="btn btn-primary d-none d-md-block ml-3" href="https://data.maptiler.com/my-extracts/">My Data</a>
-      {% else %}
-      <a class="btn btn-primary d-none d-md-block ml-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
-      {% endif %}
+
+      <div class="d-flex align-items-center">
+        {% if page.style contains 'data' %}
+        <a class="btn btn-primary d-none d-md-block ml-3" href="https://data.maptiler.com/my-extracts/">My Data</a>
+        {% else %}
+        <a class="btn btn-primary d-none d-md-block ml-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
+        {% endif %}
+        <button onclick="changeThemeColor()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+            <use href="{{ include.styles_path }}icon/icon.svg#menu"></use>
+          </svg>
+        </button>
+      </div>
   </nav>

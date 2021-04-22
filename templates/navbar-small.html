@@ -4,12 +4,6 @@
           <svg height="46"><use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-small.svg#maptilerLogo"></use></svg>
         </a>
 
-      <button onclick="changeThemeColor()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-          <use href="{{ include.styles_path }}icon/icon.svg#menu"></use>
-        </svg>
-      </button>
-
       <div class="collapse navbar-collapse navbar-mobile justify-content-end font-weight-bolder" id="Mobilenav">
         <div class="navbar-nav flex-sm-row text-dark">
           <div class="d-none d-md-flex">
@@ -44,7 +38,7 @@
                   </a>
                 </div>
             </div>
-            <a class="nav-item nav-link mx-md-1rem" href="https://www.maptiler.com/docs/">Docs</a>
+            <a class="nav-item nav-link mx-md-1rem" href="{{ include.link_url }}/docs/">Docs</a>
             <a class="nav-item nav-link mx-md-1rem" href="{{ include.link_url }}/news/">News</a>
           </div>
 
@@ -105,6 +99,13 @@
         </div>
       </div>
 
-      <a class="btn btn-primary d-none d-md-block ml-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
+      <div class="d-flex align-items-center">
+        <a class="btn btn-primary d-none d-md-block ml-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
+        <button onclick="changeThemeColor()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+            <use href="{{ include.styles_path }}icon/icon.svg#menu"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </nav>
