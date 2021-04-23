@@ -58,3 +58,54 @@ a[aria-expanded="true"] {
   text-overflow: ellipsis;
   cursor: pointer;
 }
+
+// Utilities
+$utilities: map-merge( $utilities,(
+
+  "width": (
+    property: width,
+    class: w,
+    values: (
+      10: 10%,
+      20: 20%,
+      25: 25%,
+      30: 30%,
+      40: 40%,
+      50: 50%,
+      60: 60%,
+      70: 70%,
+      75: 75%,
+      80: 80%,
+      85: 85%,
+      90: 90%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+  "height": (
+    property: height,
+    class: h,
+    values: (
+      300px: 300px,
+      350px: 350px,
+      400px: 400px,
+      450px: 450px,
+      500px: 500px,
+      10: 10%,
+      20: 20%,
+      25: 25%,
+      30: 30%,
+      40: 40%,
+      50: 50%,
+      60: 60%,
+      70: 70%,
+      75: 75%,
+      80: 80%,
+      85: 85%,
+      90: 90%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+
+));
