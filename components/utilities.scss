@@ -107,5 +107,13 @@ $utilities: map-merge( $utilities,(
       auto: auto
     )
   ),
-
+  "transition": (
+    property: transition,
+    class: transition,
+    values: (
+      all-15: all .15s ease-in-out,
+      all-30: all .3s ease-in-out,
+      all-50: all .5s ease-in-out,
+    )
+  ),
 ));
