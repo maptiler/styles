@@ -102,15 +102,6 @@ $utilities: map-merge( $utilities,(
       all-50: all .5s ease-in-out,
     )
   ),
-  "font-size": (
-    property: font-size,
-    class: ,
-    values: (
-      all-15: all .15s ease-in-out,
-      all-30: all .3s ease-in-out,
-      all-50: all .5s ease-in-out,
-    )
-  ),
   "scale": (
     property: transform,
     class: scale,
