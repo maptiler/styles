@@ -24,22 +24,16 @@
     z-index: $i;
   }
 }
-p, h1, h2, h3, h4, h5, h6, {
-  margin-top: $headings-margin-bottom;
-  margin-bottom: $headings-margin-bottom;
+
+.select-transparent,.select-transparent:focus{
+  background: transparent;
+  border: 0;
+  text-align-last: center;
+  padding: 0;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-    @each $scale-name, $value in $transform-scale {
-      .scale#{$infix}-#{$scale-name} {
-        transform: scale($value)!important;
-      }
-    }
-  }
-}
 .collapse-arrow {
   transform: rotateX(0deg);
   transition: 0.25s;
@@ -50,20 +44,12 @@ a[aria-expanded="true"] {
     color: $primary;
   }
 }
-.select-transparent,.select-transparent:focus{
-  background: transparent;
-  border: 0;
-  text-align-last: center;
-  padding: 0;
-  text-overflow: ellipsis;
-  cursor: pointer;
-}
-
 // Utilities
 $utilities: map-merge( $utilities,(
 
   "width": (
     property: width,
+    responsive: true,
     class: w,
     values: (
       10: 10%,
@@ -114,6 +100,26 @@ $utilities: map-merge( $utilities,(
       all-15: all .15s ease-in-out,
       all-30: all .3s ease-in-out,
       all-50: all .5s ease-in-out,
+    )
+  ),
+  "font-size": (
+    property: font-size,
+    class: ,
+    values: (
+      all-15: all .15s ease-in-out,
+      all-30: all .3s ease-in-out,
+      all-50: all .5s ease-in-out,
+    )
+  ),
+  "scale": (
+    property: transform,
+    class: scale,
+    responsive: true,
+    values: (
+    '50': scale(.5),
+    '75': scale(.75),
+    '125': scale(1.25),
+    '150': scale(1.5),
     )
   ),
 ));

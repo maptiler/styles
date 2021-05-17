@@ -1226,16 +1226,6 @@ $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 $btn-text-transform: uppercase;
 $skew: 5deg;
 
-$transform-scale: () !default;
-$transform-scale: map-merge(
-  (
-  '50': .5,
-  '75': .75,
-  '125': 1.25,
-  '150': 1.5,
-  ),
-  $transform-scale
-);
 $font-sizes: () !default;
 $font-sizes: map-merge(
   (
@@ -1261,15 +1251,12 @@ $footer-border-color: transparent;
 $footer-bordertop-size: 0;
 $footer-link-margin: 0;
 
-
 $popupbg-bg-color: rgba(55, 55, 55, 0.8);
 $popup-bg-color: #fff;
 $popup-top: 10%;
 $popup-width: 400px;
 $popup-padding: 25px;
 $popup-radius: 6px;
-
-$skew: 5deg;
 
 $gradient-cloud:   linear-gradient(109.32deg, #140F92 -5.04%, #2340B7 47.81%, #38B6FB 102.93%);
 $gradient-desktop: linear-gradient(90deg, #453279 1.04%, #5D399B 49.48%, #997EC4 100%);
