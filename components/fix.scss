@@ -113,8 +113,11 @@ p, h1, h2, h3, h4, h5, h6, {
 
   .form-switch {
     .form-check-input {
-      background-color: gray-400;
+      background-color: $gray-400;
       &:checked {
+        background-color: $primary;
+      }
+      &.switch-equal{
         background-color: $primary;
       }
     }
