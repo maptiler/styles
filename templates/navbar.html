@@ -1,4 +1,5 @@
   <nav id="navbar" class="navbar navbar-expand-md pt-md-4 pb-md-1
+                          {% if page.style == null or page.style contains "misc" %}border-bottom border-light{% endif %}
                           {% if page.header == 'darklight' or page.header == 'light' %} navbar-light
                           {% else %} navbar-dark{% endif %}">
 
