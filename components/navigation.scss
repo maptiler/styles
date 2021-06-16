@@ -237,6 +237,9 @@
       color: $dark;
       display: block;
       margin: 10px 0;
+      &:hover{
+        color: $primary;
+      }
     }
   }
   .mt-copyright{
@@ -254,7 +257,7 @@
   .nav-secondary-link {
     @extend .nav-item;
     @extend .nav-link;
-    margin: 0 10px;
+    margin: 0 5px;
     font-weight: $font-weight-bold;
     font-size: 14px;
     text-transform: uppercase;
@@ -282,4 +285,23 @@
       }
     }
   }
+}
+// product border colors
+.border-nav-cloud{
+  border-color: #B5D4FA !important;
+}
+.border-nav-desktop{
+  border-color: #D1C4E9 !important;
+}
+.border-nav-engine{
+  border-color: #F1BB93 !important;
+}
+.border-nav-mobile{
+  border-color: #B5F8FD !important;
+}
+.border-nav-server{
+  border-color: #FBB8BB !important;
+}
+.border-nav-data{
+  border-color: #B9E8B0 !important;
 }
