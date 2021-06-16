@@ -49,6 +49,12 @@
         background-image: url("#{$social-icon}medium-white.svg");
       }
     }
+    &.github {
+      color: #fff;
+      &:before {
+        background-image: url("#{$social-icon}github-white.svg");
+      }
+    }
 
     &:not(.colored){
       &:before{

@@ -67,6 +67,10 @@ ul, ol{
 .form-control{
   height: auto;
 }
+p, h1, h2, h3, h4, h5, h6, {
+  margin-top: $headings-margin-bottom;
+  margin-bottom: $headings-margin-bottom;
+}
 //  btn-stroke
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
@@ -105,4 +109,16 @@ ul, ol{
   //safari btn fix
     [type=button], [type=reset], [type=submit], button {
   -webkit-appearance: none !important;
+  }
+
+  .form-switch {
+    .form-check-input {
+      background-color: $gray-400;
+      &:checked {
+        background-color: $primary;
+      }
+      &.switch-equal{
+        background-color: $primary;
+      }
+    }
   }

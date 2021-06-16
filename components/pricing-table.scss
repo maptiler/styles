@@ -54,6 +54,7 @@
 
     .plans-table {
       width: 100%;
+      position: relative;
       tbody{
         tr:last-child{
           td:last-child{
@@ -78,7 +79,7 @@
       z-index: 2;
       background: $primary;
       color: white;
-      top: -25px;
+      top: -45px;
       display: block;
       padding: 10px 56px;
       border-top-left-radius: 6px;

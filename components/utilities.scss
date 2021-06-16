@@ -6,7 +6,6 @@
 .stick-bottom{bottom: 0;}
 .svg-text{vertical-align: bottom;}
 .events-none{pointer-events: none;}
-.border-thick{border-width: 2px !important;}
 
 @each $font-sizes, $value in $font-sizes {
   .#{$font-sizes} {
@@ -25,21 +24,16 @@
     z-index: $i;
   }
 }
-p, h1, h2, h3, h4, h5, h6, {
-  margin-top: $headings-margin-top;
-  margin-bottom: $headings-margin-bottom;
-}
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    @each $scale-name, $value in $transform-scale {
-      .scale#{$infix}-#{$scale-name} {
-        transform: scale($value)!important;
-      }
-    }
-  }
+.select-transparent,.select-transparent:focus{
+  background: transparent;
+  border: 0;
+  text-align-last: center;
+  padding: 0;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }
+
 .collapse-arrow {
   transform: rotateX(0deg);
   transition: 0.25s;
@@ -50,11 +44,73 @@ a[aria-expanded="true"] {
     color: $primary;
   }
 }
-.select-transparent,.select-transparent:focus{
-  background: transparent;
-  border: 0;
-  text-align-last: center;
-  padding: 0;
-  text-overflow: ellipsis;
-  cursor: pointer;
-}
+// Utilities
+$utilities: map-merge( $utilities,(
+
+  "width": (
+    property: width,
+    responsive: true,
+    class: w,
+    values: (
+      10: 10%,
+      20: 20%,
+      25: 25%,
+      30: 30%,
+      40: 40%,
+      50: 50%,
+      60: 60%,
+      70: 70%,
+      75: 75%,
+      80: 80%,
+      85: 85%,
+      90: 90%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+  "height": (
+    property: height,
+    class: h,
+    values: (
+      300px: 300px,
+      350px: 350px,
+      400px: 400px,
+      450px: 450px,
+      500px: 500px,
+      10: 10%,
+      20: 20%,
+      25: 25%,
+      30: 30%,
+      40: 40%,
+      50: 50%,
+      60: 60%,
+      70: 70%,
+      75: 75%,
+      80: 80%,
+      85: 85%,
+      90: 90%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+  "transition": (
+    property: transition,
+    class: transition,
+    values: (
+      all-15: all .15s ease-in-out,
+      all-30: all .3s ease-in-out,
+      all-50: all .5s ease-in-out,
+    )
+  ),
+  "scale": (
+    property: transform,
+    class: scale,
+    responsive: true,
+    values: (
+    '50': scale(.5),
+    '75': scale(.75),
+    '125': scale(1.25),
+    '150': scale(1.5),
+    )
+  ),
+));

@@ -1,5 +1,5 @@
-<footer class="footer">
-  <div class="container">
+<footer class="footer border-top border-light">
+  <div class="container pt-5">
     <div class="row">
       <div class="col-sm-4">
         <a class="text-secondary" href="/">
@@ -15,17 +15,20 @@
       <div class="col link-list">
         <h4>Products</h4>
         <a href="{{ include.link_url }}/cloud/">Cloud</a>
+        <a href="{{ include.link_url }}/data/">Data</a>
         <a href="{{ include.link_url }}/desktop/">Desktop</a>
+        <a href="{{ include.link_url }}/server/">Server</a>
         <a href="{{ include.link_url }}/engine/">Engine</a>
         <a href="{{ include.link_url }}/mobile/">Mobile</a>
-        <a href="{{ include.link_url }}/server/">Server</a>
         <a href="{{ include.link_url }}/cluster/">Cluster</a>
       </div>
       <div class="col link-list">
         <h4>Usage</h4>
-        <a href="{{ include.link_url }}/gallery/drones/">Drones</a>
-        <a href="{{ include.link_url }}/gallery/satellite/">Satellite imagery</a>
-        <a href="{{ include.link_url }}/gallery/agriculture/">Agriculture</a>
+        <a href="{{ include.link_url }}/industry/weather/">Weather</a>
+        <a href="{{ include.link_url }}/industry/transportation/">Transportation</a>
+        <a href="{{ include.link_url }}/industry/government/">Government</a>
+        <a href="{{ include.link_url }}/industry/business-intelligence/">Business intelligence
+        <a href="{{ include.link_url }}/industry/agriculture/">Agriculture</a>
         <a href="{{ include.link_url }}/google-maps-platform-alternative/">Google Maps API alternative</a>
         <a href="{{ include.link_url }}/mapbox-alternative/">MapBox alternative</a>
       </div>
@@ -41,9 +44,9 @@
         <h4>Company</h4>
         <a href="{{ include.link_url }}/news/">News</a>
         <a href="{{ include.link_url }}/team/">Team</a>
-        <a href="{{ include.link_url }}/jobs/">Jobs</a>
+        <a href="{{ include.link_url }}/company/about/">Careers</a>
         <a href="{{ include.link_url }}/press/">Press</a>
-        <a href="{{ include.link_url }}/company/">Company</a>
+        <a href="{{ include.link_url }}/company/">Company info</a>
         <a class="contact-btn" {% if include.link_url != null %}href="{{ include.link_url }}/#contact"{% endif %} >Contact sales</a>
       </div>
       <div class="mt-copyright text-center border-top border-light mt-8">

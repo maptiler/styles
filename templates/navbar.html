@@ -1,4 +1,5 @@
-  <nav id="navbar" class="navbar navbar-expand-md pt-md-4 pb-md-1
+  <nav id="navbar" class="navbar navbar-expand-md pt-md-4 pb-md-gutter
+                          {% if page.style == null or page.style contains "misc" %}border-bottom border-light{% endif %}
                           {% if page.header == 'darklight' or page.header == 'light' %} navbar-light
                           {% else %} navbar-dark{% endif %}">
 
@@ -37,18 +38,18 @@
       </a>
       {% endif %}
 
-      <div class="collapse navbar-collapse navbar-mobile justify-content-end font-weight-bolder" id="Mobilenav">
+      <div class="collapse navbar-collapse navbar-mobile justify-content-end fw-bolder" id="Mobilenav">
         <div class="navbar-nav flex-sm-row text-dark">
           <div class="d-none d-md-flex">
             <a tabindex="0" id="subnav-products-btn"
-            class="nav-item nav-link mx-1rem d-none d-md-block
+            class="nav-item nav-link mx-gutter px-0 d-none d-md-block
                   {% if page.url contains '/desktop/' or page.url contains 'pricing' or
                         page.url contains 'download' or page.url contains '/cloud/' or
                         page.url contains '/demo/' or page.url contains '/geoeditor/' or
                         page.url contains '/mobile/' or page.url contains '/engine/' or
                         page.url contains '/server/' or page.url contains '/cluster/'
                    %}active{% endif %}">Products</a>
-            <div tabindex="1" class="subnav-products  text-left">
+            <div tabindex="1" class="subnav-products text-left">
                 <div>
                   <a class="cloud" href="{{ include.link_url }}/cloud/">
                     <h6 class="product-title text-cloud">Cloud</h6>
@@ -79,8 +80,8 @@
                 </div>
             </div>
 
-            <a class="nav-item nav-link mx-md-1rem {% if page.url contains 'docs' %}active{% endif %}" href="{{ include.link_url }}/docs/">Docs</a>
-            <a class="nav-item nav-link mx-md-1rem {% if page.url contains 'news' %}active{% endif %}" href="{{ include.link_url }}/news/">News</a>
+            <a class="nav-item nav-link mx-md-gutter px-0 {% if page.url contains 'docs' %}active{% endif %}" href="{{ include.link_url }}/docs/">Docs</a>
+            <a class="nav-item nav-link mx-md-gutter px-0 {% if page.url contains 'news' %}active{% endif %}" href="{{ include.link_url }}/news/">News</a>
           </div>
 
           <div class="subnav-products-mobile d-md-none">
@@ -90,7 +91,7 @@
                   <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive.svg#maptilerLogo"></use>
                 </svg>
                 </a>
-              <button onclick="changeThemeColor()" class="navbar-toggler text-secondary align-self-center" type="button" data-toggle="collapse" data-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
+              <button onclick="changeThemeColor()" class="navbar-toggler text-secondary align-self-center" type="button" data-bs-toggle="collapse" data-bs-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
                   <use href="{{ include.styles_path }}icon/icon.svg#clear"></use>
                 </svg>
@@ -117,7 +118,7 @@
               </a>
             </div>
 
-            <div class="col-6 text-right">
+            <div class="col-6 text-end">
               <a class="d-block nav-item nav-link text-dark" href="{{ include.link_url }}/news/">
                  News
                </a>
@@ -142,13 +143,13 @@
         </div>
       </div>
 
-      <div class="d-flex align-items-center">
+      <div class="d-flex ms-md-3 align-items-center">
         {% if page.style contains 'data' %}
         <a class="btn btn-primary d-none d-md-block ml-3" href="https://data.maptiler.com/my-extracts/">My Data</a>
         {% else %}
         <a class="btn btn-primary d-none d-md-block ml-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
         {% endif %}
-        <button onclick="changeThemeColor()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
+        <button onclick="changeThemeColor()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
             <use href="{{ include.styles_path }}icon/icon.svg#menu"></use>
           </svg>
