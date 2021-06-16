@@ -234,8 +234,11 @@
 // home Carousel
   #homeCarousel{
     .home-pagination{
-      justify-content: flex-start;
-      padding: 0;
+      @include media-breakpoint-up(md) {
+        justify-content: flex-start;
+        padding: 0;
+      }
+      padding: 20px 0;
         .home-pagination-btn{
           margin: 0 6px;
           border: 0;
