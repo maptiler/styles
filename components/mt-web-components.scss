@@ -231,7 +231,7 @@
   .banner-martin {
       bottom: -72px;
   }
-// home Carousel
+// Carousel
   #homeCarousel{
     .home-pagination{
       @include media-breakpoint-up(md) {
@@ -273,6 +273,9 @@
   &.mt-slide-next{
     right: -25px;
   }
+}
+.splide__track.slide__fade{
+  overflow: visible !important;
 }
 // misc
 .customer-logo-link{
