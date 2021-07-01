@@ -113,4 +113,12 @@ $utilities: map-merge( $utilities,(
     '150': scale(1.5),
     )
   ),
+  "font-family": (
+    property: font-family,
+    class: font-family,
+    values: (
+    'ubuntu':'Ubuntu',
+    'sans': 'Open Sans',
+    )
+  ),
 ));
