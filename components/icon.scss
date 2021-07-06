@@ -19,16 +19,15 @@
     }
 
     &.twitter {
-      color: #1DA1F2;
+      color: #40ACEB;
       &:before {
         background-image: url("#{$social-icon}twitter-white.svg");
       }
     }
     &.linkedin {
-      color: #2867B2;
+      color: #0077B7;
       &:before {
         background-image: url("#{$social-icon}linkedin-white.svg");
-        color: #2867B2;
       }
     }
     &.facebook {
@@ -50,9 +49,21 @@
       }
     }
     &.github {
-      color: #fff;
+      color: #000;
       &:before {
         background-image: url("#{$social-icon}github-white.svg");
+      }
+    }
+    &.instagram {
+      color: #000;
+      &:before {
+        background-image: url("#{$social-icon}ig-white.svg");
+      }
+    }
+    &.youtube {
+      color: #FF0000;
+      &:before {
+        background-image: url("#{$social-icon}ytb-white.svg");
       }
     }
 
