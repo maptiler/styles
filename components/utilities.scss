@@ -34,16 +34,6 @@
   cursor: pointer;
 }
 
-.collapse-arrow {
-  transform: rotateX(0deg);
-  transition: 0.25s;
-}
-a[aria-expanded="true"] {
-  .collapse-arrow {
-    transform: rotateX(180deg);
-    color: $primary;
-  }
-}
 // Utilities
 $utilities: map-merge( $utilities,(
 

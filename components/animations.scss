@@ -1,0 +1,23 @@
+// customers-logo-hover
+.customer-logo{
+  .customer-hover{
+    opacity: 0;
+    transition: opacity .3s;
+  }
+  &:hover{
+    .customer-hover{
+      opacity: 1;
+    }
+  }
+}
+// collapse-arrow
+.collapse-arrow {
+  transform: rotateX(0deg);
+  transition: 0.25s;
+}
+a[aria-expanded="true"] {
+  .collapse-arrow {
+    transform: rotateX(180deg);
+    color: $primary;
+  }
+}
