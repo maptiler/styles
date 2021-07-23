@@ -160,6 +160,31 @@
                 Jobs
               </a>
             </div>
+            <div class="col-12 border-top border-light">
+              <a role="button" data-bs-toggle="collapse" href="#SolutionsBlock" data-bs-target="#SolutionsBlock" aria-expanded="false" aria-controls="SolutionsBlock">
+                <h6 class="ms-1">Solutions <svg class="collapse-arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><use href="/styles/style/icon/icon.svg#keyboard_arrow_down"></use></svg></h6>
+              </a>
+              <div class="collapse" id="SolutionsBlock">
+                <div class="subnav-solutions">
+                <div class="py-2 pt-1">
+                  <span class="d-block ms-1 mt-0 mb-1 fw-bold font-family-ubuntu body-size text-gray">By use-case</span>
+                  <a class="solution-link" href="{{ include.link_url }}/cloud/">Maps API</a>
+                  <a class="solution-link" href="{{ include.link_url }}/cloud/geocoding/">Geocoding </a>
+                  <a class="solution-link" href="{{ include.link_url }}/cloud/customize/">Map customize tool</a>
+                  <a class="solution-link" href="{{ include.link_url }}/desktop/">Data processing</a>
+                  <a class="solution-link" href="{{ include.link_url }}/cloud/geodata-hosting/">Geodata hosting</a>
+                  <a class="solution-link" href="{{ include.link_url }}/data/">Map self-hosting</a>
+                </div>
+                <div class="py-2 border-top border-light">
+                  <span class="d-block ms-1 mt-0 mb-1 fw-bold font-family-ubuntu body-size">By industry</span>
+                  <a class="solution-link" href="{{ include.link_url }}/industry/government/">Government </a>
+                  <a class="solution-link" href="{{ include.link_url }}/industry/weather/">Weather </a>
+                  <a class="solution-link" href="{{ include.link_url }}/industry/transportation/">Transportation </a>
+                  <a class="solution-link" href="{{ include.link_url }}/industry/business-intelligence/">Business Analytics</a>
+                </div>
+                </div>
+              </div>
+            </div>
             <div class="col-12 text-center border-top border-light">
               <a class="btn btn-primary w-90 my-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
             </div>
