@@ -111,4 +111,11 @@ $utilities: map-merge( $utilities,(
     'sans': 'Open Sans',
     )
   ),
+  "background": (
+    property: background,
+    class: bg,
+    values: (
+    'gradient': linear-gradient(180deg,rgba(49,112,254,0.05) 7.92%,rgba(49,112,254,0) 100%),
+    )
+  ),
 ));
