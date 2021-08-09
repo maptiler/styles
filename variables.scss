@@ -1525,8 +1525,8 @@ $pre-color:                         null !default;
 
 $btn-text-transform: uppercase;
 
-$font-sizes: () !default;
-$font-sizes: map-merge(
+$mt-font-sizes: () !default;
+$mt-font-sizes: map-merge(
   (
   'smaller': 12px,
   'small': 14px,
@@ -1534,7 +1534,7 @@ $font-sizes: map-merge(
   'big': 18px,
   'bigger': 20px,
   ),
-  $font-sizes
+  $mt-font-sizes
 );
 
 $footer-color: $gray-600;

@@ -7,8 +7,8 @@
 .svg-text{vertical-align: bottom;}
 .events-none{pointer-events: none;}
 
-@each $font-sizes, $value in $font-sizes {
-  .#{$font-sizes} {
+@each $mt-font-sizes, $value in $mt-font-sizes {
+  .#{$mt-font-sizes} {
     @include media-breakpoint-up(sm) {
       font-size: $value;
     }
