@@ -9,7 +9,7 @@
   margin-left: $mt-aside-width;
   margin-top: $topbar-height;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     width: 100%;
     margin-left: 0;
   }
@@ -33,7 +33,7 @@
   transition: $transition-collapse;
   transition-property: width, visibility;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     width: 0;
     visibility: hidden;
     &.show{
