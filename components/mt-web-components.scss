@@ -277,6 +277,21 @@
 .splide__track.slide__fade{
   overflow: visible !important;
 }
+
+#map-carousel {
+  @media (min-width:  1500px){
+    max-width: 1500px;
+  }
+  @include make-container();
+  .splide__slide__container{
+    transition: all .15s ease-in-out;
+    margin: 0 15px;
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+}
+
 // misc
 .customer-logo-link{
   color: #AEB6C7;
