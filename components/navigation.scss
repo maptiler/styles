@@ -1,6 +1,6 @@
 // navbar
 #navbar:not(.navbar-small){
- @extend .container;
+ @extend .container-lg;
 }
 .navbar-small {
   z-index: $zindex-fixed;
@@ -163,7 +163,7 @@
 .subnav-products-mobile{
   display: flex;
   flex-wrap: wrap;
-  padding: 0 15px;
+  padding: 0 30px;
   a.nav-item {
     padding: 20px 0;
     font-weight: normal;
@@ -182,7 +182,7 @@
         position: absolute;
         background-repeat: no-repeat;
         background-size: 35px 35px;
-        left: 10px;
+        left: 30px;
         margin-top: -5px;
       }
       &.cloud{

@@ -1,60 +1,3 @@
-.tag-hiring {
-  display: inline-flex !important;
-  margin: 0 !important;
-}
-.tag-hiring:after {
-  content: 'We are hiring';
-    padding: 10px 11px;
-    left: -10px;
-    top: -8px;
-    border-radius: 4px;
-    font-size: 14px;
-    position: relative;
-    display: inline-block;
-    background-color: #333359;
-    color: white;
-}
-.tag-hiring span:after {
-    content: '';
-      position: relative;
-      display: inline-block;
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-bottom: 12px solid #333359;
-      transform: rotate(-90deg);
-  }
-  .tag-hiring {
-    display: inline-flex !important;
-    margin: 0 0 5px 0 !important;
-    &:after {
-      content: 'We are hiring';
-        padding: 9px 11px;
-        left: -10px;
-        top: -8px;
-        border-radius: 4px;
-        font-size: 14px;
-        position: relative;
-        display: inline-block;
-        background-color: $secondary;
-        color: white;
-    }
-    span {
-      &:after {
-        content: '';
-          position: relative;
-          display: inline-block;
-          width: 0;
-          height: 0;
-          border-left: 10px solid transparent;
-          border-right: 10px solid transparent;
-          border-bottom: 12px solid #333359;
-          transform: rotate(-90deg);
-      }
-    }
-  }
-
   .rhomb {
     background: #448aff;
     display: block;
@@ -282,7 +225,7 @@
   @media (min-width:  1500px){
     max-width: 1500px;
   }
-  @include make-container();
+  @extend .container-lg;
   .splide__slide__container{
     transition: all .15s ease-in-out;
     margin: 0 15px;
