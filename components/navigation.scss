@@ -186,43 +186,43 @@
         margin-top: -5px;
       }
       &.cloud{
-        color: $cloud;
+        color: $cloud !important;
         &:before {
           background-image: url('#{$nav-icon}cloud-icon.svg');
         }
       }
       &.desktop{
-        color: $desktop;
+        color: $desktop !important;
         &:before {
           background-image: url('#{$nav-icon}desktop-icon.svg');
         }
       }
       &.engine{
-        color: $engine;
+        color: $engine !important;
         &:before {
           background-image: url('#{$nav-icon}engine-icon.svg');
         }
       }
       &.mobile{
-        color: $mobile;
+        color: $mobile !important;
         &:before {
           background-image: url('#{$nav-icon}mobile-icon.svg');
         }
       }
       &.cluster{
-        color: cluster;
+        color: $cluster !important;
         &:before {
           background-image: url('#{$nav-icon}cluster-icon.svg');
         }
       }
       &.server{
-        color: $server;
+        color: $server !important;
         &:before {
           background-image: url('#{$nav-icon}server-icon.svg');
         }
       }
       &.data{
-        color: $data;
+        color: $data !important;
         &:before {
           background-image: url('#{$nav-icon}data-icon.svg');
         }
