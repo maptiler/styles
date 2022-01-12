@@ -1,8 +1,17 @@
 {
   "name": "@maptiler/styles",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.1",
+  "description": "Visual front-end framework of MapTiler brand based on Bootstrap",
+  "author": "MapTiler Team",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maptiler/styles.git"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/maptiler"
+  },
   "peerDependencies": {
-    "bootstrap": "^4.4.1"
+    "bootstrap": "^5.0.0"
   }
 }
