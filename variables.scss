@@ -594,6 +594,7 @@ $table-cell-vertical-align:   middle !default;
 
 $table-color:                 $body-color !default;
 $table-bg:                    transparent !default;
+$table-accent-bg:             transparent !default;
 
 $table-th-font-weight:        null !default;
 
@@ -882,6 +883,8 @@ $form-select-font-size-sm:        $input-font-size-sm !default;
 $form-select-padding-y-lg:        $input-padding-y-lg !default;
 $form-select-padding-x-lg:        $input-padding-x-lg !default;
 $form-select-font-size-lg:        $input-font-size-lg !default;
+
+$form-select-transition:          $input-transition !default;
 // scss-docs-end form-select-variables
 
 // scss-docs-start form-range-variables
@@ -913,6 +916,7 @@ $form-file-button-hover-bg:       shade-color($form-file-button-bg, 5%) !default
 
 // scss-docs-start form-floating-variables
 $form-floating-height:            add(3.5rem, $input-height-border) !default;
+$form-floating-line-height:       1.25 !default;
 $form-floating-padding-x:         $input-padding-x !default;
 $form-floating-padding-y:         1rem !default;
 $form-floating-input-padding-t:   1.625rem !default;
@@ -1063,7 +1067,7 @@ $dropdown-link-hover-color:         $primary !default;
 $dropdown-link-hover-bg:            $lighter !default;
 
 $dropdown-link-active-color:        $primary !default;
-$dropdown-link-active-bg:           $lighter !default
+$dropdown-link-active-bg:           $lighter !default;
 
 $dropdown-link-disabled-color:      $gray-400 !default;
 
