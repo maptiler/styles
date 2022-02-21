@@ -30,16 +30,14 @@
   }
 }
 
-//rectangles
+// background rectangles
 
-.bg-tangle{
-  z-index: -1;
+.background-rectangle {
+  z-index: -10;
   position: absolute;
   pointer-events: none;
-  left: 50%;
-}
-
-.bg-tangle.bg-right{
-  left: unset;
   right: 50%;
+  img{
+    transform: scale(var(--rScale)) translateX(var(--rX)) translateY(var(--rY)) rotate(var(--rRotate));
+  }
 }
