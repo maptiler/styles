@@ -58,12 +58,15 @@
       </div>
       <div class="mt-copyright text-center border-top border-light mt-8">
         <p class="py-4">
-          &copy;&nbsp;<script>
-            document.write(new Date().getFullYear())
-          </script>&nbsp;<a href="{{ include.link_url }}/contacts/">MapTiler</a>. All&nbsp;rights&nbsp;reserved.
+          &copy;&nbsp;
+          <span id="copyrightYear"></span>
+          &nbsp;<a href="{{ include.link_url }}/contacts/">MapTiler</a>. All&nbsp;rights&nbsp;reserved.
           <a href="{{ include.link_url }}/privacy-policy/">Privacy</a>&nbsp;&amp;&nbsp;<a href="{{ include.link_url }}/terms/">Terms</a>.
         </p>
       </div>
     </div>
   </div>
 </footer>
+<script>
+  document.getElementById('copyrightYear').innerHTML = new Date().getFullYear();
+</script>
