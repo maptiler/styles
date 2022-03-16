@@ -44,6 +44,7 @@
     position: absolute;
     left: 25px;
     transform: scale(1.5);
+    top: calc(50% - 10px);
   }
 
   &.success::before{
@@ -54,6 +55,9 @@
   }
   &.error::before{
     content: url("#{$messages-icon}cancel-red.svg");
+  }
+  &.idea::before{
+    content: url("#{$messages-icon}idea-yellow.svg");
   }
 }
 
