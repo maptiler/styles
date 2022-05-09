@@ -19,11 +19,6 @@
     box-shadow: 0 10px 30px #{$value}40;
   }
 }
-@for $i from -1 through 10 {
-  .z-#{$i} {
-    z-index: $i;
-  }
-}
 
 .select-transparent,.select-transparent:focus{
   background: transparent;
@@ -73,6 +68,30 @@ $utilities: map-merge( $utilities,(
       100: 100%,
       vh: 100vh,
       auto: auto
+    )
+  ),
+  "z-index": (
+    property: z-index,
+    class: z,
+    values: (
+    n5: -5,
+    n4: -4,
+    n10: -10,
+    n11: -11,
+    n12: -12,
+    n15: -15,
+      -1: -1,
+      1: 1,
+      2: 2,
+      3: 3,
+      4: 4,
+      5: 5,
+      6: 6,
+      7: 7,
+      8: 8,
+      9: 9,
+      10: 10,
+      11: 11,
     )
   ),
   "height": (

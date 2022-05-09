@@ -37,7 +37,7 @@
   position: absolute;
   pointer-events: none;
   right: 50%;
-  img{
+  img, svg{
     transform: scale(var(--rScale)) translateX(var(--rX)) translateY(var(--rY)) rotate(var(--rRotate));
   }
 }
