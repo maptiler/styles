@@ -13,7 +13,7 @@
 // collapse-arrow
 .collapse-arrow {
   transform: rotateX(0deg);
-  transition: 0.25s;
+  transition: transform 0.25s;
 }
 a[aria-expanded="true"] {
   .collapse-arrow {

@@ -1,15 +1,55 @@
-  <nav id="navbar" class="navbar navbar-small navbar-dark navbar-expand-lg">
-    <div class="container px-gutter">
-        <a class="navbar-brand product-brand" href="{{ '/' | relative_url }}">
-          <svg height="46"><use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-small.svg#maptilerLogo"></use></svg>
-        </a>
+  <nav id="navbar" class="navbar navbar-expand-lg pt-lg-4 pb-lg-gutter
+                          {% if page.style == null or page.style contains "misc" %}border-bottom border-light{% endif %}
+                          {% if page.header == 'darklight' or page.header == 'light' %} navbar-light
+                          {% else %} navbar-dark{% endif %}">
+
+      {% if page.style contains 'desktop' or page.style contains 'cloud'
+            or page.style contains 'mobile' or page.style contains 'cluster'
+            or page.style contains 'engine' or page.style contains 'server'
+            or page.style contains 'data' %}
+      <a class="navbar-brand product-brand adaptive-brand" href="{{ '/' | relative_url }}">
+      <svg width="347" height="57">
+        <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-{{ page.style | replace: " svg","" }}.svg#{{ page.style | replace: " svg","" }}"></use>
+      </svg>
+      </a>
+      {% elsif page.style contains 'basemaps' %}
+      <a class="navbar-brand pl-gutter product-brand {% if page.style contains 'satellite' %}adaptive-brand{% endif %}" href="{{ '/' | relative_url }}">
+      <svg width="347" height="57">
+        <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-data.svg#data"></use>
+      </svg>
+      </a>
+      {% elsif page.header == 'darklight' %}
+      <a class="navbar-brand product-brand adaptive-brand" href="{{ '/' | relative_url }}">
+      <svg width="318" height="55">
+        <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive.svg#maptilerLogo"></use>
+      </svg>
+      </a>
+      {% elsif page.header == 'light' %}
+      <a class="navbar-brand product-brand" href="{{ '/' | relative_url }}">
+      <svg width="318" height="55">
+        <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive.svg#maptilerLogo"></use>
+      </svg>
+      </a>
+      {% else %}
+      <a class="navbar-brand product-brand" href="{{ '/' | relative_url }}">
+      <svg width="318" height="55">
+        <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive.svg#maptilerLogo"></use>
+      </svg>
+      </a>
+      {% endif %}
 
       <div class="collapse navbar-collapse navbar-mobile justify-content-end fw-bolder" id="Mobilenav">
         <div class="navbar-nav flex-lg-row text-dark">
           <div class="d-none d-lg-flex">
             <div class="position-relative">
             <a tabindex="1" id="subnav-products-btn"
-            class="nav-item nav-link mx-gutter px-0 d-none d-lg-block">Products</a>
+            class="nav-item nav-link mx-gutter px-0 d-none d-lg-block
+                  {% if page.url contains '/desktop/' or page.url contains 'pricing' or
+                        page.url contains 'download' or page.url contains '/cloud/' or
+                        page.url contains '/demo/' or page.url contains '/geoeditor/' or
+                        page.url contains '/mobile/' or page.url contains '/engine/' or
+                        page.url contains '/server/' or page.url contains '/cluster/'
+                   %}active{% endif %}">Products</a>
             <div tabindex="1" class="subnav subnav-products text-left">
                 <div>
                   <a class="cloud" href="{{ include.link_url }}/cloud/">
@@ -43,7 +83,8 @@
           </div>
           <div class="position-relative">
             <a tabindex="1" id="subnav-solutions-btn"
-            class="nav-item nav-link mx-gutter px-0 d-none d-lg-block">Solutions</a>
+            class="nav-item nav-link mx-gutter px-0 d-none d-lg-block
+                  {% if page.url contains '/industry/' %}active{% endif %}">Solutions</a>
                   <div class="subnav subnav-solutions">
                   <div class="pe-3">
                     <span class="d-block ms-1 mt-0 mb-1 fw-bold font-family-ubuntu body-size text-gray">By use-case</span>
@@ -59,20 +100,23 @@
                     <a class="solution-link" href="{{ include.link_url }}/industry/transportation/">Transportation </a>
                     <a class="solution-link" href="{{ include.link_url }}/industry/weather/">Weather </a>
                     <a class="solution-link" href="{{ include.link_url }}/industry/business-intelligence/">Business Intelligence</a>
+                    <a class="solution-link" href="{{ include.link_url }}/industry/aviation/">Aviation</a>
                     <a class="solution-link" href="{{ include.link_url }}/industry/news-media/">News & Media</a>
                     <a class="solution-link" href="{{ include.link_url }}/industry/government/">Government </a>
                   </div>
             </div>
           </div>
 
-            <a class="nav-item nav-link mx-lg-gutter px-0" href="https://documentation.maptiler.com/">Docs</a>
-            <a class="nav-item nav-link mx-lg-gutter px-0 {% if page.url contains 'news' %}active{% endif %}" href="{{ include.link_url }}/news/">News</a>
+            <a class="nav-item nav-link mx-lg-gutter px-0 {% if page.url contains 'docs' %}active{% endif %}" href="https://documentation.maptiler.com/">Docs</a>
+            <a class="nav-item nav-link mx-lg-gutter px-0 {% if page.url contains '/news/' %}active{% endif %}" href="{{ include.link_url }}/news/">News</a>
           </div>
 
           <div class="subnav-products-mobile d-lg-none">
             <div class="col-12 d-flex justify-content-between px-0 mb-1 border-bottom border-light">
                 <a class="navbar-brand product-brand text-secondary" href="{{ '/' | relative_url }}">
-                  <svg height="46"><use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-small.svg#maptilerLogo"></use></svg>
+                <svg width="318" height="55">
+                  <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive.svg#maptilerLogo"></use>
+                </svg>
                 </a>
               <button onclick="changeThemeColor()" class="navbar-toggler text-secondary align-self-center" type="button" data-bs-toggle="collapse" data-bs-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
@@ -103,7 +147,7 @@
 
             <div class="col-6 text-end">
               <a class="d-block nav-item nav-link text-dark" href="{{ include.link_url }}/news/">
-                News
+                 News
                </a>
               <a class="d-block nav-item nav-link text-dark" href="https://documentation.maptiler.com/">
                 Docs
@@ -138,9 +182,9 @@
                   <a class="solution-link" href="{{ include.link_url }}/industry/transportation/">Transportation </a>
                   <a class="solution-link" href="{{ include.link_url }}/industry/weather/">Weather </a>
                   <a class="solution-link" href="{{ include.link_url }}/industry/business-intelligence/">Business Intelligence</a>
+                  <a class="solution-link" href="{{ include.link_url }}/industry/aviation/">Aviation</a>
                   <a class="solution-link" href="{{ include.link_url }}/industry/news-media/">News & Media</a>
                   <a class="solution-link" href="{{ include.link_url }}/industry/government/">Government </a>
-
                 </div>
                 </div>
               </div>
@@ -153,13 +197,17 @@
         </div>
       </div>
 
-      <div class="d-flex align-items-center">
+      <div class="d-flex ms-lg-3 align-items-center">
+        {% if page.style contains 'data' %}
+        <a class="btn btn-primary d-none d-lg-block ml-3" href="https://data.maptiler.com/my-extracts/">My Data</a>
+        {% else %}
         <a class="btn btn-primary d-none d-lg-block ml-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
-        <button onclick="changeThemeColor()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
+        {% endif %}
+        <button onclick="changeThemeColor()" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
             <use href="{{ include.styles_path }}icon/icon.svg#menu"></use>
           </svg>
         </button>
       </div>
-    </div>
   </nav>

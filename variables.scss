@@ -1203,11 +1203,11 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 $tooltip-font-size:                 $font-size-sm !default;
 $tooltip-max-width:                 200px !default;
 $tooltip-color:                     $white !default;
-$tooltip-bg:                        $black !default;
-$tooltip-border-radius:             $border-radius !default;
-$tooltip-opacity:                   .9 !default;
-$tooltip-padding-y:                 $spacer * 0.25 !default;
-$tooltip-padding-x:                 $spacer * 0.5 !default;
+$tooltip-bg:                        $secondary !default;
+$tooltip-border-radius:             8px !default;
+$tooltip-opacity:                   1 !default;
+$tooltip-padding-y:                 $spacer * 1 !default;
+$tooltip-padding-x:                 $spacer * 1 !default;
 $tooltip-margin:                    0 !default;
 
 $tooltip-arrow-width:               .8rem !default;
@@ -1284,7 +1284,7 @@ $badge-font-weight:                 $font-weight-bold !default;
 $badge-color:                       $white !default;
 $badge-padding-y:                   .25em !default;
 $badge-padding-x:                   .4em !default;
-$badge-border-radius:               $border-radius-sm !default;
+$badge-border-radius:               2px !default;
 // scss-docs-end badge-variables
 
 

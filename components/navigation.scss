@@ -2,12 +2,6 @@
 #navbar:not(.navbar-small){
  @extend .container-lg;
 }
-.navbar-small {
-  z-index: $zindex-fixed;
-  padding: 0 !important;
-  background: rgba(255,255,255,.9);
-  box-shadow: 0 10px 35px rgba(51,51,89,.1);
-}
 
 @include media-breakpoint-down(lg){
 .navbar-mobile{
@@ -23,142 +17,20 @@
   }
 }
 
-// mt logo scaling
-.navbar-brand.product-brand {
-  @include media-breakpoint-down(lg) {
-    transform: scale(.75);
-    width: 0;
-  }
-  @include media-breakpoint-down(sm) {
-    transform: scale(.6);
-  }
-  &.adaptive-brand{
-    color: white;
-    @include media-breakpoint-up(md) {
-      color: $secondary;
-    }
-  }
-}
-// subnav
-#subnav-solutions-btn{
-  &:focus~.subnav-solutions{
-    display: flex !important;
-  }
-}
-#subnav-products-btn{
-  &:focus~.subnav-products{
-    display: flex !important;
-  }
-}
-.subnav {
-  div{
-    position: relative;
-    padding: 0 10px;
-    max-width: 340px;
-  }
-  &:focus,
-  &:active{
-    display: flex !important;
-  }
-  user-select: none;
-  display: none;
-  position: absolute;
-  width: max-content;
-  background: #fff;
-  padding: 30px 20px;
-  margin-top: 10px;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-  z-index: $zindex-popover;
-  right: 50%;
-  transform: translate(50%, 10px);
-  @include media-breakpoint-down(sm){
-    position: relative;
-    margin: 0 auto;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-bottom: 10px solid #fff;
-    top: -8px;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-}
-// navnav
+//navigation links
+.navbar-nav{
+  @extend .flex-lg-row;
 
-.subnav-products {
-  a {
-    .product-title {margin: 10px 0 5px 0;}
-    color: $body-color;
-    font-weight: normal;
-    display: block;
-    margin: 5px 0;
-    padding: 5px;
-    padding-left: 70px;
-    border-radius: $border-radius;
-
-      &:hover{
-        background: #F5F8FF;
-      }
-    &::before {
-      content: '';
-      width: 45px;
-      height: 45px;
-      background-image: none;
-      position: absolute;
-      background-repeat: no-repeat;
-      background-size: 40px 40px;
-      left: 15px;
-    }
-
-    &.cloud::before {
-      background-image: url('#{$nav-icon}cloud-icon.svg');
-    }
-    &.desktop::before {
-      background-image: url('#{$nav-icon}desktop-icon.svg');
-    }
-    &.engine::before {
-      background-image: url('#{$nav-icon}engine-icon.svg');
-    }
-    &.mobile::before {
-      background-image: url('#{$nav-icon}mobile-icon.svg');
-    }
-    &.cluster::before {
-      background-image: url('#{$nav-icon}cluster-icon.svg');
-    }
-    &.server::before {
-      background-image: url('#{$nav-icon}server-icon.svg');
-    }
-    &.data::before {
-      background-image: url('#{$nav-icon}data-icon.svg');
-    }
-  }
-}
-.subnav-solutions {
-  div:first-child {
-    border-right: 1px solid $lighter;
-  }
-
-  .solution-link {
-    display: block;
-    font-weight: normal;
-    color: $body-color;
-    padding: 5px 10px 5px 10px;
-    margin: 2px 0;
-    font-size: 16px;
-
-    &:hover {
-      background-color: $lighter;
+  .nav-item.nav-link {
+    &:hover{
       color: $primary;
     }
+    &[aria-expanded="true"] {
+        color: $primary;
+    }
   }
 }
+
 // mobile
 .subnav-products-mobile{
   display: flex;
@@ -231,29 +103,22 @@
   }
 }
 
-// active states
+.subnav-solutions {
+  div:first-child {
+    border-right: 1px solid $lighter;
+  }
 
-.nav {
-  .nav-link.text-white.active{
-    color: white !important;
-    border-bottom: 2px solid #fff;
-  }
-  .nav-link.text-secondary.active{
-    border-bottom: 2px solid $secondary;
-  }
-}
-.navbar-dark {
-  .nav-link.active {
-    @include media-breakpoint-up(sm) {
-      border-bottom: 2px solid $secondary;
-    }
-  }
-}
-.navbar-light {
-  .nav-link.active {
-    @include media-breakpoint-up(sm) {
-      border-bottom: 2px solid #fff;
-      color: white !important;
+  .solution-link {
+    display: block;
+    font-weight: normal;
+    color: $body-color;
+    padding: 5px 10px 5px 10px;
+    margin: 2px 0;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $lighter;
+      color: $primary;
     }
   }
 }
