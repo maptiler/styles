@@ -32,32 +32,97 @@
   </span>
   {% endcapture %}
 
-  <div class="collapse navbar-collapse navbar-mobile justify-content-end fw-bolder" id="Mobilenav">
+  <div class="collapse navbar-collapse navbar-mobile justify-content-end" id="Mobilenav">
     <div class="navbar-nav">
       <div class="d-none d-lg-flex" >
-        <div class="dropdown dropdown-products">
+        <div class="dropdown">
           <a class="nav-item nav-link" type="button" id="dropdownProductsLink" data-bs-toggle="dropdown" aria-expanded="false">
             Products {{ collapse-arrow }}
           </a>
-          <div class="dropdown-menu"  aria-labelledby="dropdownProductsLink">
-            <a href="/cloud/">Cloud</a>
+          <div class="dropdown-menu dropdown-menu-navbar p-3"  aria-labelledby="dropdownProductsLink">
+            <div class="d-flex">
+              <div class="dropdown-products dropdown-cloud d-flex">
+                <div class="pe-2">
+                  <h6 class="m-0 text-uppercase small ps-o5 text-cloud pb-1">MapTiler Cloud</h6>
+                  <a class="dropdown-link" href="{{ include.link_url }}/cloud/">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                      <use href="/styles/style/icon/extra/navbar-products/maps-platform.svg#maps-platform"></use>
+                    </svg>
+                    Maps Platform</a>
+                  <a class="dropdown-link" href="{{ include.link_url }}/cloud/geodata-hosting/">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                      <use href="/styles/style/icon/extra/navbar-products/geodata-hosting.svg#geodata-hosting"></use>
+                    </svg>
+                    GeoData Hosting</a>
+                  <a class="dropdown-link" href="{{ include.link_url }}/weather/">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                      <use href="/styles/style/icon/extra/navbar-products/weather-visualization.svg#weather-visualization"></use>
+                    </svg>
+                    Weather Visualization</a>
+                </div>
+                <div class="px-2">
+                  <h6 class="m-0 text-uppercase text-white user-select-none pb-1">MapTiler</h6>
+                  <a class="dropdown-link" href="{{ include.link_url }}/cloud/customize/">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                      <use href="/styles/style/icon/extra/navbar-products/map-design-tool.svg#map-design-tool"></use>
+                    </svg>
+                    Map Design Tool</a>
+                  <a class="dropdown-link" href="{{ include.link_url }}/cloud/geocoding/">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                      <use href="/styles/style/icon/extra/navbar-products/search.svg#search"></use>
+                    </svg>
+                    Search & Geocoding</a>
+                </div>
+              </div>
+              <div class="dropdown-products dropdown-data px-2 border-start border-light">
+                <h6 class="m-0 text-uppercase small ps-o5 text-data pb-1">server & data</h6>
+                <a class="dropdown-link" href="{{ include.link_url }}/server/">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                    <use href="/styles/style/icon/extra/navbar-products/map-server.svg#map-server"></use>
+                  </svg>
+                  Map Server</a>
+                <a class="dropdown-link" href="{{ include.link_url }}/data/">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                    <use href="/styles/style/icon/extra/navbar-products/self-hosted-maps.svg#self-hosted-maps"></use>
+                  </svg>
+                  Self-hosted Maps</a>
+              </div>
+              <div class="dropdown-products dropdown-desktop ps-2 border-start border-light">
+                <h6 class="m-0 text-uppercase small ps-o5 text-desktop pb-1">Engine & Desktop</h6>
+                <a class="dropdown-link" href="{{ include.link_url }}/desktop/">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                    <use href="/styles/style/icon/extra/navbar-products/geodata-processing.svg#geodata-processing"></use>
+                  </svg>
+                  GeoData Processing</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="dropdown">
           <a class="nav-item nav-link" type="button" id="dropdownCompanyLink" data-bs-toggle="dropdown" aria-expanded="false">
             Company {{ collapse-arrow }}
           </a>
-          <div class="dropdown-menu"  aria-labelledby="dropdownCompanyLink">
-            <a href="/cloud/">Cloud</a>
+          <div class="dropdown-menu dropdown-menu-navbar"  aria-labelledby="dropdownCompanyLink">
+            <a class="dropdown-link" href="{{ include.link_url }}/news/">News</a>
+            <a class="dropdown-link" href="{{ include.link_url }}/jobs/">Careers</a>
+            <a class="dropdown-link" href="{{ include.link_url }}/open-source/">Open-source</a>
+            <a class="dropdown-link" href="{{ include.link_url }}/team/">Team</a>
           </div>
         </div>
-        <a class="nav-item nav-link" >Pricing</a>
+        <a class="nav-item nav-link" href="/cloud/pricing/">Pricing</a>
         <div class="dropdown">
           <a class="nav-item nav-link" type="button" id="dropdownResourcesLink" data-bs-toggle="dropdown" aria-expanded="false">
             Resources {{ collapse-arrow }}
           </a>
-          <div class="dropdown-menu"  aria-labelledby="dropdownResourcesLink">
-            <a href="/cloud/">Cloud</a>
+          <div class="dropdown-menu dropdown-menu-navbar"  aria-labelledby="dropdownResourcesLink">
+            <a class="dropdown-link" href="https://documentation.maptiler.com/hc/en-us">Documentation Portal</a>
+            <a class="dropdown-link" href="https://docs.maptiler.com/cloud/api/">API Reference</a>
+            <a class="dropdown-link" href="https://docs.maptiler.com/maplibre-gl-js/get-started/">JavaScript Maps API</a>
+            <a class="dropdown-link" href="https://docs.maptiler.com/maplibre-gl-native-android">Android SDK</a>
+            <a class="dropdown-link" href="https://docs.maptiler.com/maplibre-gl-native-ios">iOS SDK</a>
+            <a class="dropdown-link" href="https://documentation.maptiler.com/hc/en-us#:~:text=Datasets">Tileset Schemas</a>
+            <a class="dropdown-link" href="https://www.youtube.com/channel/UCubcQeWuBKvqpMu172CLEXw">YouTube Channel</a>
+            <a class="dropdown-link" href="https://documentation.maptiler.com/hc/en-us/requests/new">Support</a>
           </div>
         </div>
       </div>

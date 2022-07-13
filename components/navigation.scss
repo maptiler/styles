@@ -16,12 +16,81 @@
     }
   }
 }
+//navigation dropdowns
+.dropdown-menu-navbar{
+  padding: 20px;
+  margin-top: 10px !important;
+  border-radius: 15px;
+  left: 50% !important;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+  .dropdown-link{
+    display: block;
+    padding: 5px;
+    padding-right: 30px;
+    border-radius: 5px;
+    color: $secondary;
+    width: 100%;
+    min-width: 150px;
+    white-space: nowrap;
+    font-size: 15px;
+
+    &:hover{
+      background: $lighter;
+      color: $primary;
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 10px solid #fff;
+    top: -8px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.dropdown-products {
+  max-height: 200px;
+  .dropdown-link{
+    display: block;
+    min-width: 220px;
+    padding: 9px 8px;
+    svg{transform: translateY(-1px);margin-right: 8px;}
+  }
+
+  &.dropdown-data{
+    .dropdown-link:hover{
+      color: $data;
+      background: $data-light;
+    }
+  }
+  &.dropdown-desktop{
+    .dropdown-link:hover{
+      color: $desktop;
+      background: $desktop-light;
+    }
+  }
+  &.dropdown-cloud{
+    .dropdown-link:hover{
+      color: $cloud;
+      background: $cloud-light;
+    }
+  }
+}
 
 //navigation links
 .navbar-nav{
   @extend .flex-lg-row;
 
   .nav-item.nav-link {
+    font-weight: 600;
     &:hover{
       color: $primary;
     }
