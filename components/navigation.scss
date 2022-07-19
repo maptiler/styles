@@ -192,21 +192,22 @@
 
 // footer
 .footer {
+  .social-circles{
+    a {
+      transform: scale(.85);
+      width: 30px;
+      height: 30px;
+    }
+  }
   .link-list{
     a{
-      color: $dark;
+      color: $secondary;
       display: block;
       margin: 10px 0;
+      font-size: 14px;
       &:hover{
         color: $primary;
       }
-    }
-  }
-  .mt-copyright{
-    @include make-col(12);
-    a{
-      color: $dark;
-      display: inline;
     }
   }
 }
