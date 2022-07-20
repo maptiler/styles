@@ -6,6 +6,7 @@
 .stick-bottom{bottom: 0;}
 .svg-text{vertical-align: bottom;}
 .events-none{pointer-events: none;}
+.link-secondary{color: $secondary; &:hover{color:$primary;}&[aria-expanded="true"]{color: $primary;}}
 
 @each $mt-font-sizes, $value in $mt-font-sizes {
   .#{$mt-font-sizes} {

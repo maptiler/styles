@@ -1,7 +1,9 @@
 // navbar
 #navbar:not(.navbar-small){
  @extend .container-lg;
+ height: 72px;
 }
+//Mobilenav
 
 @include media-breakpoint-down(lg){
 .navbar-mobile{
@@ -16,6 +18,10 @@
     }
   }
 }
+.navbar-mobile-dropdown{
+  height: 72px;
+  padding: 0 30px;
+}
 //navigation dropdowns
 .dropdown-menu-navbar{
   padding: 20px;
@@ -24,6 +30,22 @@
   left: 50% !important;
   box-shadow: 0px 15px 68px rgba(51, 51, 89, 0.15);
 
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 10px solid #fff;
+    top: -8px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.navbar-links{
   .dropdown-link{
     display: block;
     padding: 5px;
@@ -40,19 +62,6 @@
       color: $primary;
     }
   }
-  &:before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-bottom: 10px solid #fff;
-    top: -8px;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
 }
 
 .dropdown-products {
@@ -61,6 +70,11 @@
     min-width: 220px;
     padding: 9px 8px;
     svg{transform: translateY(-1px);margin-right: 8px;}
+    color: $secondary;
+    &:hover{
+      background: $lighter;
+      color: $primary;
+    }
   }
 
   &.dropdown-data{
@@ -99,96 +113,6 @@
 }
 
 // mobile
-.subnav-products-mobile{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 30px;
-  a.nav-item {
-    padding: 20px 0;
-    font-weight: normal;
-  }
-  .products{
-    text-align: left;
-    padding-bottom: 30px;
-
-    a{
-      padding-left: 50px;
-      &:before {
-        content: '';
-        width: 35px;
-        height: 35px;
-        background-image: none;
-        position: absolute;
-        background-repeat: no-repeat;
-        background-size: 35px 35px;
-        left: 30px;
-        margin-top: -5px;
-      }
-      &.cloud{
-        color: $cloud !important;
-        &:before {
-          background-image: url('#{$nav-icon}cloud-icon.svg');
-        }
-      }
-      &.desktop{
-        color: $desktop !important;
-        &:before {
-          background-image: url('#{$nav-icon}desktop-icon.svg');
-        }
-      }
-      &.engine{
-        color: $engine !important;
-        &:before {
-          background-image: url('#{$nav-icon}engine-icon.svg');
-        }
-      }
-      &.mobile{
-        color: $mobile !important;
-        &:before {
-          background-image: url('#{$nav-icon}mobile-icon.svg');
-        }
-      }
-      &.cluster{
-        color: $cluster !important;
-        &:before {
-          background-image: url('#{$nav-icon}cluster-icon.svg');
-        }
-      }
-      &.server{
-        color: $server !important;
-        &:before {
-          background-image: url('#{$nav-icon}server-icon.svg');
-        }
-      }
-      &.data{
-        color: $data !important;
-        &:before {
-          background-image: url('#{$nav-icon}data-icon.svg');
-        }
-      }
-    }
-  }
-}
-
-.subnav-solutions {
-  div:first-child {
-    border-right: 1px solid $lighter;
-  }
-
-  .solution-link {
-    display: block;
-    font-weight: normal;
-    color: $body-color;
-    padding: 5px 10px 5px 10px;
-    margin: 2px 0;
-    font-size: 16px;
-
-    &:hover {
-      background-color: $lighter;
-      color: $primary;
-    }
-  }
-}
 
 // footer
 .footer {
