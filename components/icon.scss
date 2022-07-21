@@ -69,7 +69,7 @@
 
     &:not(.colored){
       &:before{
-        background-color: $light;
+        background-color: $secondary;
       }
       &:hover{
         &:before{
