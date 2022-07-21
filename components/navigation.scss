@@ -3,8 +3,16 @@
  @extend .container-lg;
  height: 72px;
 }
-//Mobilenav
 
+@include media-breakpoint-up(lg) {
+  .navbar-sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
+
+//Mobilenav
 @include media-breakpoint-down(lg){
 .navbar-mobile{
     position: absolute;
@@ -18,10 +26,12 @@
     }
   }
 }
+
 .navbar-mobile-dropdown{
   height: 72px;
   padding: 0 30px;
 }
+
 //navigation dropdowns
 .dropdown-menu-navbar{
   padding: 20px;
