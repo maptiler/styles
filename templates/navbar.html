@@ -109,7 +109,7 @@
             </div>
           </div>
           {% if page.style contains 'data' %}
-          <a class="nav-item nav-link" href="/data/package/">Pricing</a>
+          <a class="nav-item nav-link" href="/data/pricing/">Pricing</a>
           {% elsif page.style contains 'server' %}
           <a class="nav-item nav-link" href="/server/pricing/">Pricing</a>
           {% elsif page.style contains 'desktop' %}
@@ -225,7 +225,7 @@
               </div>
 
               <a role="button" type="button" class="py-2 mx-2 h6 d-block my-0 border-top border-light link-secondary"
-              {% if page.style contains 'data' %}href="/data/package/"{% elsif page.style contains 'server' %}href="/server/pricing/"
+              {% if page.style contains 'data' %}href="/data/pricing/"{% elsif page.style contains 'server' %}href="/server/pricing/"
               {% elsif page.style contains 'desktop' %}href="/pricing/"{% else %}href="/cloud/pricing/"{% endif %}>
                 Pricing
               </a>
