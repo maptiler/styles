@@ -1,5 +1,5 @@
 # MapTiler Styles
-Visual front-end framework of MapTiler brand based on Bootstrap
+Visual front-end framework of [MapTiler](https://www.maptiler.com/) brand based on Bootstrap
 ## Icons
 We use [material icons](https://fonts.google.com/icons?selected=Material+Icons) for all the icons, with some custom ones made by our designer. 
 ### Icons structure
