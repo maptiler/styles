@@ -115,7 +115,7 @@
           {% elsif page.style contains 'desktop' %}
           <a class="nav-item nav-link" href="/pricing/">Pricing</a>
           {% else %}
-          <a class="nav-item nav-link" href="/cloud/pricing/">Pricing</a>
+          <a class="nav-item nav-link" href="{{ include.link_url }}/cloud/pricing/">Pricing</a>
           {% endif %}
           <div class="dropdown">
             <a class="nav-item nav-link" type="button" id="dropdownResourcesLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -226,7 +226,7 @@
 
               <a role="button" type="button" class="py-2 mx-2 h6 d-block my-0 border-top border-light link-secondary"
               {% if page.style contains 'data' %}href="/data/pricing/"{% elsif page.style contains 'server' %}href="/data/pricing/"
-              {% elsif page.style contains 'desktop' %}href="/pricing/"{% else %}href="/cloud/pricing/"{% endif %}>
+              {% elsif page.style contains 'desktop' %}href="/pricing/"{% else %}href="{{ include.link_url }}/cloud/pricing/"{% endif %}>
                 Pricing
               </a>
 
