@@ -206,11 +206,14 @@
     z-index: 1000;
     font-size: 12px;
     cursor: pointer;
-    span{
+    span {
       color: $white;
       background: $primary;
       padding: 7px;
       border-radius: $border-radius;
+      &.disabled {
+        background: $secondary;
+      }
     }
 }
 /* mapbox fix */
