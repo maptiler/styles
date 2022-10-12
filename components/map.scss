@@ -8,8 +8,7 @@
 }
 /* map small */
 
-#map,
-#map-raster {
+#map {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -17,20 +16,11 @@
   right: 0;
 }
 
-#map-raster {
-  display: none;
-}
-
-.map-type-wrap .switch {
-  margin: -8px 5px -5px 10px;
-}
-
 .map-controls a.map-controls-text {
   font-size: 16px;
 }
 
-#map-fullscreen-btn,
-.map-type-wrap {
+#map-fullscreen-btn {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -46,7 +36,7 @@
 
 #map-language {
   position: absolute;
-  top: 52px;
+  top: 0px;
   left: 10px;
   z-index: 10;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
@@ -54,7 +44,6 @@
 }
 
 .map-wrap {
-
   position: relative !important;
   height: 595px;
   &:not(.fullscreen) {
@@ -72,27 +61,6 @@
     height: 100%;
     background: #f2f3f6;
     z-index: 80;
-  }
-}
-
-.map-type-wrap.fullscreen {
-  top: 80px;
-  left: 20px;
-  display: inline-block;
-  font-size: 14px;
-  text-align: center;
-  width: auto;
-  height: auto;
-  span, label{
-    user-select: none;
-    cursor: pointer;
-    line-height: 1.4;
-  }
-  @include media-breakpoint-down(md) {
-    font-size: 12px;
-    padding: 6px 0 5px;
-    top: 127px;
-    left: 15px;
   }
 }
 
@@ -139,7 +107,7 @@
   overflow-y: auto;
   position: fixed;
   left: 15px;
-  top: 180px;
+  top: 125px;
   z-index: 86;
   width: auto;
   height: auto;
@@ -147,7 +115,7 @@
   @include media-breakpoint-down(md){
     bottom: 65px;
     left: 15px;
-    top: 155px;
+    top: 125px;
     height: 50%;
   }
 
@@ -174,6 +142,33 @@
   transition: all 0.2s ease;
 }
 
+#map-switch-streets-v2 {
+  background-image: url("/img/cloud/slider/streets-v2.png");
+}
+
+#map-switch-hybrid {
+  background-image: url("/img/cloud/slider/hybrid.png");
+}
+
+#map-switch-basic-v2 {
+  background-image: url("/img/cloud/slider/basic-v2.png");
+}
+
+#map-switch-streets-v2-dark {
+  background-image: url("/img/cloud/slider/streets-v2-dark.png");
+}
+
+#map-switch-streets-v2-light {
+  background-image: url("/img/cloud/slider/streets-v2-light.png");
+}
+
+#map-switch-outdoor {
+  background-image: url("/img/cloud/slider/outdoor.png");
+}
+
+#map-switch-winter {
+  background-image: url("/img/cloud/slider/winter.png");
+}
 
 #map-switch-streets {
   background-image: url("/img/cloud/slider/streets.png");
@@ -210,11 +205,15 @@
     right: 10px !important;
     z-index: 1000;
     font-size: 12px;
-    a{
+    cursor: pointer;
+    span {
       color: $white;
       background: $primary;
       padding: 7px;
       border-radius: $border-radius;
+      &.disabled {
+        background: $secondary;
+      }
     }
 }
 /* mapbox fix */
