@@ -92,8 +92,8 @@
                     Map Server</a>
                 </div>
                 <div class="dropdown-products dropdown-desktop ps-2 border-start border-light">
-                  <h6 class="m-0 text-uppercase small ps-o5 text-desktop pb-1">Engine & Desktop</h6>
-                  <a class="dropdown-link" href="{{ include.link_url }}/desktop/">
+                  <h6 class="m-0 text-uppercase small ps-o5 text-desktop pb-1">Engine</h6>
+                  <a class="dropdown-link" href="{{ include.link_url }}/engine/">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
                       <use href="/styles/style/icon/extra/navbar-products/geodata-processing.svg#geodata-processing"></use>
                     </svg>
@@ -118,7 +118,7 @@
           {% elsif page.style contains 'server' %}
           <a class="nav-item nav-link" href="/data/pricing/">Pricing</a>
           {% elsif page.style contains 'desktop' %}
-          <a class="nav-item nav-link" href="/pricing/">Pricing</a>
+          <a class="nav-item nav-link" href="/engine/pricing/">Pricing</a>
           {% else %}
           <a class="nav-item nav-link" href="{{ include.link_url }}/cloud/pricing/">Pricing</a>
           {% endif %}
@@ -211,8 +211,8 @@
                       Map Server</a>
                   </div>
                   <div class="dropdown-products dropdown-desktop pt-2 border-top border-light">
-                    <h6 class="m-0 text-uppercase small ps-o5 text-desktop pb-1">Engine & Desktop</h6>
-                    <a class="dropdown-link" href="{{ include.link_url }}/desktop/">
+                    <h6 class="m-0 text-uppercase small ps-o5 text-desktop pb-1">Engine</h6>
+                    <a class="dropdown-link" href="{{ include.link_url }}/engine/">
                       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
                         <use href="/styles/style/icon/extra/navbar-products/geodata-processing.svg#geodata-processing"></use>
                       </svg>
@@ -236,7 +236,7 @@
 
               <a role="button" type="button" class="py-2 mx-2 h6 d-block my-0 border-top border-light link-secondary"
               {% if page.style contains 'data' %}href="/data/pricing/"{% elsif page.style contains 'server' %}href="/data/pricing/"
-              {% elsif page.style contains 'desktop' %}href="/pricing/"{% else %}href="{{ include.link_url }}/cloud/pricing/"{% endif %}>
+              {% elsif page.style contains 'desktop' %}href="/engine/pricing/"{% else %}href="{{ include.link_url }}/cloud/pricing/"{% endif %}>
                 Pricing
               </a>
 
