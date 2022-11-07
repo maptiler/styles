@@ -117,7 +117,7 @@
           <a class="nav-item nav-link" href="/data/pricing/">Pricing</a>
           {% elsif page.style contains 'server' %}
           <a class="nav-item nav-link" href="/data/pricing/">Pricing</a>
-          {% elsif page.style contains 'desktop' %}
+          {% elsif page.style contains 'engine' %}
           <a class="nav-item nav-link" href="/engine/pricing/">Pricing</a>
           {% else %}
           <a class="nav-item nav-link" href="{{ include.link_url }}/cloud/pricing/">Pricing</a>
@@ -236,7 +236,7 @@
 
               <a role="button" type="button" class="py-2 mx-2 h6 d-block my-0 border-top border-light link-secondary"
               {% if page.style contains 'data' %}href="/data/pricing/"{% elsif page.style contains 'server' %}href="/data/pricing/"
-              {% elsif page.style contains 'desktop' %}href="/engine/pricing/"{% else %}href="{{ include.link_url }}/cloud/pricing/"{% endif %}>
+              {% elsif page.style contains 'engine' %}href="/engine/pricing/"{% else %}href="{{ include.link_url }}/cloud/pricing/"{% endif %}>
                 Pricing
               </a>
 
