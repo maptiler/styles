@@ -108,9 +108,10 @@
 //navigation links
 .navbar-nav{
   @extend .flex-lg-row;
-  max-height: 100vh;
-  overflow-y: auto;
-  
+  @include media-breakpoint-down(lg){
+    max-height: 100vh;
+    overflow-y: auto;
+  }
   .nav-item.nav-link {
     font-weight: 600;
     &:hover{
