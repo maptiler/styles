@@ -214,6 +214,7 @@
     z-index: 1000;
     font-size: 12px;
     cursor: pointer;
+    margin-right: 10px;
     span {
       color: $white;
       background: $primary;
@@ -227,7 +228,7 @@
 /* mapbox fix */
 
 .mapboxgl-ctrl {
-  margin: 0 !important;
+  margin: 0;
   box-shadow: $box-shadow !important;
 }
 
