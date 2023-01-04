@@ -151,7 +151,7 @@
             </svg>
           </a>
           <div class="">
-            <a class="btn btn-primary btn-sm me-o5" href="{{ site.cloud.url-sign }}">My Account</a>
+            <a class="btn btn-primary btn-sm me-o5" href="{{ site.cloud.url }}">My Account</a>
             <button onclick="changeThemeColor()" class="navbar-toggler text-secondary align-self-center" type="button" data-bs-toggle="collapse" data-bs-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
                 <use href="{{ include.styles_path }}icon/icon.svg#clear"></use>
@@ -276,7 +276,7 @@
       {% if page.style contains 'data' %}
       <a class="btn btn-primary d-none d-lg-block ml-3" href="https://data.maptiler.com/my-extracts/">My Data</a>
       {% else %}
-      <a class="btn btn-primary d-none d-lg-block ml-3" href="{{ site.cloud.url-sign }}">My Cloud</a>
+      <a class="btn btn-primary d-none d-lg-block ml-3" href="{{ site.cloud.url }}">My Cloud</a>
       {% endif %}
       <button onclick="changeThemeColor()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
