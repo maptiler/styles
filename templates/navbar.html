@@ -275,7 +275,7 @@
     </div>
 
     <div class="d-flex ms-lg-3 align-items-center">
-      {% if page.style contains 'data' %}
+      {% if page.style contains 'data' or page.style contains 'server' %}
       <a class="btn btn-primary d-none d-lg-block ml-3" href="https://data.maptiler.com/my-extracts/">My Data</a>
       {% else %}
       <a class="btn btn-primary d-none d-lg-block ml-3" href="{{ site.cloud.url }}">My Cloud</a>
