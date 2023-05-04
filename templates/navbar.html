@@ -15,6 +15,12 @@
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-data.svg?123#data"></use>
       </svg>
     </a>
+    {% elsif page.style contains 'sdk' %}
+    <a class="navbar-brand pl-gutter product-brand" href="{{ '/' | relative_url }}">
+      <svg width="250" height="41">
+        <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-sdk.svg?123#sdk"></use>
+      </svg>
+    </a>
     {% else %}
     <a class="navbar-brand product-brand" href="{{ '/' | relative_url }}">
       <svg width="200" height="45">
@@ -81,6 +87,11 @@
                           <use href="/styles/style/icon/extra/navbar-products/geolocation.svg#geolocation"></use>
                         </svg>
                         IP Geolocation API</a>
+                      <a class="dropdown-link" href="{{ include.link_url }}/sdk-javascript/">
+                        <svg width="50" height="17" viewBox="0 0 50 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use href="/styles/style/icon/extra/navbar-products/sdk.svg#sdk"></use>
+                        </svg>
+                        MapTiler SDK JS</a>
                   </div>
                 </div>
                 <div class="dropdown-products dropdown-data px-2 border-start border-light">
@@ -207,6 +218,11 @@
                             <use href="/styles/style/icon/extra/navbar-products/static-maps.svg#static-maps"></use>
                           </svg>
                           Static maps API</a>
+                          <a class="dropdown-link" href="{{ include.link_url }}/sdk-javascript/">
+                            <svg width="50" height="17" viewBox="0 0 50 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="/styles/style/icon/extra/navbar-products/sdk.svg#sdk"></use>
+                            </svg>
+                            MapTiler SDK JS</a>
                   </div>
                   <div class="dropdown-products dropdown-data py-2 border-top border-light">
                     <h6 class="m-0 text-uppercase small ps-o5 text-data pb-1">server & data</h6>
