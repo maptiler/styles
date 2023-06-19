@@ -155,24 +155,14 @@
       text-decoration: none;
     }
   }
-  .cheap-table {
-    color: #579e57;
-    text-align: center;
-    border-left: 2px solid $success !important;
-    border-right: 2px solid $success !important;
-    background: #f4fef7;
-    font-size: 16px !important;
-  }
-
-  .cheap-table-first {
-    border-top: 2px solid $success;
-  }
-
-  .cheap-table-last {
-    border-bottom: 2px solid $success;
-  }
-  .banner-martin {
-      bottom: -72px;
+  .table-sale {
+    td:nth-child(1){
+      border-right: none;
+    }
+    td:nth-child(2){
+      background-color: rgba(53, 193, 134, 0.05);
+      border: 1px solid #35C186;
+    }
   }
 // Carousel
   #homeCarousel{
