@@ -79,13 +79,11 @@
       <div class="col-6 col-md-4 col-lg-2 link-list">
         <h6>Company</h6>
         <a href="{{ include.link_url }}/news/">News</a>
-        <a href="{{ include.link_url }}/team/">Team</a>
         <a href="{{ include.link_url }}/jobs/">Jobs</a>
         <a href="{{ include.link_url }}/partner/">Become a Partner</a>
         <a href="{{ include.link_url }}/open-source/">Open-source</a>
         <a href="{{ include.link_url }}/press/">Press</a>
         <a href="{{ include.link_url }}/contacts/">Company info</a>
-        <a class="contact-btn" {% if include.link_url != null %}href="{{ include.link_url }}/#contact"{% endif %} >Contact sales</a>
         {% if include.url == "" %}<a id="ybug" href="#feedback">Website feedback</a>{% endif %}
       </div>
       <div class="border-top border-light mt-6">
