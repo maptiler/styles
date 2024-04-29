@@ -21,6 +21,12 @@
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-sdk.svg?123#sdk"></use>
       </svg>
     </a>
+    {% elsif page.subdomain contains 'documentation' %}
+    <a class="navbar-brand pl-gutter product-brand" href="{{ site.homepage }}">
+      <svg width="250" height="41">
+        <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive.svg?123#maptilerLogo"></use>
+      </svg>
+    </a>
     {% else %}
     <a class="navbar-brand product-brand" href="{{ '/' | relative_url }}">
       <svg width="200" height="45">
