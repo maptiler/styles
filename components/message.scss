@@ -1,14 +1,14 @@
 /* Messages */
-.flashes{
+.flashes {
   position: absolute;
   width: $message-width;
   left: 50%;
   top: 100px;
   margin-left: -220px;
-  z-index: 1000;
+  z-index: 1080;
   transition: all 0.5s ease-out;
 
-  &.right{
+  &.right {
     position: fixed;
     left: auto;
     right: 0;
@@ -17,16 +17,16 @@
     animation: 0.8s ease-out 0s 1 slideFromRight;
   }
 
-  &.closed{
+  &.closed {
     right: -440px;
   }
 }
 
-.message-box{
+.message-box {
   position: absolute;
 }
 
-.message{
+.message {
   color: $body-color;
   background-color: white;
   padding: 25px;
@@ -39,25 +39,25 @@
   border-radius: $border-radius;
   box-shadow: $box-shadow;
 
-  &::before{
-    content: url("#{$messages-icon}info-blue.svg");
+  &::before {
+    content: url('#{$messages-icon}info-blue.svg');
     position: absolute;
     left: 25px;
     transform: scale(1.5);
     top: calc(50% - 10px);
   }
 
-  &.success::before{
-    content: url("#{$messages-icon}check_circle-success.svg");
+  &.success::before {
+    content: url('#{$messages-icon}check_circle-success.svg');
   }
-  &.warning::before{
-    content: url("#{$messages-icon}warning-orange.svg");
+  &.warning::before {
+    content: url('#{$messages-icon}warning-orange.svg');
   }
-  &.error::before{
-    content: url("#{$messages-icon}cancel-red.svg");
+  &.error::before {
+    content: url('#{$messages-icon}cancel-red.svg');
   }
-  &.idea::before{
-    content: url("#{$messages-icon}idea-yellow.svg");
+  &.idea::before {
+    content: url('#{$messages-icon}idea-yellow.svg');
   }
 }
 
