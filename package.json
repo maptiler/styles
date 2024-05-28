@@ -9,7 +9,7 @@
   },
   "publishConfig": {
     "access": "restricted",
-    "registry": "https://npm.pkg.github.com/maptiler"
+    "registry": "https://npm.maptiler.dev/"
   },
   "peerDependencies": {
     "bootstrap": "^5.0.2"
