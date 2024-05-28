@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 'latest'
 
@@ -24,10 +24,7 @@ jobs:
         run: npm config set //npm.maptiler.dev/:_authToken "${{ secrets.NPM_MAPTILER_TOKEN }}"
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
+        run: npm ci
 
       - name: Publish package to MapTiler NPM
         run: npm publish
