@@ -18,13 +18,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
+          node-version: 18
 
       - name: Configure MapTiler NPM registry
         run: npm config set //npm.maptiler.dev/:_authToken "${{ secrets.NPM_MAPTILER_TOKEN }}"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Publish package to MapTiler NPM
         run: npm publish
