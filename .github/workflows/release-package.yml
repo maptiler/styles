@@ -1,10 +1,8 @@
 name: Release NPM private package
 
 on:
-  #release:
-  #  types: [ created ]
-  push:
-    branches: [ IT-201_publish-to-maptiler-npm ]
+  release:
+    types: [ created ]
 
 jobs:
   release:
