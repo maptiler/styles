@@ -1,0 +1,31 @@
+name: Release NPM private package
+
+on:
+  #release:
+  #  types: [ created ]
+  push:
+    branches: [ IT-201_publish-v1.0.0-to-maptiler-npm ]
+
+jobs:
+  release:
+    name: Release new version
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Configure MapTiler NPM registry
+        run: npm config set //npm.maptiler.dev/:_authToken "${{ secrets.NPM_MAPTILER_TOKEN }}"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Publish package to MapTiler NPM
+        run: npm publish
+
