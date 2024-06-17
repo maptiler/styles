@@ -1,35 +1,35 @@
 <div class="border-bottom border-light bg-white navbar-sticky-top">
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark navbar-maptiler">
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark navbar-maptiler px-o5 px-sm-gutter">
     {% if page.style contains 'desktop' or page.style contains 'cloud'
         or page.style contains 'mobile' or page.style contains 'cluster'
         or page.style contains 'engine' or page.style contains 'server'
         or page.style contains 'data' %}
     <a class="navbar-brand product-brand adaptive-brand" href="{{ '/' | relative_url }}">
-      <svg width="265" height="41">
+      <svg width="245" height="45">
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-{{ page.style | replace: " svg","" }}.svg?123#{{ page.style | replace: " svg","" }}"></use>
       </svg>
     </a>
     {% elsif page.style contains 'basemaps' %}
     <a class="navbar-brand pl-gutter product-brand {% if page.style contains 'satellite' %}adaptive-brand{% endif %}" href="{{ '/' | relative_url }}">
-      <svg width="250" height="41">
+      <svg width="245" height="45">
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-data.svg?123#data"></use>
       </svg>
     </a>
     {% elsif page.style contains 'sdk' %}
     <a class="navbar-brand pl-gutter product-brand" href="{{ '/' | relative_url }}">
-      <svg width="250" height="41">
+      <svg width="245" height="45">
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-sdk.svg?123#sdk"></use>
       </svg>
     </a>
     {% elsif page.subdomain contains 'documentation' %}
     <a class="navbar-brand pl-gutter product-brand" href="{{ site.homepage }}">
-      <svg width="250" height="41">
+      <svg width="245" height="45">
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive.svg?123#maptilerLogo"></use>
       </svg>
     </a>
     {% else %}
     <a class="navbar-brand product-brand" href="{{ '/' | relative_url }}">
-      <svg width="200" height="45">
+      <svg width="160" height="45">
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive.svg?123#maptilerLogo"></use>
       </svg>
     </a>
@@ -163,20 +163,17 @@
           </div>
         </div>
 
-        <div class="col-12 d-flex justify-content-between d-lg-none navbar-mobile-dropdown align-items-center">
+        <div class="col-12 d-flex justify-content-between d-lg-none navbar-mobile-dropdown align-items-center px-o5 px-gutter px-o5 px-sm-gutter">
           <a class="navbar-brand product-brand text-secondary" href="{{ '/' | relative_url }}">
             <svg width="160" height="45">
               <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive.svg?123#maptilerLogo"></use>
             </svg>
           </a>
-          <div class="">
-            <a class="btn btn-primary btn-sm me-o5" href="{{ site.cloud.url }}">My Account</a>
             <button class="navbar-toggler text-secondary align-self-center" type="button" data-bs-toggle="collapse" data-bs-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
                 <use href="{{ include.styles_path }}icon/icon.svg#clear"></use>
               </svg>
             </button>
-          </div>
         </div>
         <div class="col-12 d-lg-none border-top border-light">
 
@@ -292,8 +289,10 @@
                   <a class="dropdown-link" href="https://documentation.maptiler.com/hc/en-us/requests/new">Support</a>
                 </div>
               </div>
-          </div>
-
+              <div class=" py-2 mx-2 my-0 border-top border-light ">
+                <a class="btn btn-primary btn-sm me-o5" href="{{ site.cloud.url }}">My Account</a>
+              </div>
+           </div>
         </div>
       </div>
     </div>
