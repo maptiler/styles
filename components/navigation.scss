@@ -77,7 +77,7 @@
     display: block;
     min-width: 220px;
     padding: 9px 8px;
-    svg{transform: translateY(-1px);margin-right: 8px;}
+    svg,img{transform: translateY(-1px);margin-right: 8px;}
     color: $secondary;
     &:hover{
       background: $lighter;
