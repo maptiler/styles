@@ -290,7 +290,11 @@
                 </div>
               </div>
               <div class=" py-2 mx-2 my-0 border-top border-light ">
-                <a class="btn btn-primary btn-sm me-o5" href="{{ site.cloud.url }}">My Account</a>
+                {% if page.style contains 'data' or page.style contains 'server' %}
+                <a class="btn btn-primary" href="https://data.maptiler.com/my-extracts/">My Data</a>
+                {% else %}
+                <a class="btn btn-primary" href="{{ site.cloud.url }}">My Cloud</a>
+                {% endif %}
               </div>
            </div>
         </div>
