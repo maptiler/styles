@@ -5,7 +5,7 @@
     height: 40px;
     margin: 0 5px;
 
-    &:before{
+    &:before {
       content: '';
       background-image: none;
       background-color: currentcolor;
@@ -15,64 +15,64 @@
       border-radius: 50%;
       background-repeat: no-repeat;
       background-size: contain;
-      transition: .15s;
+      transition: 0.15s;
     }
 
     &.twitter {
-      color: #40ACEB;
+      color: #40aceb;
       &:before {
-        background-image: url("#{$social-icon}twitter-white.svg");
+        background-image: url('#{$social-icon}twitter-white.svg');
       }
     }
     &.linkedin {
-      color: #0077B7;
+      color: #0077b7;
       &:before {
-        background-image: url("#{$social-icon}linkedin-white.svg");
+        background-image: url('#{$social-icon}linkedin-white.svg');
       }
     }
     &.facebook {
-      color: #4267B2;
+      color: #4267b2;
       &:before {
-        background-image: url("#{$social-icon}facebook-white.svg");
+        background-image: url('#{$social-icon}facebook-white.svg');
       }
     }
     &.rss {
       color: #f2772e;
       &:before {
-        background-image: url("#{$social-icon}feed-white.svg");
+        background-image: url('#{$social-icon}feed-white.svg');
       }
     }
     &.medium {
       color: #333359;
       &:before {
-        background-image: url("#{$social-icon}medium-white.svg");
+        background-image: url('#{$social-icon}medium-white.svg');
       }
     }
     &.github {
       color: #000;
       &:before {
-        background-image: url("#{$social-icon}github-white.svg");
+        background-image: url('#{$social-icon}github-white.svg');
       }
     }
     &.instagram {
-      color: #000;
+      color: #ff0076;
       &:before {
-        background-image: url("#{$social-icon}ig-white.svg");
+        background-image: url('#{$social-icon}ig-white.svg');
       }
     }
     &.youtube {
-      color: #FF0000;
+      color: #ff0000;
       &:before {
-        background-image: url("#{$social-icon}ytb-white.svg");
+        background-image: url('#{$social-icon}ytb-white.svg');
       }
     }
 
-    &:not(.colored){
-      &:before{
+    &:not(.colored) {
+      &:before {
         background-color: $secondary;
       }
-      &:hover{
-        &:before{
+      &:hover {
+        &:before {
           background-color: currentcolor;
         }
       }
