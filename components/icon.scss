@@ -19,9 +19,9 @@
     }
 
     &.twitter {
-      color: #40aceb;
+      color: black;
       &:before {
-        background-image: url('#{$social-icon}twitter-white.svg');
+        background-image: url('#{$social-icon}x-white.svg');
       }
     }
     &.linkedin {
