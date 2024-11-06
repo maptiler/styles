@@ -90,8 +90,7 @@
     }
 
     &:last-child {
-      height: 85px;
-      border-bottom: 1px solid #e4e4e4;
+      margin-bottom: 10px;
     }
 
     span {
@@ -110,7 +109,7 @@
   z-index: 86;
   width: auto;
   height: auto;
-  -webkit-mask-image: linear-gradient(
+  mask-image: linear-gradient(
     0deg,
     transparent,
     #000 10px,
@@ -118,12 +117,9 @@
     transparent
   );
   @include media-breakpoint-down(md) {
-    bottom: 65px;
+    bottom: 110px;
     left: 15px;
     top: 125px;
-    height: calc(
-      100% - ($navbar-brand-height + 110px + 52.8px)
-    ); // heght - navbar, customizebutton and language dropdown
   }
 
   .map-switch {
