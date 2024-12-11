@@ -525,6 +525,7 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
+$headings-margin-top:      $paragraph-margin-bottom !default;
 $headings-margin-bottom:      $paragraph-margin-bottom !default;
 $headings-font-family:        'Ubuntu', 'Open Sans', sans-serif !default;
 $headings-font-style:         null !default;
