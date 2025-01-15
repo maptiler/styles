@@ -4,31 +4,31 @@
         or page.style contains 'mobile' or page.style contains 'cluster'
         or page.style contains 'engine' or page.style contains 'server'
         or page.style contains 'data' %}
-    <a class="navbar-brand product-brand adaptive-brand track-link-header" href="{{ '/' | relative_url }}">
+    <a class="navbar-brand product-brand adaptive-brand track-link-header" href="{{ '/' | relative_url }}" aria-label="MapTiler">
       <svg width="245" height="45">
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-{{ page.style | replace: " svg","" }}.svg?123#{{ page.style | replace: " svg","" }}"></use>
       </svg>
     </a>
     {% elsif page.style contains 'basemaps' %}
-    <a class="navbar-brand pl-gutter product-brand {% if page.style contains 'satellite' %}adaptive-brand{% endif %}" href="{{ '/' | relative_url }}">
+    <a class="navbar-brand pl-gutter product-brand {% if page.style contains 'satellite' %}adaptive-brand{% endif %}" href="{{ '/' | relative_url }}" aria-label="MapTiler">
       <svg width="245" height="45">
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-data.svg?123#data"></use>
       </svg>
     </a>
     {% elsif page.style contains 'sdk' %}
-    <a class="navbar-brand pl-gutter product-brand track-link-header" href="{{ '/' | relative_url }}">
+    <a class="navbar-brand pl-gutter product-brand track-link-header" href="{{ '/' | relative_url }}" aria-label="MapTiler">
       <svg width="245" height="45">
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive-sdk.svg?123#sdk"></use>
       </svg>
     </a>
     {% elsif page.subdomain contains 'documentation' %}
-    <a class="navbar-brand pl-gutter product-brand track-link-header" href="{{ site.homepage }}">
+    <a class="navbar-brand pl-gutter product-brand track-link-header" href="{{ site.homepage }}" aria-label="MapTiler">
       <svg width="245" height="45">
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive.svg?123#maptilerLogo"></use>
       </svg>
     </a>
     {% else %}
-    <a class="navbar-brand product-brand track-link-header" href="{{ '/' | relative_url }}">
+    <a class="navbar-brand product-brand track-link-header" href="{{ '/' | relative_url }}" aria-label="MapTiler">
       <svg width="160" height="45">
         <use href="{{ include.styles_path }}logo/maptiler-logo-adaptive.svg?123#maptilerLogo"></use>
       </svg>
@@ -47,7 +47,7 @@
       <div class="navbar-nav">
         <div class="d-none d-lg-flex">
           <div class="dropdown">
-            <a class="nav-item nav-link track-link-header" type="button" id="dropdownProductsLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-item nav-link track-link-header" type="button" id="dropdownProductsLink" aria-controls="dropdownProducts" data-bs-toggle="dropdown" aria-expanded="false">
               Products {{ collapse-arrow }}
             </a>
             <div class="dropdown-menu dropdown-menu-navbar p-3 dropdown-menu-navbar-animation slideIn" aria-labelledby="dropdownProductsLink">
@@ -125,7 +125,7 @@
             </div>
           </div>
           <div class="dropdown">
-            <a class="nav-item nav-link" type="button" id="dropdownCompanyLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-item nav-link" type="button" id="dropdownCompanyLink" aria-controls="dropdownCompany" data-bs-toggle="dropdown" aria-expanded="false">
               Company {{ collapse-arrow }}
             </a>
             <div class="dropdown-menu dropdown-menu-navbar navbar-links dropdown-menu-navbar-animation slideIn" aria-labelledby="dropdownCompanyLink">
