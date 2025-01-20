@@ -24,6 +24,12 @@
         background-image: url('#{$social-icon}x-white.svg');
       }
     }
+    &.bsky {
+      color: #59b9ff;
+      &:before {
+        background-image: url('#{$social-icon}bsky-white.svg');
+      }
+    }
     &.linkedin {
       color: #0077b7;
       &:before {
