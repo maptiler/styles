@@ -1,8 +1,8 @@
 //bootstrap design changes to our framework
-html{
+html {
   scroll-behavior: smooth;
 }
-main{
+main {
   position: relative;
   overflow-x: clip;
 }
@@ -10,13 +10,13 @@ mark {
   color: $secondary;
   background-color: $gray-100;
 }
-textarea{
+textarea {
   resize: auto;
 }
 b {
   color: $darker;
 }
-a{
+a {
   cursor: pointer;
 }
 iframe {
@@ -26,50 +26,60 @@ iframe {
   border-bottom: 1px;
   font-weight: normal;
 }
-.table.small{
-  td{
+.table.small {
+  td {
     padding: 0.8rem;
   }
 }
-.custom-select, .form-control,.form-select{
-  @include media-breakpoint-down(sm){
+.custom-select,
+.form-control,
+.form-select {
+  @include media-breakpoint-down(sm) {
     width: 100%;
   }
 }
 :focus {
-    outline: none;
+  outline: none;
 }
 button:focus {
   outline: none !important;
 }
-.btn-link:active{
-box-shadow: none !important;
+.btn-link:active {
+  box-shadow: none !important;
 }
-.nav-item{
+.nav-item {
   user-select: none;
   cursor: pointer;
 }
-.btn-lg{
+.btn-lg {
   font-weight: $btn-font-weight;
 }
-.btn{
+.btn {
   text-transform: $btn-text-transform;
 }
-.navbar-toggler{
+.navbar-toggler {
   border: none;
 }
-ul, ol{
+ul,
+ol {
   padding-left: 1.5rem;
 }
-.modal-title{
+.modal-title {
   margin-top: 0;
 }
-.form-control,.form-select{
+.form-control,
+.form-select {
   height: auto;
   width: auto;
   display: inline-block;
 }
-p, h1, h2, h3, h4, h5, h6, {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: $headings-margin-top;
   margin-bottom: $headings-margin-bottom;
 }
@@ -82,49 +92,54 @@ p, h1, h2, h3, h4, h5, h6, {
 
     &:active,
     &:hover {
-      box-shadow: none!important;
+      box-shadow: none !important;
       background-color: transparent !important;
-      color: darken($value, 5%)!important;
-      border: solid 2px darken($value, 5%)!important;
+      color: darken($value, 5%) !important;
+      border: solid 2px darken($value, 5%) !important;
     }
   }
 }
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
-    box-shadow: 0px 8px 32px rgba($value, 0.20);
-    &:focus,&:active{
-    box-shadow: 0px 8px 32px rgba($value, 0.28)!important;
+    box-shadow: 0px 8px 32px rgba($value, 0.2);
+    &:focus,
+    &:active {
+      box-shadow: 0px 8px 32px rgba($value, 0.28) !important;
     }
   }
 }
-.nav-tabs .nav-link, .nav-tabs .nav-item .nav-link {
-    color: $secondary;
-    border-bottom: 1px solid $light;
-    &.active{
+.nav-tabs .nav-link,
+.nav-tabs .nav-item .nav-link {
+  color: $secondary;
+  border-bottom: 1px solid $light;
+  &.active {
     color: $primary;
     border-bottom: 1px solid $primary;
-    }
+  }
 }
 
-  .collapsing.width {
-    -webkit-transition-property: width, visibility;
-    transition-property: width, visibility;
-    width: 0;
-  }
+.collapsing.width {
+  -webkit-transition-property: width, visibility;
+  transition-property: width, visibility;
+  width: 0;
+}
 
-  //safari btn fix
-    [type=button], [type=reset], [type=submit], button {
+//safari btn fix
+[type='button'],
+[type='reset'],
+[type='submit'],
+button {
   -webkit-appearance: none !important;
-  }
+}
 
-  .form-switch {
-    .form-check-input {
-      background-color: $gray-400;
-      &:checked {
-        background-color: $primary;
-      }
-      &.switch-equal{
-        background-color: $primary;
-      }
+.form-switch {
+  .form-check-input {
+    background-color: $gray-400;
+    &:checked {
+      background-color: $primary;
+    }
+    &.switch-equal {
+      background-color: $primary;
     }
   }
+}
