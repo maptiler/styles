@@ -178,6 +178,14 @@
         <div class="col-12 d-lg-none border-top border-light">
 
           <div class="accordion px-gutter py-2" id="accordionExample">
+            {% if page.subdomain contains 'documentation' %}
+              <a role="button" type="button" class="py-2 mx-2 h6 d-block my-0 link-secondary border-bottom border-gray track-link-header" 
+               href="/search/">
+                <svg class="me-o5 align-bottom" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <use href="/styles/style/icon/icon.svg#search"></use>
+                </svg>Search
+              </a>
+            {% endif %}
               <a role="button" type="button" data-bs-toggle="collapse" class="py-2 mx-2 h6 d-block my-0 link-secondary track-link-header"
                data-bs-target="#accordionMobileProducts" aria-expanded="false" aria-controls="accordionMobileProducts">
                 Products<span class="d-inline-block collapse-arrow"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><use href="/styles/style/icon/icon.svg#keyboard_arrow_down"></use></svg></span>
@@ -290,6 +298,7 @@
                 </div>
               </div>
               <div class=" py-2 mx-2 my-0 border-top border-light ">
+
                 {% if page.style contains 'data' or page.style contains 'server' %}
                 <a class="btn btn-primary track-link-header" href="https://data.maptiler.com/my-extracts/">My Data</a>
                 {% else %}
@@ -302,11 +311,20 @@
     </div>
 
     <div class="d-flex ms-lg-3 align-items-center">
-      {% if page.style contains 'data' or page.style contains 'server' %}
-      <a class="btn btn-primary d-none d-lg-block ml-3 track-link-header" href="https://data.maptiler.com/my-extracts/">My Data</a>
-      {% else %}
-      <a class="btn btn-primary d-none d-lg-block ml-3 track-link-header" href="{{ site.cloud.url }}">My Cloud</a>
+      {% if page.subdomain contains 'documentation' %}
+        <a class="d-none d-lg-inline-block track-link-header" href="/search/">
+          <svg class="text-secondary hover-primary" version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 24 24">
+            <use href="/styles/style/icon/icon.svg#search"></use>
+          </svg>
+        </a>
       {% endif %}
+      <div class="ms-2">
+      {% if page.style contains 'data' or page.style contains 'server' %}
+        <a class="btn btn-primary d-none d-lg-block ml-3 track-link-header" href="https://data.maptiler.com/my-extracts/">My Data</a>
+      {% else %}
+        <a class="btn btn-primary d-none d-lg-block ml-3 track-link-header" href="{{ site.cloud.url }}">My Cloud</a>
+      {% endif %}
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Mobilenav" aria-controls="Mobilenav" aria-expanded="false" aria-label="Toggle navigation">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
           <use href="{{ include.styles_path }}icon/icon.svg#menu"></use>
