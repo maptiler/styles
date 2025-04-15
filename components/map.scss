@@ -149,7 +149,7 @@
   transition: all 0.2s ease;
 }
 
-#map-switch-streets {
+#map-switch-streets, #map-switch-streets-v2 {
   background-image: url('/img/cloud/slider/streets-v2.png');
 }
 
@@ -157,15 +157,15 @@
   background-image: url('/img/cloud/slider/hybrid.png');
 }
 
-#map-switch-basic {
+#map-switch-basic, #map-switch-basic-v2 {
   background-image: url('/img/cloud/slider/basic-v2.png');
 }
 
-#map-switch-outdoor {
+#map-switch-outdoor, #map-switch-outdoor-v2 {
   background-image: url('https://media.maptiler.com/img/outdoor_v2_28fe72cefb.png');
 }
 
-#map-switch-winter {
+#map-switch-winter, #map-switch-winter-v2 {
   background-image: url('/img/cloud/slider/winter-v2.png');
 }
 
