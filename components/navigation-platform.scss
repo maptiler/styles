@@ -96,7 +96,7 @@
       border-radius: 4px;
       svg,
       img {
-        transform: translateY(-1px);
+        transform: unset;
         margin-right: 8px;
       }
       color: $secondary;
