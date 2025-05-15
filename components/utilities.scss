@@ -157,4 +157,26 @@ $utilities: map-merge( $utilities,(
     'gradient': linear-gradient(180deg,rgba(49,112,254,0.05) 7.92%,rgba(49,112,254,0) 100%),
     )
   ),
+  "overflow-x": (
+      property: overflow-x,
+      responsive: true,
+      class: overflow-x,
+      values: (
+        'auto': auto,
+        'hidden': hidden,
+        'visible': visible,
+        'scroll': scroll,
+      ),
+    ),
+  "overflow-y": (
+      property: overflow-y,
+      responsive: true,
+      class: overflow-y,
+      values: (
+        'auto': auto,
+        'hidden': hidden,
+        'visible': visible,
+        'scroll': scroll,
+      ),
+    ),
 ));
