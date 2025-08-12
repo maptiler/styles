@@ -1,12 +1,38 @@
-.no-select{user-select: none;}
-.uderline{text-decoration: underline;}
-.stick-left{left: 0;}
-.stick-right{right: 0;}
-.stick-top{top: 0;}
-.stick-bottom{bottom: 0;}
-.svg-text{vertical-align: bottom;}
-.events-none{pointer-events: none;}
-.link-secondary{color: $secondary; &:hover{color:$primary;}&[aria-expanded="true"]{color: $primary;}}
+@use 'sass:math';
+
+.no-select {
+  user-select: none;
+}
+.uderline {
+  text-decoration: underline;
+}
+.stick-left {
+  left: 0;
+}
+.stick-right {
+  right: 0;
+}
+.stick-top {
+  top: 0;
+}
+.stick-bottom {
+  bottom: 0;
+}
+.svg-text {
+  vertical-align: bottom;
+}
+.events-none {
+  pointer-events: none;
+}
+.link-secondary {
+  color: $secondary;
+  &:hover {
+    color: $primary;
+  }
+  &[aria-expanded='true'] {
+    color: $primary;
+  }
+}
 
 @each $mt-font-sizes, $value in $mt-font-sizes {
   .#{$mt-font-sizes} {
@@ -21,7 +47,8 @@
   }
 }
 
-.select-transparent,.select-transparent:focus{
+.select-transparent,
+.select-transparent:focus {
   background: transparent;
   border: 0;
   text-align-last: center;
@@ -30,12 +57,12 @@
   cursor: pointer;
 }
 
-.iframed{
+.iframed {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top:  round(nearest, 56.25%, 1px); // 16:9 aspect ratio
-  iframe{
+  padding-top: round(56.25%); // 16:9 aspect ratio
+  iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,117 +74,122 @@
 }
 
 // Utilities
-$utilities: map-merge( $utilities,(
-
-  "width": (
-    property: width,
-    responsive: true,
-    class: w,
-    values: (
-      10: 10%,
-      20: 20%,
-      25: 25%,
-      30: 30%,
-      40: 40%,
-      50: 50%,
-      60: 60%,
-      70: 70%,
-      75: 75%,
-      80: 80%,
-      85: 85%,
-      90: 90%,
-      100: 100%,
-      vh: 100vh,
-      auto: auto
-    )
-  ),
-  "z-index": (
-    property: z-index,
-    class: z,
-    values: (
-    n5: -5,
-    n4: -4,
-    n10: -10,
-    n11: -11,
-    n12: -12,
-    n15: -15,
-      -1: -1,
-      1: 1,
-      2: 2,
-      3: 3,
-      4: 4,
-      5: 5,
-      6: 6,
-      7: 7,
-      8: 8,
-      9: 9,
-      10: 10,
-      11: 11,
-    )
-  ),
-  "height": (
-    property: height,
-    responsive: true,
-    class: h,
-    values: (
-      300px: 300px,
-      350px: 350px,
-      400px: 400px,
-      450px: 450px,
-      500px: 500px,
-      10: 10%,
-      20: 20%,
-      25: 25%,
-      30: 30%,
-      40: 40%,
-      50: 50%,
-      60: 60%,
-      70: 70%,
-      75: 75%,
-      80: 80%,
-      85: 85%,
-      90: 90%,
-      100: 100%,
-      vh: 100vh,
-      auto: auto
-    )
-  ),
-  "transition": (
-    property: transition,
-    class: transition,
-    values: (
-      all-15: all .15s ease-in-out,
-      all-30: all .3s ease-in-out,
-      all-50: all .5s ease-in-out,
-    )
-  ),
-  "scale": (
-    property: transform,
-    class: scale,
-    responsive: true,
-    values: (
-    '50': scale(.5),
-    '75': scale(.75),
-    '125': scale(1.25),
-    '150': scale(1.5),
-    )
-  ),
-  "font-family": (
-    property: font-family,
-    class: font-family,
-    values: (
-    'ubuntu':'Ubuntu',
-    'sans': 'Open Sans',
-    )
-  ),
-  "background": (
-    property: background,
-    class: bg,
-    values: (
-    'gradient': linear-gradient(180deg,rgba(49,112,254,0.05) 7.92%,rgba(49,112,254,0) 100%),
-    )
-  ),
-  "overflow-x": (
+$utilities: map-merge(
+  $utilities,
+  (
+    'width': (
+      property: width,
+      responsive: true,
+      class: w,
+      values: (
+        10: 10%,
+        20: 20%,
+        25: 25%,
+        30: 30%,
+        40: 40%,
+        50: 50%,
+        60: 60%,
+        70: 70%,
+        75: 75%,
+        80: 80%,
+        85: 85%,
+        90: 90%,
+        100: 100%,
+        vh: 100vh,
+        auto: auto
+      )
+    ),
+    'z-index': (
+      property: z-index,
+      class: z,
+      values: (
+        n5: -5,
+        n4: -4,
+        n10: -10,
+        n11: -11,
+        n12: -12,
+        n15: -15,
+        -1: -1,
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+        10: 10,
+        11: 11
+      )
+    ),
+    'height': (
+      property: height,
+      responsive: true,
+      class: h,
+      values: (
+        300px: 300px,
+        350px: 350px,
+        400px: 400px,
+        450px: 450px,
+        500px: 500px,
+        10: 10%,
+        20: 20%,
+        25: 25%,
+        30: 30%,
+        40: 40%,
+        50: 50%,
+        60: 60%,
+        70: 70%,
+        75: 75%,
+        80: 80%,
+        85: 85%,
+        90: 90%,
+        100: 100%,
+        vh: 100vh,
+        auto: auto
+      )
+    ),
+    'transition': (
+      property: transition,
+      class: transition,
+      values: (
+        all-15: all 0.15s ease-in-out,
+        all-30: all 0.3s ease-in-out,
+        all-50: all 0.5s ease-in-out
+      )
+    ),
+    'scale': (
+      property: transform,
+      class: scale,
+      responsive: true,
+      values: (
+        '50': scale(0.5),
+        '75': scale(0.75),
+        '125': scale(1.25),
+        '150': scale(1.5)
+      )
+    ),
+    'font-family': (
+      property: font-family,
+      class: font-family,
+      values: (
+        'ubuntu': 'Ubuntu',
+        'sans': 'Open Sans'
+      )
+    ),
+    'background': (
+      property: background,
+      class: bg,
+      values: (
+        'gradient': linear-gradient(
+            180deg,
+            rgba(49, 112, 254, 0.05) 7.92%,
+            rgba(49, 112, 254, 0) 100%
+          )
+      )
+    ),
+    'overflow-x': (
       property: overflow-x,
       responsive: true,
       class: overflow-x,
@@ -165,10 +197,10 @@ $utilities: map-merge( $utilities,(
         'auto': auto,
         'hidden': hidden,
         'visible': visible,
-        'scroll': scroll,
-      ),
+        'scroll': scroll
+      )
     ),
-  "overflow-y": (
+    'overflow-y': (
       property: overflow-y,
       responsive: true,
       class: overflow-y,
@@ -176,7 +208,8 @@ $utilities: map-merge( $utilities,(
         'auto': auto,
         'hidden': hidden,
         'visible': visible,
-        'scroll': scroll,
-      ),
-    ),
-));
+        'scroll': scroll
+      )
+    )
+  )
+);
