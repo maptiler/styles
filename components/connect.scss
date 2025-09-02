@@ -32,7 +32,6 @@ $connect-banner-bg: '/img/connect-banner-bg.webp' !default;
 }
 
 body.banner-open {
-  main,
   .HeaderShape {
     margin-top: $connect-banner-height;
   }
@@ -65,7 +64,6 @@ body.banner-open {
   }
 
   body.banner-open {
-    main,
     .HeaderShape {
       margin-top: $connect-banner-height;
     }
