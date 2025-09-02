@@ -1,0 +1,75 @@
+// connect 2025
+$connect-banner-height: 50px !default;
+$connect-banner-transition: 500ms cubic-bezier(0.46, 0, 0, 1);
+$connect-banner-height-sm: 104px;
+$connect-banner-bg: '../../../elements/ConnectBanner/connect-banner-bg.svg' !default;
+
+.connect-banner {
+  height: $connect-banner-height;
+  top: 0;
+  z-index: 2000;
+  position: sticky;
+  background-image: url($connect-banner-bg);
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: $connect-banner-transition;
+
+  &.collapsed {
+    height: 0;
+  }
+  &.open {
+    height: $connect-banner-height;
+  }
+}
+
+.navbar-sticky-top,
+.map-wrap.map-wrap.fullscreen-navbar,
+.map-switcher.fullscreen {
+  transition: $connect-banner-transition;
+}
+
+body.banner-open {
+  .navbar-sticky-top {
+    top: $connect-banner-height;
+  }
+  .map-wrap.fullscreen-navbar {
+    height: calc(100dvh - $navbar-brand-height - 1px - $connect-banner-height);
+  }
+  .map-wrap.fullscreen {
+    height: calc(100dvh - $connect-banner-height);
+  }
+  .map-switcher.fullscreen {
+    top: calc(125px + $connect-banner-height);
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  $connect-banner-height: $connect-banner-height-sm !global;
+
+  .connect-banner {
+    height: $connect-banner-height;
+
+    &.open {
+      height: $connect-banner-height;
+    }
+  }
+
+  body.banner-open {
+    .navbar-sticky-top {
+      top: $connect-banner-height;
+    }
+    .map-wrap.fullscreen-navbar {
+      height: calc(
+        100dvh - $navbar-brand-height - 1px - #{$connect-banner-height}
+      );
+    }
+    .map-wrap.fullscreen {
+      height: calc(100dvh - #{$connect-banner-height});
+    }
+    .map-switcher.fullscreen {
+      top: calc(125px + #{$connect-banner-height});
+    }
+  }
+}
