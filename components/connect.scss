@@ -26,11 +26,19 @@ $connect-banner-bg: '/img/connect-banner-bg.webp' !default;
 
 .navbar-sticky-top,
 .map-wrap.map-wrap.fullscreen-navbar,
-.map-switcher.fullscreen {
+.map-switcher.fullscreen,
+.HeaderShape {
   transition: $connect-banner-transition;
 }
 
 body.banner-open {
+  main,
+  .HeaderShape {
+    margin-top: $connect-banner-height;
+  }
+  .map-wrap:not(.fullscreen):not(.fullscreen-navbar) {
+    max-height: calc(100dvh - 72px - 30px - #{$connect-banner-height});
+  }
   .navbar-sticky-top {
     top: $connect-banner-height;
   }
@@ -57,6 +65,13 @@ body.banner-open {
   }
 
   body.banner-open {
+    main,
+    .HeaderShape {
+      margin-top: $connect-banner-height;
+    }
+    .map-wrap:not(.fullscreen):not(.fullscreen-navbar) {
+      max-height: calc(100dvh - 72px - 30px - #{$connect-banner-height});
+    }
     .navbar-sticky-top {
       top: $connect-banner-height;
     }
