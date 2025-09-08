@@ -7,7 +7,7 @@ $connect-banner-bg: '/img/connect-banner-bg.webp' !default;
 .connect-banner {
   height: $connect-banner-height;
   top: 0;
-  z-index: 2000;
+  z-index: 1020;
   position: sticky;
   background-image: url($connect-banner-bg);
   background-color: #fff;
