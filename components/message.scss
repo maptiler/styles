@@ -59,6 +59,9 @@
   &.idea::before {
     content: url('#{$messages-icon}idea-yellow.svg');
   }
+  &.key::before {
+    content: url('#{$messages-icon}vpn-key-yellow.svg');
+  }
 }
 
 .flashes.right .message {
