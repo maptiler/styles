@@ -53,14 +53,27 @@
     }
   }
 
-  &.fullscreen {
+  &:not(.fullscreen):not(.fullscreen-navbar) {
+    max-height: calc(100dvh - $navbar-brand-height - 30px);
+  }
+
+  &.fullscreen,
+  &.fullscreen-navbar {
     position: fixed !important;
-    top: 0;
+    // top: 0; // will break showcase
     left: 0;
     right: 0;
     height: 100%;
     background: #f2f3f6;
     z-index: 80;
+  }
+
+  &.fullscreen-navbar {
+    height: calc(100dvh - $navbar-brand-height - 1px);
+  }
+  #map,
+  .map-container {
+    height: 100% !important;
   }
 }
 
