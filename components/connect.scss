@@ -51,6 +51,9 @@ body.banner-open {
     top: calc(125px + $connect-banner-height);
   }
 }
+html:has(> body.banner-open) {
+  scroll-padding-top: $navbar-brand-height + $connect-banner-height + 10px;
+}
 
 @include media-breakpoint-down(sm) {
   $connect-banner-height: $connect-banner-height-sm !global;
@@ -84,5 +87,8 @@ body.banner-open {
     .map-switcher.fullscreen {
       top: calc(125px + #{$connect-banner-height});
     }
+  }
+  html:has(> body.banner-open) {
+    scroll-padding-top: $navbar-brand-height + $connect-banner-height + 10px;
   }
 }
