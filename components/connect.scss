@@ -51,7 +51,7 @@ body.banner-open {
     top: calc(125px + $connect-banner-height);
   }
 }
-html:has(> body.banner-open) {
+html {
   scroll-padding-top: $navbar-brand-height + $connect-banner-height + 10px;
 }
 
@@ -88,7 +88,7 @@ html:has(> body.banner-open) {
       top: calc(125px + #{$connect-banner-height});
     }
   }
-  html:has(> body.banner-open) {
+  html {
     scroll-padding-top: $navbar-brand-height + $connect-banner-height + 10px;
   }
 }
