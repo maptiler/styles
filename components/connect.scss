@@ -2,7 +2,7 @@
 $connect-banner-height: 50px !default;
 $connect-banner-transition: 500ms cubic-bezier(0.46, 0, 0, 1);
 $connect-banner-height-sm: 104px;
-$connect-banner-bg: '/img/connect-banner-bg.webp' !default;
+$connect-banner-bg: "/img/connect-banner-bg.webp" !default;
 
 .connect-banner {
   height: $connect-banner-height;
@@ -52,7 +52,9 @@ body.banner-open {
   }
 }
 html {
-  scroll-padding-top: $navbar-brand-height + $connect-banner-height + 10px;
+  scroll-padding-top: calc(
+    $navbar-brand-height + $connect-banner-height + 10px
+  );
 }
 
 @include media-breakpoint-down(sm) {
@@ -89,6 +91,8 @@ html {
     }
   }
   html {
-    scroll-padding-top: $navbar-brand-height + $connect-banner-height + 10px;
+    scroll-padding-top: calc(
+      $navbar-brand-height + $connect-banner-height + 10px
+    );
   }
 }
