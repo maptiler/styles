@@ -2,6 +2,7 @@
 $headings-margin-top: 1rem; // Define the variable with a valid value
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: $navbar-brand-height + 10px; //header height + 10px
 }
 main {
   position: relative;
