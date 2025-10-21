@@ -24,6 +24,12 @@
 .events-none {
   pointer-events: none;
 }
+.hover-primary:hover {
+  color: $primary !important;
+}
+.hover-bg:hover {
+  background-color: $lighter;
+}
 .link-secondary {
   color: $secondary;
   &:hover {
@@ -32,6 +38,33 @@
   &[aria-expanded='true'] {
     color: $primary;
   }
+}
+.link-arrow {
+  vertical-align: middle;
+
+  &:hover {
+    .link-arrow-svg {
+      transform: translate3d(2px, 0, 0);
+    }
+  }
+
+  .link-arrow-svg {
+    transition: all 0.2s ease-in-out;
+  }
+}
+.img-hover {
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+// * for required inputs
+label:has(+ :is(input, textarea):required)::after {
+  content: ' *';
+}
+:is(input, textarea, select):required + label::after {
+  content: ' *';
 }
 
 @each $mt-font-sizes, $value in $mt-font-sizes {
@@ -209,6 +242,15 @@ $utilities: map-merge(
         'hidden': hidden,
         'visible': visible,
         'scroll': scroll
+      )
+    ),
+    'white-space': (
+      property: white-space,
+      class: text,
+      values: (
+        wrap: normal,
+        nowrap: nowrap,
+        prewrap: pre-wrap
       )
     )
   )

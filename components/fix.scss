@@ -33,6 +33,14 @@ iframe {
     padding: 0.8rem;
   }
 }
+strong {
+  color: $secondary;
+}
+a {
+  strong {
+    color: inherit;
+  }
+}
 .custom-select,
 .form-control,
 .form-select {
