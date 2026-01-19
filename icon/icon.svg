@@ -408,8 +408,8 @@ use:
     <symbol id="light_mode" viewBox="0 -960 960 960">
       <path fill="currentColor" d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/>
     </symbol>
-    <symbol id="keyboard_arrow_down" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path>
+    <symbol id="unfold_more" viewBox="0 -960 960 960">
+      <path fill="currentColor" d="M480-120 300-300l58-58 122 122 122-122 58 58-180 180ZM358-598l-58-58 180-180 180 180-58 58-122-122-122 122Z"></path>
     </symbol>
     <symbol id="content_copy" viewBox="0 0 24 24">
       <path fill="currentColor" d="M18.984 21v-14.016h-10.969v14.016h10.969zM18.984 5.016q0.797 0 1.406 0.586t0.609 1.383v14.016q0 0.797-0.609 1.406t-1.406 0.609h-10.969q-0.797 0-1.406-0.609t-0.609-1.406v-14.016q0-0.797 0.609-1.383t1.406-0.586h10.969zM15.984 0.984v2.016h-12v14.016h-1.969v-14.016q0-0.797 0.586-1.406t1.383-0.609h12z"></path>
@@ -483,8 +483,8 @@ use:
     <symbol id="desktop_windows" viewBox="0 0 24 24">
       <path fill="currentColor" d="M21 15.984v-12h-18v12h18zM21 2.016q0.797 0 1.406 0.586t0.609 1.383v12q0 0.797-0.609 1.406t-1.406 0.609h-6.984v2.016h1.969v1.969h-7.969v-1.969h1.969v-2.016h-6.984q-0.797 0-1.406-0.609t-0.609-1.406v-12q0-0.797 0.609-1.383t1.406-0.586h18z"></path>
     </symbol>
-    <symbol id="keyboard_arrow_down" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path>
+     <symbol id="keyboard_arrow_down" viewBox="0 -960 960 960">
+      <path fill="currentColor" d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path>
     </symbol>
     <symbol id="keyboard_arrow_left" viewBox="0 0 24 24">
       <path fill="currentColor" d="M15.422 16.594l-1.406 1.406-6-6 6-6 1.406 1.406-4.594 4.594z"></path>
