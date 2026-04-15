@@ -72,6 +72,12 @@
         background-image: url('#{$social-icon}ytb-white.svg');
       }
     }
+    &.discord {
+      color: #5865F2;
+      &:before {
+        background-image: url('#{$social-icon}discord-white.svg');
+      }
+    }
 
     &:not(.colored) {
       &:before {
