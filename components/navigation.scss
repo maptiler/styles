@@ -129,24 +129,6 @@
       }
     }
   }
-  &.dropdown-data {
-    .dropdown-link:hover {
-      color: $data;
-      background: $data-light;
-    }
-  }
-  &.dropdown-desktop {
-    .dropdown-link:hover {
-      color: $desktop;
-      background: $desktop-light;
-    }
-  }
-  &.dropdown-cloud {
-    .dropdown-link:hover {
-      color: $cloud;
-      background: $cloud-light;
-    }
-  }
   &.show {
     display: flex;
   }

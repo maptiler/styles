@@ -79,26 +79,9 @@ $light: $gray-300 !default;
 $dark: $gray-600 !default;
 $darker: $gray-700 !default;
 
-$cloud: #0e61c6 !default;
-$cloud-s: #2b8bfb !default;
-$cloud-light: #f2f8fe !default;
 $desktop: #724fa7 !default;
-$desktop-s: #a82ab6 !default;
-$desktop-light: #f1edf8 !default;
-$mobile: #00d5df !default;
-$mobile-s: #03a1c4 !default;
-$mobile-light: #daf5f9 !default;
-$engine: #e58035 !default;
-$engine-s: #ff6f4c !default;
-$engine-light: #fcf3e9 !default;
-$cluster: #e58035 !default;
-$cluster-s: #ffc957 !default;
-$cluster-light: #fcefe0 !default;
 $server: #e6353d !default;
-$server-s: #dd1144 !default;
-$server-light: #f5d7d7 !default;
 $data: #64a856 !default;
-$data-light: #eaf3e8 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -114,26 +97,9 @@ $theme-colors: (
   'light': $gray-300,
   'dark': $gray-600,
   'darker': $gray-700,
-  'cloud': $cloud,
-  'cloud-s': $cloud-s,
-  'cloud-light': $cloud-light,
   'desktop': $desktop,
-  'desktop-s': $desktop-s,
-  'desktop-light': $desktop-light,
-  'mobile': $mobile,
-  'mobile-s': $mobile-s,
-  'mobile-light': $mobile-light,
-  'engine': $engine,
-  'engine-s': $engine-s,
-  'engine-light': $engine-light,
-  'cluster': $cluster,
-  'cluster-s': $cluster-s,
-  'cluster-light': $cluster-light,
   'server': $server,
-  'server-s': $server-s,
-  'server-light': $server-light,
   'data': $data,
-  'data-light': $data-light
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -1674,12 +1640,6 @@ $topbar-height: 75px;
 $topbars: () !default;
 $topbars: map-merge(
   (
-    'topbar-cloud': $cloud,
-    'topbar-desktop': $desktop,
-    'topbar-mobile': $mobile,
-    'topbar-cluster': $cluster,
-    'topbar-server': $server,
-    'topbar-data': $data
   ),
   $topbars
 );
