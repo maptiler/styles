@@ -92,6 +92,8 @@
 }
 
 .social-circles {
+  font-size: 0;
+  
   a {
     @extend .social-icon;
   }
