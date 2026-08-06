@@ -358,33 +358,3 @@
     content: url('#{$map-control-out}remove-hover.svg');
   }
 }
-
-// new /maps
-.geocoder-mapStyleViewer {
-  @media (min-width: 575px) {
-    width: calc(100vw - 410px) !important;
-    max-width: 200px !important;
-    input {
-      width: calc(100% - 500px) !important;
-      padding: 0px;
-    }
-  }
-
-  @media (max-width: 574px) {
-    min-width: 220px !important;
-    max-width: 450px !important;
-    width: calc(100vw - 120px) !important;
-    height: 42px !important;
-    pointer-events: auto !important;
-
-    .input-group {
-      border: none !important;
-    }
-
-    input {
-      height: 40px !important;
-      font-size: 16px !important;
-      border: none !important;
-    }
-  }
-}
